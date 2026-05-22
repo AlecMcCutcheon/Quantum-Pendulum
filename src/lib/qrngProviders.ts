@@ -20,7 +20,24 @@ const CORS_BRIDGE_URLS = [
     `https://api.cors.lol/?url=${encodeURIComponent(target)}`,
   (target: string) =>
     `https://api.cors.syrins.tech/?url=${encodeURIComponent(target)}`,
+  /** Needs Origin from browser fetch; register your Pages host at corsfix.com */
+  (target: string) =>
+    `https://proxy.corsfix.com/?${encodeURIComponent(target)}`,
 ] as const;
+
+function parseQrandomResponse(text: string): { number: number; raw: unknown } | null {
+  try {
+    const json = JSON.parse(text) as {
+      number?: number;
+      corsfix_error?: string;
+    };
+    if (json.corsfix_error) return null;
+    if (typeof json.number !== "number") return null;
+    return { number: json.number, raw: json };
+  } catch {
+    return null;
+  }
+}
 
 /** Browser cannot call qrandom.io directly; use when no edge proxy is configured. */
 export function needsQrandomCorsBridge(): boolean {
@@ -46,14 +63,9 @@ async function fetchQrandomOne(
   for (const url of qrandomFetchUrls(min, max, useCorsBridge)) {
     const res = await fetchWithTimeout(url);
     if (!res?.ok) continue;
-    try {
-      const text = await res.text();
-      const json = JSON.parse(text) as { number?: number };
-      if (typeof json.number !== "number") continue;
-      return { number: json.number, raw: json };
-    } catch {
-      /* try next relay */
-    }
+    const text = await res.text();
+    const parsed = parseQrandomResponse(text);
+    if (parsed) return parsed;
   }
   return null;
 }

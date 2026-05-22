@@ -65,7 +65,7 @@ Live site: `https://alecmccutcheon.github.io/Quantum-Tarot/`
 
    In the GitHub repo: **Settings → Secrets and variables → Actions → Variables**, add `QRNG_PROXY_URL` = your worker URL (e.g. `https://quantum-tarot-qrng.<account>.workers.dev`, no trailing slash). Re-run the Pages deploy workflow so `VITE_QRNG_PROXY_URL` is baked into the build.
 
-2. **CORS relay fallback** — If `QRNG_PROXY_URL` is unset, production tries public relays (`api.cors.lol`, then `api.cors.syrins.tech`). These are third-party and may rate-limit.
+2. **CORS relay fallback** — If `QRNG_PROXY_URL` is unset, production tries public relays (`api.cors.lol`, `api.cors.syrins.tech`, then `proxy.corsfix.com`). Relays are third-party and may rate-limit. **Corsfix** only works from browser `fetch` (not pasted URLs) and requires registering your Pages host (`alecmccutcheon.github.io`) at [corsfix.com](https://corsfix.com).
 
    **Optional:** add GitHub secret `CLOUDFLARE_API_TOKEN` (+ `CLOUDFLARE_ACCOUNT_ID`). The Pages workflow will deploy `worker/` automatically and bake the worker URL into the build.
 
