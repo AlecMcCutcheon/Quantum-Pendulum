@@ -112,10 +112,13 @@ export function buildMinorUpright(
   pip: MinorPipSource,
   meta: SuitMeta,
 ): ReadingText {
+  const custom = pip.vertical?.upright;
+  const defaultDetail = `Traditionally upright, the ${card.classicName} emphasizes ${pip.biddyUpright.toLowerCase()} (Biddy Tarot / Rider–Waite line). ${hook(card.rank, "upright")} ${pipApplies(card, pip, meta, "upright")} ${meta.lens} This pip is immediate weather in the ${meta.quantum} suit—not a fate card, but a precise pressure you can respond to while it is active.`;
+  const defaultGuidance = `Name what you want from this ${meta.element} domain in one sentence. Take one step aligned with the upright keyword—not habit, audience, or old defense. ${hook(card.rank, "upright")} If outcomes matter, set a check-in within seven days rather than assuming the energy will stay.`;
   return {
     summary: `${card.quantumName} (${card.classicName}) — ${pip.biddyUpright}. ${hook(card.rank, "upright")}`,
-    detail: `Traditionally upright, the ${card.classicName} emphasizes ${pip.biddyUpright.toLowerCase()} (Biddy Tarot / Rider–Waite line). ${hook(card.rank, "upright")} ${pipApplies(card, pip, meta, "upright")} ${meta.lens} This pip is immediate weather in the ${meta.quantum} suit—not a fate card, but a precise pressure you can respond to while it is active.`,
-    guidance: `Name what you want from this ${meta.element} domain in one sentence. Take one step aligned with the upright keyword—not habit, audience, or old defense. ${hook(card.rank, "upright")} If outcomes matter, set a check-in within seven days rather than assuming the energy will stay.`,
+    detail: custom?.detail ?? defaultDetail,
+    guidance: custom?.guidance ?? defaultGuidance,
   };
 }
 
@@ -124,10 +127,13 @@ export function buildMinorReversed(
   pip: MinorPipSource,
   meta: SuitMeta,
 ): ReadingText {
+  const custom = pip.vertical?.reversed;
+  const defaultDetail = `Traditionally reversed, the ${card.classicName} signals ${pip.biddyReversed.toLowerCase()} (Biddy Tarot). Reversal may block, delay, internalize, or invert the upright lesson depending on context—not a universal “bad” pole. ${hook(card.rank, "reversed")} ${pipApplies(card, pip, meta, "reversed")} ${meta.lens} Ask whether the lesson is private (inner correction) or public (behavior others can name).`;
+  const defaultGuidance = `Slow the reaction. Correct dosage: less force where gentleness restores flow, more honesty where silence bred confusion. ${hook(card.rank, "reversed")} One conversation or one boundary, proportionate to the pip—avoid both dramatic purge and polite denial.`;
   return {
     summary: `Reversed, ${card.quantumName} — ${pip.biddyReversed}. ${hook(card.rank, "reversed")}`,
-    detail: `Traditionally reversed, the ${card.classicName} signals ${pip.biddyReversed.toLowerCase()} (Biddy Tarot). Reversal may block, delay, internalize, or invert the upright lesson depending on context—not a universal “bad” pole. ${hook(card.rank, "reversed")} ${pipApplies(card, pip, meta, "reversed")} ${meta.lens} Ask whether the lesson is private (inner correction) or public (behavior others can name).`,
-    guidance: `Slow the reaction. Correct dosage: less force where gentleness restores flow, more honesty where silence bred confusion. ${hook(card.rank, "reversed")} One conversation or one boundary, proportionate to the pip—avoid both dramatic purge and polite denial.`,
+    detail: custom?.detail ?? defaultDetail,
+    guidance: custom?.guidance ?? defaultGuidance,
   };
 }
 

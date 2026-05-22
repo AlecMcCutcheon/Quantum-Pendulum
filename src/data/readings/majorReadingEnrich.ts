@@ -395,6 +395,18 @@ const VERTICAL_EXPAND: Record<
         "List loose ends; close one per day for a week. Identity catches up to fact.",
     },
   },
+  "major-00": {
+    reversed: {
+      detail:
+        "Health and money readings often show the reversed Fool as ‘almost starting’—visible opportunity, invisible follow-through. The white dog still signals allyship; use one trusted witness before you reframe avoidance as spirituality.",
+      guidance:
+        "Tell one ally what you are postponing. If you choose wait, calendar the next review—drift is not the same as discernment.",
+    },
+    upright: {
+      detail:
+        "Career and creative readings: the Observer favors launches where you admit unknowns aloud—investors, collaborators, and bodies trust honesty more than false certainty.",
+    },
+  },
 };
 
 export function enrichMajorVertical(

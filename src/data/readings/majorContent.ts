@@ -23,9 +23,9 @@ export const MAJOR_CONTENT: Record<string, Orientations> = {
       summary:
         "The wave fails to collapse—hesitation, denial, or leaps without grounding.",
       detail:
-        "Fool reversed traditionally warns fear dressed as prudence, or impulsivity dressed as freedom. The Observer measures without preparation—forcing outcomes while ignoring context, or refusing to observe at all. You may stall a necessary change because the unknown threatens identity, or charge ahead without learning from feedback. Spontaneity can become avoidance of responsibility.",
+        "Fool reversed in Biddy Tarot names two distinct failures, not one generic ‘bad start’: holding back from fear of the unknown, and reckless risk-taking with disregard for consequence. Rider–Waite keeps the cliff, the white dog, and the light pack—the lesson is at the edge, not in the meadow. As The Observer reversed, measurement goes wrong: you force a collapse before context is gathered, or you refuse to observe at all and call that wisdom. Fear may dress as prudence—postponing a move, relationship, or creative birth because identity feels safer in the old story. The flip side is impulsivity dressed as freedom—partners, budgets, or health dragged into an ‘experiment’ without consent, the loyal dog left behind while you sprint. Spontaneity without feedback becomes avoidance of responsibility; control without curiosity becomes a cage. In work, the pitch ships before the prototype; in love, commitment is promised in spirit but avoided in calendar; in inner life, you perform openness while dodging the one question that would change the reading.",
       guidance:
-        "Pause before a big commitment. Name one ignored risk and one overstated fear. Run a small, reversible experiment instead of an all-or-nothing gamble.",
+        "Pause before a big commitment, but set an end date on the pause so it is a decision, not drift. Name one ignored risk and one overstated fear on paper. If you are leaping, list who shares consequences and what you will measure in seven days. If you are frozen, run one small, reversible trial—one conversation, one application, one hour of honest inventory—instead of an all-or-nothing gamble.",
     },
   },
   "major-01": {

@@ -1,6 +1,7 @@
 import type { ReadingText } from "../../types/reading";
 import type { Suit, TarotCard } from "../../types/deck";
 import { getMinorPipSource } from "./minorLateral";
+import { getMinorVertical } from "./minorVertical";
 import {
   buildMinorReversed,
   buildMinorUpright,
@@ -52,10 +53,14 @@ function buildOrientations(
   card: TarotCard,
 ): Orientations {
   const meta = SUIT_META[suit];
-  const pip = getMinorPipSource(card.id);
-  if (!pip) {
+  const pipBase = getMinorPipSource(card.id);
+  if (!pipBase) {
     throw new Error(`Missing minor pip research: ${card.id}`);
   }
+  const vertical = getMinorVertical(card.id);
+  const pip = vertical
+    ? { ...pipBase, vertical: { ...pipBase.vertical, ...vertical } }
+    : pipBase;
 
   return {
     upright: buildMinorUpright(card, pip, meta),

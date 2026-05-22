@@ -6,6 +6,10 @@ export interface MinorPipSource {
   biddyReversed: string;
   transverse: ReadingText;
   conjugate: ReadingText;
+  /** Optional full vertical copy; replaces generic builder text when set. */
+  vertical?: Partial<
+    Record<"upright" | "reversed", { detail: string; guidance?: string }>
+  >;
 }
 
 export type MinorLateralMap = Record<string, MinorPipSource>;
