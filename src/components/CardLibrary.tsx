@@ -1,6 +1,6 @@
 import { memo, startTransition, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { DECK } from "../data/deck";
+import { DECK, SUIT_CLASSIC, SUIT_QUANTUM } from "../data/deck";
 import { getReading } from "../data/readings";
 import { useLibraryThumbs } from "../hooks/useLibraryThumbs";
 import { getLibraryDetailSvg } from "../lib/cardArt/libraryDetailSvg";
@@ -10,6 +10,9 @@ import {
   ORIENTATION_STYLE,
   ROTATION,
 } from "../lib/cardOrientationUi";
+import { PersonalReadingView } from "./PersonalReadingView";
+import { ReadingTabs } from "./ReadingTabs";
+import { ScholarlyReadingBody } from "./ScholarlyReadingBody";
 import type { Orientation, TarotCard } from "../types/deck";
 
 const ORIENTATIONS: Orientation[] = [
@@ -18,6 +21,63 @@ const ORIENTATIONS: Orientation[] = [
   "transverse",
   "conjugate",
 ];
+
+type LibraryFilter =
+  | "all"
+  | "major"
+  | "wands"
+  | "cups"
+  | "swords"
+  | "pentacles";
+
+const FILTER_OPTIONS: {
+  id: LibraryFilter;
+  label: string;
+  subtitle?: string;
+}[] = [
+  { id: "all", label: "All" },
+  { id: "major", label: "Major", subtitle: "Arcana" },
+  {
+    id: "wands",
+    label: SUIT_QUANTUM.wands,
+    subtitle: SUIT_CLASSIC.wands,
+  },
+  { id: "cups", label: SUIT_QUANTUM.cups, subtitle: SUIT_CLASSIC.cups },
+  {
+    id: "swords",
+    label: SUIT_QUANTUM.swords,
+    subtitle: SUIT_CLASSIC.swords,
+  },
+  {
+    id: "pentacles",
+    label: SUIT_QUANTUM.pentacles,
+    subtitle: SUIT_CLASSIC.pentacles,
+  },
+];
+
+function cardMatchesFilter(card: TarotCard, filter: LibraryFilter): boolean {
+  if (filter === "all") return true;
+  if (filter === "major") return card.arcana === "major";
+  return card.arcana === "minor" && card.suit === filter;
+}
+
+function cardMatchesQuery(card: TarotCard, query: string): boolean {
+  const q = query.trim().toLowerCase();
+  if (!q) return true;
+  const suitQuantum =
+    card.suit != null ? SUIT_QUANTUM[card.suit].toLowerCase() : "";
+  const suitClassic =
+    card.suit != null ? SUIT_CLASSIC[card.suit].toLowerCase() : "";
+  return (
+    card.id.toLowerCase().includes(q) ||
+    card.quantumName.toLowerCase().includes(q) ||
+    card.classicName.toLowerCase().includes(q) ||
+    suitQuantum.includes(q) ||
+    suitClassic.includes(q) ||
+    (card.suit?.toLowerCase().includes(q) ?? false) ||
+    String(card.rank).toLowerCase().includes(q)
+  );
+}
 
 interface CardLibraryProps {
   open: boolean;
@@ -79,12 +139,14 @@ const LibraryListItem = memo(function LibraryListItem({
 export function CardLibrary({ open, onClose }: CardLibraryProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [orientation, setOrientation] = useState<Orientation>("upright");
-  const [filter, setFilter] = useState<"all" | "major" | "minor">("all");
+  const [filter, setFilter] = useState<LibraryFilter>("all");
+  const [searchQuery, setSearchQuery] = useState("");
   const cards = useMemo(() => {
-    if (filter === "major") return DECK.filter((c) => c.arcana === "major");
-    if (filter === "minor") return DECK.filter((c) => c.arcana === "minor");
-    return DECK;
-  }, [filter]);
+    return DECK.filter(
+      (card) =>
+        cardMatchesFilter(card, filter) && cardMatchesQuery(card, searchQuery),
+    );
+  }, [filter, searchQuery]);
 
   const thumbUrls = useLibraryThumbs(cards, open);
 
@@ -118,7 +180,7 @@ export function CardLibrary({ open, onClose }: CardLibraryProps) {
     setOrientation("upright");
   };
 
-  const setFilterDeferred = (f: "all" | "major" | "minor") => {
+  const setFilterDeferred = (f: LibraryFilter) => {
     startTransition(() => setFilter(f));
   };
 
@@ -175,33 +237,60 @@ export function CardLibrary({ open, onClose }: CardLibraryProps) {
                 </button>
               </header>
 
-              <div className="flex shrink-0 gap-1 border-b border-white/10 px-3 py-2">
-                {(["all", "major", "minor"] as const).map((f) => (
+              <div className="shrink-0 border-b border-white/10 px-3 py-2">
+                <label className="sr-only" htmlFor="library-search">
+                  Search cards
+                </label>
+                <input
+                  id="library-search"
+                  type="search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search name, suit, rank…"
+                  className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-star/90 placeholder:text-star/35 focus:border-accent/40 focus:outline-none focus:ring-1 focus:ring-accent/30"
+                />
+              </div>
+
+              <div className="flex shrink-0 flex-wrap gap-1 border-b border-white/10 px-3 py-2">
+                {FILTER_OPTIONS.map(({ id, label, subtitle }) => (
                   <button
-                    key={f}
+                    key={id}
                     type="button"
-                    onClick={() => setFilterDeferred(f)}
-                    className={`rounded-full px-3 py-1 text-xs font-medium capitalize transition ${
-                      filter === f
-                        ? "bg-accent/25 text-accent"
-                        : "text-star/50 hover:text-star/80"
+                    onClick={() => setFilterDeferred(id)}
+                    className={`rounded-lg px-2.5 py-1.5 text-left transition ${
+                      filter === id
+                        ? "bg-accent/25 text-accent ring-1 ring-accent/30"
+                        : "text-star/50 hover:bg-white/5 hover:text-star/80"
                     }`}
                   >
-                    {f}
+                    <span className="block text-[11px] font-medium leading-tight">
+                      {label}
+                    </span>
+                    {subtitle ? (
+                      <span className="block text-[9px] font-normal leading-tight text-star/40">
+                        {subtitle}
+                      </span>
+                    ) : null}
                   </button>
                 ))}
               </div>
 
               <ul className="library-scroll min-h-0 flex-1 overflow-y-auto px-2 py-2">
-                {cards.map((card) => (
-                  <LibraryListItem
-                    key={card.id}
-                    card={card}
-                    active={selectedId === card.id}
-                    thumbUrl={thumbUrls[card.id]}
-                    onSelect={handleSelect}
-                  />
-                ))}
+                {cards.length === 0 ? (
+                  <li className="px-2 py-6 text-center text-xs text-star/45">
+                    No cards match your search.
+                  </li>
+                ) : (
+                  cards.map((card) => (
+                    <LibraryListItem
+                      key={card.id}
+                      card={card}
+                      active={selectedId === card.id}
+                      thumbUrl={thumbUrls[card.id]}
+                      onSelect={handleSelect}
+                    />
+                  ))
+                )}
               </ul>
             </nav>
 
@@ -273,11 +362,15 @@ export function CardLibrary({ open, onClose }: CardLibraryProps) {
                         <p className="mt-1 font-mono text-[10px] tracking-wide text-star/40 uppercase">
                           Major · {selected.romanLabel}
                         </p>
-                      ) : (
+                      ) : selected.suit ? (
                         <p className="mt-1 font-mono text-[10px] tracking-wide text-star/40 uppercase">
-                          {selected.suit} · {String(selected.rank)}
+                          {SUIT_QUANTUM[selected.suit]} ·{" "}
+                          {String(selected.rank)}
+                          <span className="mt-0.5 block font-sans font-normal normal-case tracking-normal text-star/35">
+                            {SUIT_CLASSIC[selected.suit]}
+                          </span>
                         </p>
-                      )}
+                      ) : null}
                     </div>
 
                     <div className="mt-5 flex flex-wrap justify-center gap-1.5">
@@ -302,19 +395,27 @@ export function CardLibrary({ open, onClose }: CardLibraryProps) {
                         <p className="text-[10px] font-medium tracking-wide text-gold/80 uppercase">
                           {ORIENTATION_LABEL[orientation]}
                         </p>
-                        <p className="mt-2 text-sm leading-relaxed font-medium text-star/95">
-                          {reading.summary}
-                        </p>
-                        <p className="mt-3 text-xs leading-relaxed text-star/80">
-                          {reading.detail}
-                        </p>
-                        <div className="mt-4 rounded-lg border border-accent/20 bg-accent/5 px-3 py-3">
-                          <p className="text-[10px] font-semibold tracking-wide text-gold uppercase">
-                            Guidance
-                          </p>
-                          <p className="mt-2 text-xs leading-relaxed text-star/85">
-                            {reading.guidance}
-                          </p>
+                        <div className="mt-4">
+                          <ReadingTabs
+                            hasPersonal={Boolean(reading.personal)}
+                            compact
+                            scholarly={
+                              <ScholarlyReadingBody
+                                reading={reading}
+                                orientation={orientation}
+                                compact
+                                showOrientationNote={false}
+                              />
+                            }
+                            personal={
+                              reading.personal ? (
+                                <PersonalReadingView
+                                  personal={reading.personal}
+                                  compact
+                                />
+                              ) : null
+                            }
+                          />
                         </div>
                       </article>
                     ) : (

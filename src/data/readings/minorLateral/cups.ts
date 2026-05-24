@@ -93,7 +93,7 @@ export const CUPS_LATERAL: MinorLateralMap = {
       summary:
         "Transverse Quintet—mourning the spill; two cups still behind you.",
       detail:
-        "In Rider–Waite, the cloaked figure fixates on three overturned cups while two remain upright behind—classic ‘focus on loss, miss remaining resource’ (Biddy: regret, disappointment). Transverse crossing is active grief: failure feels total while recovery is spatially present but not yet turned toward. Fluids pool at the feet; the wave has not chosen whether to keep mourning or receive what still stands.",
+        "In Rider–Waite, the cloaked figure fixates on three overturned cups while two remain upright behind—classic ‘focus on loss, miss remaining resource’ (Biddy: regret, disappointment). Transverse crossing is active grief: failure feels total while recovery is spatially present but not yet turned toward. Waves pool at the feet; the wave has not chosen whether to keep mourning or receive what still stands.",
       guidance:
         "Honor what spilled without denying the two cups. Turn physically—literally change view—before you decide the story is finished.",
     },

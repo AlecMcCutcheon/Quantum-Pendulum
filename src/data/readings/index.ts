@@ -3,6 +3,7 @@ import type { Orientation } from "../../types/deck";
 import { frameReadingForOrientation } from "../../lib/readingOrientationFraming";
 import { buildAllReadings } from "./buildReadings";
 import { loadReadingDepth } from "./readingDepthLoader";
+import { loadReadingPersonal } from "./readingPersonalLoader";
 
 let readingsMap: Map<string, CardReading> | null = null;
 let initPromise: Promise<void> | null = null;
@@ -16,9 +17,11 @@ export function initReadings(): Promise<void> {
   if (readingsMap) return Promise.resolve();
   if (initPromise) return initPromise;
 
-  initPromise = loadReadingDepth().then(() => {
-    rebuildMap();
-  });
+  initPromise = Promise.all([loadReadingDepth(), loadReadingPersonal()]).then(
+    () => {
+      rebuildMap();
+    },
+  );
 
   return initPromise;
 }

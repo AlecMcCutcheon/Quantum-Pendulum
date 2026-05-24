@@ -15,9 +15,9 @@ export const MAJOR_TRANSVERSE: Record<string, ReadingText> = {
   },
   "major-01": {
     summary:
-      "Transverse Operator—tools on the table; transformation not yet applied.",
+      "Transverse Catalyst—tools on the table; transformation not yet applied.",
     detail:
-      "Magician reversed lists untapped talents and poor planning (Biddy). Transverse crossing is capability without sequence—all operators present, hypothesis undefined. You may be influential in rooms that do not matter while the real experiment waits.",
+      "Magician reversed lists untapped talents and poor planning (Biddy). Transverse crossing is capability without sequence—all tools present, hypothesis undefined. You may be influential in rooms that do not matter while the real experiment waits.",
     guidance:
       "Write one-sentence aim. One action that applies a single tool today.",
   },
@@ -55,7 +55,7 @@ export const MAJOR_TRANSVERSE: Record<string, ReadingText> = {
   },
   "major-06": {
     summary:
-      "Transverse Entanglement—values felt; commitment uncollapsed.",
+      "Transverse The Entangled—values felt; commitment uncollapsed.",
     detail:
       "Lovers upright: choice, alignment, union (Biddy). Transverse is chemistry with terms still open—attraction, ethical fork visible, contract not signed. Entangled preview, not disharmony (see conjugate).",
     guidance:

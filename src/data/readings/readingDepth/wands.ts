@@ -3,344 +3,576 @@ import type { ReadingText } from "../../../types/reading";
 
 type CardDepth = Partial<Record<Orientation, Partial<ReadingText>>>;
 
-/** Biddy Wands keywords + Rider–Waite imagery; Photons suit (fire, creativity, enterprise). */
+/** Particles suit (Wands): fire, enterprise, creative momentum — cosmic mechanics voice. */
 export const WANDS_DEPTH: Record<string, CardDepth> = {
   "wands-ace": {
     upright: {
       summary:
-        "Photon Singularity: inspiration arrives as a living branch—new enterprise, creative potential, and growth asking for its first channel.",
+        "Upright Singularity: first localized burst—point charge before vector commit, igniting momentum asking for a channel.",
       detail:
-        "Rider–Waite shows a hand emerging from cloud, offering a wand still sprouting leaves while more foliage falls toward the ground—a living branch, not a finished staff (Biddy: inspiration, new opportunities, growth, potential). The castle on the hill confirms that worldly structure exists; the ace asks which gate your fire will illuminate first. In the Photons suit, this is discrete energy before it couples to a medium: ambition sensed as heat in the chest, a creative impulse that has not yet chosen its wire. Enterprise here is the courage to treat an idea as real before proof arrives. Passion is not performance; it is the body's vote for a new vector. This card favors beginnings you can name in one sentence—the prototype sketch, the honest conversation about what you want to build, the application sent before perfectionism wins. Mastery is not required; emission is. The falling leaves remind you that not every spark becomes a tree; choosing one branch is the work. When Photons first lase, the beam is narrow and bright—protect that aperture from the noise that would scatter it into pretty but useless glitter. Inspiration without embodiment stays myth; the ace blesses the first honest act that proves you mean it.",
+        `When you draw the Ace of Wands upright as the Singularity of Particles, you occupy the first localized burst in the fire suit—a point of charge radiating outward until something in your life couples to it. Igniting momentum is not mood; it is measurable heat seeking direction. Follow what feels warmer, not what feels obligatory—the field responds to appetite honestly named.
+
+As Singularity of Particles, discrete initiative exists before it couples to a medium: enough charge to start, not yet enough structure to scale. Rank zero is waking into motion; permission is not granted from outside—you assign the first channel yourself. The burst is lawful physics: localized emission before the field learns your signature.
+
+In work, name the prototype before the pitch; in relationships, say the want before the contract; in the body, honor restlessness as signal; in inner life, treat compulsion as data worth logging. The burst can be fleeting unless you narrow aperture—one line, then one act. Enterprise favors honest first emission over polished delay.
+
+Quantumally, Singularity is uncollapsed fire—Photons bright but uncoupled until you choose one wire long enough to learn. Heat without channel dissipates; channel without heat is theater. Steward the spark as infrastructure, not identity costume.
+
+Passion is the body's vote for a new trajectory. Mastery is not required; first honest emission is. Not every burst sustains—but none couples without choosing one wire and protecting it from scatter long enough to measure.`,
       guidance:
-        "Capture the spark in one concrete line—a title, a deadline, or a first deliverable. Choose a single outlet this week so Photons lase instead of scatter. Treat the castle as reachable, not as permission to wait for certainty.",
+        "Write one sentence for what feels warmer—not what you should want. Produce one finishable micro-deliverable within seven days. Protect forty-eight hours from one distraction that scatters the burst.",
     },
     reversed: {
       summary:
-        "Reversed ace: inspiration present but the channel blocked—emerging ideas, lack of direction, distractions, and delays leaking vitality.",
+        "Reversed Singularity: heat without wire—inspiration present, direction blocked, charge leaking through delays and scatter.",
       detail:
-        "Reversed, the Ace of Wands inverts the cloud-born gift: inspiration present, channel blocked (Biddy: an emerging idea, lack of direction, distractions, delays). Rider–Waite's falling leaves suggest vitality leaking before it roots—many sparks, no hearth. Photons refract through notifications, self-doubt, or parallel projects that never receive finishing energy. You may feel creative urgency while refusing the boring middle work that turns impulse into enterprise. Delays are often disguised decisions: the idea stays sacred because acting would expose it to measurement. Distraction is not always laziness; sometimes it protects an identity that has not updated to include the new role. Reversed asks whether you are waiting for a sign when the sign was the restlessness itself. The ace still exists—only the aperture is wrong. You might hoard inspiration as identity—always becoming, never being—so the emerging idea never meets the world that would refine it. Lack of direction can mean too many equally loud possibilities, or fear of choosing wrong and closing doors. Delays compound when you treat preparation as infinite and launch as optional. Photons in reversed ace scatter into heat without work—busy, warm, and ultimately inert.",
+        `When the Ace of Wands reverses as the Singularity of Particles, the burst still fires but dissipates faster than it couples. Charge backs up behind the wrong aperture: many sparks, no hearth. You may feel creative urgency while refusing the boring middle work that turns impulse into enterprise.
+
+Delays are often disguised decisions—if the idea never ships, it cannot be judged. Distraction protects an identity that has not updated to include the maker you are becoming. Reversed is not absence of fire; it is scatter refracting one gift into heat without work. The singularity still exists; the channel is wrong.
+
+In work, parallel drafts without sends; in love, enthusiasm without calendar; in the body, spike and crash; in inner life, inspiration consumed as identity while nothing couples to artifact. Research dresses as creation; prudence dresses as fear of measurement.
+
+Quantumally, reversed Singularity leaks emission through too many open ports—Photons refract instead of lasing. Subtraction precedes addition: one distraction named, one proof finished, one wire chosen long enough to learn whether the burst was signal or appetite for novelty alone.`,
       guidance:
-        "Remove one distraction source for forty-eight hours and protect one hour for the idea alone. Finish a micro-deliverable—outline, email, ten-minute recording—before opening another tab. If direction is unclear, pick the smallest experiment that would prove the idea wants to live.",
+        "List open starts and pause one for forty-eight hours. Ship one micro-sized proof before opening anything new. Silence one scatter source until Friday and note whether direction feels closer.",
     },
     transverse: {
       summary:
-        "Transverse spark: inspiration crosses as raw Photonic potential—growth sensed, channel uncollapsed, liminal ignition before the first wire is chosen.",
+        "Transverse Singularity: threshold burst—warmth felt, vector offered, grip and commitment still uncollapsed.",
       detail:
-        "Ace of Wands upright traditionally opens fire: inspiration and growth not yet directed (Biddy). As Singularity of Photons, the pulse is real but the experiment lacks a hypothesis—crossing you as creative heat that has not chosen its wire. This is liminal ignition, not failure. Rider–Waite's hand from cloud marks a threshold: the gift is offered, but your grip has not closed. Transverse is the first lateral crossing—the upright cluster of inspiration, opportunity, and potential meeting you sideways, before vertical commitment. You may feel called without knowing the vocation, excited without a calendar, or pregnant with enterprise while still debating names. Photons here behave as wavefront: present everywhere in the field, localized nowhere in action. The castle visible on the hill says structure awaits; the sprouting wand says life wants to move. Crossing energy asks you to honor the spark without either dismissing it as fantasy or inflating it into premature empire. Growth in transverse is cellular—division before differentiation. Creative fire at this crossing favors capture over performance: notebooks, voice memos, honest conversation with one trusted witness. Enterprise begins when you treat the impulse as data worth logging, not as mood to consume and forget.",
+        `When the Ace of Wands crosses you transversely as the Singularity of Particles, igniting energy is real but uncollapsed. You feel the next chapter without signing it—restlessness, envy of builders, heat in the chest while calendars stay empty. The field offers a channel; your grip has not closed.
+
+Transverse is liminal ignition, not failure. Enough charge to move; not yet enough structure to land. Treat half-light as information: gather one fact, but do not pretend the spark is fantasy. Threshold energy is lawful—assembly before emission is not reversed stall unless it becomes infinite maybe.
+
+In work, decks without publish dates; in relationships, almost confessions; in the body, adrenaline seeking a container; in inner life, knowing a change wants you while logistics still assemble. Honor the burst without inflating it into premature empire.
+
+Quantumally, transverse Singularity holds superposition at the gate—heat present, commitment uncollapsed. Capture the idea in one line; choose one outlet this week; date when grip closes—commit or release without shaming the fire. Charge intact is not permission to haunt the threshold forever.`,
       guidance:
-        "Capture the idea in one line before the crossing fades. Choose one outlet this week—one draft, one call, one prototype—so Photons begin to lase. Do not demand mastery; demand a first honest emission.",
+        "Name the offered vector in one sentence and read it aloud once. Hold one protected outlet until Wednesday. Calendar when you commit or release—thresholds need dates.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: distractions and delays scatter the first flame—emerging ideas refract through doubt, notifications, and unfinished starts.",
+        "Conjugate Singularity: scatter crosses spark—distraction and delay interfere while the burst still glows.",
       detail:
-        "Reversed Ace of Wands: emerging idea without direction, distractions, delays (Biddy). The conjugate crossing is the second lateral—reversed keyword cluster active—where scatter meets the original spark and steals its coherence. Photons refract instead of lasing: many tabs, many half-born projects, many eloquent reasons why tomorrow is better. The hand still offers the wand, but your attention splinters before contact. Delays dress as prudence; distractions dress as research. Self-limiting narratives may sound like spirituality or realism while functionally protecting you from the vulnerability of being measured. Emerging ideas need both protection and friction; conjugate errs toward over-protection—idea stays pure because it never meets reality. Lack of direction here is not absence of desire but refusal to rank desires. You may confuse consumption with creation—reading about the work instead of doing one ugly page. The falling leaves in the image warn that vitality dissipates when not rooted; conjugate is that dissipation in real time. This crossing is not a verdict against your gift—it is a mirror for aperture. Close one loop, however small, and the ace reappears as usable fire.",
+        `When the Ace of Wands crosses conjugately as the Singularity of Particles, inspiration and scatter share a wrist. Direction wobbles; delays repeat on your watch. Conjugate is interference, not verdict—noise dulling heat while you perform almost-starts.
+
+Work shows brilliant openings, absent middles. Love shows passionate language, evasive logistics. You may consume inspiration as identity—always becoming, never measured—while charge leaks sideways. Delays dress as prudence; research dresses as creation. Someone else's urgency may cross your path; your own fear may cross it as control dressed as care.
+
+In the body, spike without container; in inner life, perform openness while dodging the one honest send. The apparatus runs on appearance, not coupling—rank-zero fire becomes stage rather than laboratory.
+
+Quantumally, conjugate Singularity injects noise into the burst—false readings that make later commitment expensive. Close one loop, however small, and the singularity reappears as usable fire. Separate spark from scatter on paper; starve one distraction long enough to finish one honest proof. Follow heat, not theater.`,
       guidance:
-        "Remove one distraction source for forty-eight hours. Finish one micro-deliverable from the idea before opening anything new. If direction is unclear, run the smallest experiment that would prove the spark wants to live.",
+        "Two columns: what wants to begin vs what you open when afraid of beginning. Remove one distraction for forty-eight hours. Sunday note one metric only—did the idea couple to action?",
     },
   },
   "wands-02": {
     upright: {
       summary:
-        "Photon Pair: on the ramparts with globe in hand—future planning, progress, decisions, and discovery before the next voyage commits.",
+        "Upright Pair: stable dual field—personal power surveyable, two vectors before collapse, cartography before voyage commits.",
       detail:
-        "The Two of Wands upright in Rider–Waite places a robed figure on the ramparts, wand in one hand and globe in the other, looking out over sea and distant hills (Biddy: future planning, progress, decisions, discovery). Fire has stabilized enough to survey territory—you are no longer merely ignited; you are choosing where to aim Photons next. Ambition becomes cartography: which market, relationship, craft, or migration deserves the next season of your life force. Progress here is strategic visibility, not hustle for its own sake. The globe is both privilege and responsibility; you already hold influence, even if it feels modest. Enterprise favors scouts over settlers at this stage—send the probe, price the trip, compare alliances. Passion cools into purposeful desire when you admit you cannot occupy every shore at once. Discovery is the reward for naming the decision you have postponed while pretending you are still gathering data. The second wand planted beside the figure says you have more than spark—you have continuity. Photons at this pip form a stable pair: enough coherence to interfere constructively if you aim deliberately. Worldly success is visible but not yet seized; the card blesses planning that serves motion rather than replacing it. Compare paths with honest costs—identity, time, reputation—not only money.",
+        `When you draw the Two of Wands upright as the Pair of Particles, you stand where the ace's flash has stabilized into surveyable power. Multi-faceted charge sits in a horizontal field—stable, untapped, waiting for your direction. Two vectors angle toward the horizon; you can reach out and assign one. This is personal power after ignition: enthusiasm taking shape, still largely uncollapsed.
+
+You are not separate from the forces shaping your life; you influence how they take shape from here. The Pair of Particles is two viable trajectories before commitment: secured baseline behind you, open horizon ahead, scope of influence already in hand.
+
+In work, compare two real paths with honest costs; in relationships, name what shared future you are pricing; in the body, notice restlessness that wants a destination; in inner life, reconcile ambition with identity. Discovery rewards naming the decision you postponed while pretending you were still gathering data.
+
+Progress here is strategic visibility—not hustle for its own sake. Hold influence without clutching; planning serves motion when it has a collapse date.`,
       guidance:
-        "List two paths with honest costs—not only money, but identity and energy. Set a decision date and, until then, gather one new fact per path. Hold the globe without clutching; planning works when it serves motion.",
+        "List two paths with costs in money, identity, and energy. Set a decision date and tell one witness. Take one scouting step before the date—call, visit, or honest conversation.",
     },
     reversed: {
       summary:
-        "Reversed pair: personal goals and inner alignment unsettle the map—fear of the unknown and lack of planning masquerading as patience.",
+        "Reversed Pair: power pooled inward—personal goals unsettled, fear of the unknown masquerading as patience, map refused.",
       detail:
-        "Reversed Two of Wands turns the ramparts inward (Biddy: personal goals, inner alignment, fear of the unknown, lack of planning). The figure may still hold the world, but the gaze retreats—private ambition disconnected from a map, or fear of the unknown masquerading as prudence. Photons pool behind the eyes instead of crossing the sea. You might know what you want yet refuse to price the voyage, lest success change who you are allowed to be. Lack of planning is not always chaos; sometimes it is a strategy to keep options imaginary, where they cannot fail. Inner alignment work is legitimate here—reconcile the part that wants expansion with the part that wants safety. Reversed warns against using spirituality or going with the flow to avoid the uncomfortable commitment that discovery requires. The unknown is not only danger; it is also the place your next chapter has not been measured yet. Personal goals may conflict with inherited scripts—family, culture, team—so you hold the globe silently. Fear of the unknown can manifest as endless research, credential collecting, or waiting for a partner to decide for you. Photons reversed here reflect back from the wall you built. Alignment work belongs on the calendar, not only in journaling.",
+        `When the Two of Wands reverses as the Pair of Particles, the field still holds charge but attention retreats from the horizon. Personal goals disconnect from calendars—you rehearse futures at night and perform neutrality by day. Fear of the unknown is not only danger; it is where your next chapter has not been measured.
+
+Lack of planning may look like chaos; often it is strategy—if no route is chosen, no route can be wrong. Inner alignment work is legitimate: reconcile expansion with safety. Reversed warns against using flow language to avoid the commitment discovery requires.
+
+In work, private ambition without sends; in love, deferred geography while someone else makes plans; in the body, tension in shoulders and jaw—scanning without departure. Charge pools inward instead of crossing open water.
+
+Name fear in plain language, then take one scouting step. Alignment belongs on the calendar, not only in journaling.`,
       guidance:
-        "Name the fear in plain language—loss, visibility, wrong choice—and write what it protects. Take one scouting step into the unknown: a call, a visit, a published intention. Align personal goals with a calendar date, not only with mood.",
+        "Write what the unknown threatens—visibility, loss, wrong choice. Connect one personal goal to a date and a ten-minute action this week. Take one footprint into the unmapped—call, apply, or stated intention.",
     },
     transverse: {
       summary:
-        "Transverse Pair: plans and discovery hover in superposition—the world held, territory visible, decisive voyage not yet collapsed.",
+        "Transverse Pair: superposition between shores—influence held, paths visible, voyage ethically uncollapsed.",
       detail:
-        "Two of Wands upright: holding the globe, planning progress (Biddy). Transverse is the crossing of choice—paths visible, decision uncollapsed. Pair of Photons in superposition between territories. Rider–Waite's figure stands between castle and sea—security behind, horizon ahead—embodying the liminal moment before commitment. You may feel competent yet suspended, ambitious yet unpinned, holding more optionality than your nervous system enjoys. Transverse energy is not weakness; it is the ethical pause before you spend life force on a direction that will reorganize identity. Future planning crosses you sideways: spreadsheets, conversations, fantasies, and dread all valid data. Progress at this crossing is informational—maps updated, allies sounded, costs estimated. Discovery tempts and terrifies in equal measure because choosing one shore means grieving imaginary versions of the others. The wand in hand says you are not empty-handed; the globe says influence is already yours. Enterprise here favors experiments over declarations—scout trips, pilot clients, sample chapters, dating apps opened with honest bios. Photons interfere constructively when you compare paths without pretending they are costless. Let the crossing teach you what you lean toward when no one is performing for.",
+        `When the Two of Wands crosses you transversely as the Pair of Particles, you stand between secured baseline and open horizon—influence in hand while the road stays uncrossed. Future planning crosses sideways: spreadsheets, conversations, fantasies, and dread are valid data; none equals departure.
+
+Transverse is liminal cartography, not failure. You may feel competent yet suspended, ambitious yet unpinned. Progress at this crossing is informational—maps updated, allies sounded, costs estimated—while the body waits for a date that commits life force.
+
+In work, two offers or two models; in relationships, two futures you will not collapse because choosing one grieves the other in imagination. Discovery tempts and terrifies because naming a shore ends infinite hypothetical selves.
+
+List paths with honest costs, set a collapse date, gather one fact per path until then. Superposition ends on calendar, not on perfect certainty.`,
       guidance:
-        "List two paths with costs—time, identity, money—and set a decision date. Until then, gather one new fact per path each week. Hold the globe lightly; planning should serve motion, not replace it.",
+        "Chart path A and path B with money, identity, and energy costs. Choose the decision date and tell one witness. Gather one embodied fact today—quote, conversation, or visit response.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: fear of the unknown and lack of planning block forward motion—inner alignment needed before the sea is crossed.",
+        "Conjugate Pair: fear crosses forward motion—inner alignment needed, hesitation dressed as prudence blocks the crossing.",
       detail:
-        "Reversed Two: inner alignment work, fear of unknown, lack of planning (Biddy). The conjugate crossing is hesitation dressed as prudence—you may know your goal but refuse the map that would make failure measurable. Discovery stalls at the gate while Photons circulate in anxious loops. Personal goals diverge from performed goals: you say one thing publicly while privately craving another shore. Lack of planning can be covert rebellion against expectations—if there is no plan, no one can say you chose wrong. Fear of the unknown amplifies every headline and family story until the globe feels like a burden, not a privilege. Inner alignment work is the medicine: which ambition is yours, which is inherited, which is revenge, which is joy? Conjugate does not mock caution; it names when caution became identity. You might be waiting for certainty that only action supplies—clarity after the first voyage, not before. The reversed cluster crosses the upright plan and introduces static: mixed signals to collaborators, delayed replies, half-commitments. Photons need a decision surface to reflect off. Choose alignment practices that touch the body—walks, conversations, constrained timelines—not only thought spirals.",
+        `When the Two of Wands crosses conjugately as the Pair of Particles, hesitation dressed as prudence drains the voyage you claim to want. Personal goals diverge from performed goals—you say one thing publicly while privately craving another shore. Fear of the unknown amplifies every headline until influence feels like burden, not privilege.
+
+Conjugate is static in anxious loops: mixed signals to collaborators, delayed replies, half-commitments. Lack of planning can be covert rebellion—if there is no map, no one can say you chose wrong. Inner alignment is medicine: which ambition is yours, inherited, revenge, or joy?
+
+In work, vision language without ownership dates; in love, withholding the map; in the body, irritability when asked simple logistics. Choose alignment practices that touch the body—walks, conversations, constrained timelines—not only thought spirals.
+
+One scouting step into the unknown this week; personal goals on calendar with review date.`,
       guidance:
-        "Name the fear in plain words and write what it protects. Take one scouting step into the unknown this week. Put personal goals on the calendar with a review date—not only in your head.",
+        "Name fear in plain words and write what it protects. Take one scouting step into the unknown. Put personal goals on the calendar with a review date—not only in your head.",
     },
   },
   "wands-03": {
     upright: {
       summary:
-        "Photon Triplet: ships on the horizon—progress, expansion, foresight, and overseas opportunity in transit toward reception.",
+        "Upright Triplet: bound vectors with central vision—expansion in transit, foresight rewarded, reception phase after launch commits.",
       detail:
-        "Rider–Waite's Three of Wands shows a figure on the cliff edge, back to the viewer, watching ships approach on bright water—enterprise already launched, results still in transit (Biddy: progress, expansion, foresight, overseas opportunities). Photons left the harbor earlier; now the work is reception and patience without shrinking vision. This is foresight rewarded: alliances, exports, creative launches, or long investments beginning to return signal. Ambition matures from spark to supply chain—you are not only the artist but the merchant awaiting cargo. Expansion can be geographic, digital, or relational; the image is about horizons widening because you planned beyond the first sale. Passion here steadies into confidence that the world can meet you. Creativity scales when you treat collaboration as infrastructure, not betrayal of purity. The card does not promise instant arrival; it confirms direction. Stand on the height and read the water honestly—are those your ships, or distractions dressed as opportunity? Three wands planted mark stable commitment; the figure's posture is watchful, not frantic. Enterprise at this stage rewards systems: contracts, buffers, community, documentation. Photons arrive in packets—email threads, payments, invitations—handle capacity before applause. Foresight without reception discipline wastes prior launches; this upright pip asks you to prepare docks while trusting the tide.",
+        `When you draw the Three of Wands upright as the Triplet of Particles, three vectors bind at center while a multicolor vortex opens beyond stable horizontal lines—structure and liberation coexisting. Enterprise already launched; results travel toward you across distance. This is not the first spark nor the pair's cartography—it is survey after commitment: you charted, you sent the fleet, now you learn to receive without shrinking the horizon.
+
+As Triplet, foresight rewarded means direction credible while landing incomplete. Expansion may be geographic, digital, relational, or creative—signal returning from audiences, collaborators, markets you reached earlier. Passion steadies into confidence that the field can meet you when you stop playing small at the dock. Visionary work belongs here: curiosity about what lies beyond the mundane layer, leadership through observation that benefits more than ego.
+
+In work, prepare capacity before success arrives—inbox, agreements, buffers; in relationships, trust maturing across distance or time; in body, stand in receiving posture—literally uncollapse shoulders; in inner life, let wonder coexist with logistics. Magic and setback both belong to exploration; structure helps—survey inner and outer landscape before the next vector commits.
+
+Quantumally, Triplet is emission en route—packets launched earlier approaching reception aperture. Measure ships sent, not only applause at shore. Strengthen alliances that share the voyage rather than freeload on foresight. Wait without self-erasure; impostor reflex that narrows allowance as arrivals approach is interference, not humility.`,
       guidance:
-        "Prepare to receive results—clear inbox, capacity, and agreements before success arrives. Strengthen one partnership that shares the voyage rather than freeloading on your foresight. Measure progress by ships launched, not only by applause at the dock.",
+        "List launches already in motion—applications, investments, honest asks. Clear dock space: calendar, agreements, celebration plan. Strengthen one voyage ally who carries labor, not only praise.",
     },
     reversed: {
       summary:
-        "Reversed triplet: playing small, lack of foresight, and unexpected delays shrink the horizon just as vessels approach.",
+        "Reversed Triplet: horizon shrinks—playing small, weak foresight, delays misread as verdict while vessels still approach.",
       detail:
-        "Reversed Three of Wands shrinks the horizon just as vessels approach (Biddy: playing small, lack of foresight, unexpected delays). The figure may still watch the sea, but interpretation turns pessimistic—delays become proof you were foolish to expand, or self-sabotage narrows what you allow yourself to receive. Photons dim through impostor reflex: playing small to avoid the responsibility of larger visibility. Lack of foresight can mean you shipped without logistics—no contracts, no buffers, no community—so legitimate delays feel like cosmic rejection. Unexpected setbacks are real; the reversal asks whether you confuse setback with verdict. Enterprise stalls when passion lacks stewardship—burning bright at launch, absent at maintenance. Reversed also flags envy of others' arriving ships while ignoring the fleet you already sent. Expansion requires nervous-system capacity; if you shrink, investigate whether the body needs rest or the story needs updating. Playing small protects against envy, criticism, and the labor of scale—but costs you arrivals meant for you. Delays may expose weak foresight: no follow-up, no backup vendor, no legal clarity. Photons cannot dock at a port you refuse to build.",
+        `When the Three of Wands reverses as the Triplet of Particles, the vortex dims at the horizon—setbacks become identity stories, logistics trip the stride, or you shrink vision just as opportunity widens. Reversed is not absence of progress; it is mis-stewardship—burning bright at launch, absent at maintenance, refusing scale because visibility feels expensive.
+
+Playing small protects an identity that has not updated to include the next magnitude. Lack of foresight may mean you shipped without contracts, community, or rest—legitimate delays then trigger shame spirals. Envy of others' arrivals while ignoring your own fleet is spiritual accounting error. Unexpected delays need direct address: follow-up, fix, scope adjustment—not fatalism dressed as wisdom.
+
+In work, downplaying wins or sabotaging follow-through; in love, distancing when intimacy deepens; in body, sprint-launch without recovery, then calling fatigue proof to quit. Quantumally, reversed Triplet scatters reception—aperture closed while signal still travels. Name one place you play small; address one concrete delay; add one buffer that makes the next arrival survivable.`,
       guidance:
-        "Identify where you play small to stay safe and test one expansion you have been deferring. Address a concrete delay—follow up, fix a bottleneck—instead of treating timing as fate. Revisit foresight: what single preparation would make the next arrival survivable?",
+        "Write one expansion you deferred or minimized this month. Fix one logistical bottleneck today—not drama, data. Add one buffer—sleep, savings, helper hour—for the next wave.",
     },
     transverse: {
       summary:
-        "Transverse Triplet: expansion approaching across open water—progress real, foresight active, ships visible but not yet docked.",
+        "Transverse Triplet: expansion approaching—progress sensed, foresight active, landing incomplete, patience must stay intelligent.",
       detail:
-        "Three of Wands upright: watching ships, foresight, expansion (Biddy). Transverse crossing is enterprise in transit—progress real but not yet received. Wait without shrinking. The figure's back turned to us marks a liminal stance: past launch, future arrival, present vigilance. Photons are en route—signals traveling, investments maturing, creative work circulating beyond your direct sight. This crossing can feel like anxiety dressed as patience: you check tracking obsessively or pretend you do not care. Transverse honors the middle—unsexy, uncelebrated—where most enterprise actually lives. Foresight crosses sideways as intuition plus preparation: you sense momentum and still must clear the dock. Overseas opportunities may appear as remote collaboration, import of ideas, or literal travel pending visas. Expansion at this crossing is not hype; it is infrastructure meeting timing. Allies matter now—people who can receive while you watch the horizon. The triplet structure suggests minimum stable foundation; do not uproot wands to chase every sail. Creative enterprise scales through reception discipline: onboarding, customer support, editorial feedback, community moderation. Let arrivals land without immediately launching anew.",
+        `When the Three of Wands crosses transversely as the Triplet of Particles, you occupy the cliff between launch and dock—fleet visible on the horizon, hands not yet holding cargo. Transverse is liminal widening, not reversed shrink: direction credible, integration pending. You may feel the next chapter in body before inbox confirms—excited, vigilant, unable to pretend small.
+
+Enterprise in transit is most of enterprise—uncelebrated middle where foresight meets reception discipline. Signals travel: replies pending, investments maturing, creative work circulating beyond direct sight. Anxiety may dress as patience—obsessive checking or performed indifference both leak heat.
+
+In work, deals pending, audiences growing slowly; in relationships, reunion or commitment approaching across distance; in inner life, pattern seen early while others call you impatient. Quantumally, transverse Triplet holds superposition of arrival—multiple outcomes plausible until measurement lands. Log signals en route; prepare capacity; date horizon check-in so waiting stays intelligent, not performatively cynical.`,
       guidance:
-        "Prepare capacity before results arrive—inbox, calendar, agreements. Strengthen one partnership that shares the voyage. Measure progress by ships you launched, not only applause at shore.",
+        "Log evidence of progress—replies, metrics, commitments—not wishes alone. Clear one dock space by week's end. Calendar reassessment two weeks out; strengthen one voyage ally until then.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: playing small and unexpected delays cross expansion—self-sabotage or weak logistics trip the stride as ships near.",
+        "Conjugate Triplet: smallness crosses expansion—delays inflated into verdict, foresight undermined as ships near the harbor.",
       detail:
-        "Reversed Three: playing small, lack of foresight, unexpected delays (Biddy). The conjugate crossing shrinks vision just as opportunity widens—Photons dim through impostor reflex or preventable bottlenecks. You may interpret delay as destiny when it is follow-up neglected, paperwork stalled, or fear of visibility masquerading as humility. Playing small protects against responsibility of scale but ensures your ships arrive at a port you refuse to claim. Lack of foresight shows up as no buffer—financial, emotional, or operational—so the first wave overwhelms and you retreat. Unexpected delays are real; conjugate asks whether you also delay yourself—muted announcements, unpublished work, underpriced offers. Envy of others' fleets can cross your upright voyages and poison reception. Enterprise needs nervous-system capacity; if body says no, adjust pace without calling it failure. Conjugate is corrective friction: name one delay you can address today, one expansion you have been deferring from fear, one system that would make the next arrival survivable. Photons can only integrate if you stay visible long enough to receive.",
+        `When the Three of Wands crosses conjugately as the Triplet of Particles, playing small and preventable delays cross upright expansion—vision correct, reception refused. You may slow the dock then cite slowness as fate. Lack of foresight may be real—missing contract, buffer, ally—and fear may inflate each delay into proof you should shrink.
+
+Conjugate is active interference at the waterline: launches undermined by follow-through fear, closeness resisted at threshold, sprint-then-stop cycles that produce stress injuries and call it destiny. Expansion threatens identity; the crossing names the part that prefers the cliff to the harbor because harbor requires accountability.
+
+In work, celebrating privately while critiquing publicly; in love, mixed reception—want collaboration, flinch when it intensifies. Quantumally, conjugate Triplet is destructive interference between signal and aperture—you receive less than emitted because shame closes the lens. Separate delay from verdict; take one expansion step; plug one foresight gap before the next wave.`,
       guidance:
-        "Identify where you play small and test one deferred expansion. Address one concrete delay directly—call, email, fix—instead of blaming fate. Add one foresight buffer before the next wave lands.",
+        "Write delay as fact in one line, story about it in another—unmerge shame from logistics. Take one expansion step you have been avoiding. Add missing contract, buffer, or ally hour.",
     },
   },
   "wands-04": {
     upright: {
       summary:
-        "Photon Quartet: garlanded threshold—celebration, joy, harmony, relaxation, and homecoming after enterprise finds shared ground.",
+        "Upright Quartet: threshold harmonics—milestone integration, celebration after effort, belonging that makes the next push sustainable.",
       detail:
-        "The Four of Wands upright is Rider–Waite's garlanded archway—flower canopy, celebrants with raised wands, a castle home in the background (Biddy: celebration, joy, harmony, relaxation, homecoming). Photons settle into shared wavelength: enterprise pauses for integration, not abandonment. This is the milestone after effort—launch party, signed lease, reunion, creative season completed, team rhythm found. Ambition needs these thresholds; without them, fire becomes chronic stress. Harmony here is structural—a tent of agreements, rituals, and belonging that makes the next push sustainable. Homecoming can be literal or symbolic: returning to body, community, or values after a campaign. Passion expressed as joy is still passion; relaxation is not laziness when it cements loyalty and memory. Creativity flourishes when the studio, marriage, or friend group has a door you can walk through proudly. The card invites visible gratitude—let people see the arch you built together. Four wands anchor the canopy—stability beneath festivity. Enterprise that never celebrates burns out collaborators and forgets why the work mattered. Photons in quartet phase interfere constructively: individuals retain spark while moving in rhythm. Honor the pause long enough for nervous systems to register safety before the next quest.",
+        `When you draw the Four of Wands upright as the Quartet of Particles, four vectors cross in paired symmetry—energies meeting, stabilizing, transforming around a receptive center while radiant planning rings the field. Enterprise pauses for integration, not abandonment. This is milestone after effort: launch acknowledged, lease signed, reunion held, creative season completed, team rhythm found.
+
+As Quartet, harmony is structural—rituals, agreements, belonging that cement memory before the next campaign. Homecoming can be literal or symbolic: returning to body, community, or values after intensity. Passion expressed as joy is still passion; relaxation is not laziness when it repairs loyalty and nervous system. The tranquil core knows achievements belong to a longer sacred journey—celebrate how far you came without denying how far remains.
+
+In work, mark wins before sprinting again; in relationships, let belonging be visible—invite people under the arch you built; in body, shoulders drop, eat at table, sleep in bed you made space for; in inner life, gratitude without performance. Interference shows when you skip the rite and wonder why resentment leaks into the next push.
+
+Quantumally, Quartet Photons interfere constructively—individual pulses coherent in shared field. Honor pause long enough for safety to register before next quest. Joy is infrastructure, not dessert skipped for ambition.`,
       guidance:
-        "Mark the milestone with a simple rite—meal, announcement, or afternoon off—before rushing to the next quest. Invite the people who carried the wands with you; celebration heals hidden resentments. Rest with intention so the harmony becomes habit, not a one-night flare.",
+        "Name the milestone honestly—what completed or stabilized. Hold one simple rite this week with people who carried labor. Rest with return date scheduled so harmony becomes habit.",
     },
     reversed: {
       summary:
-        "Reversed quartet: personal celebration and inner harmony possible while conflict with others or transition unsettles the public arch.",
+        "Reversed Quartet: arch flickers—private joy possible while public harmony cracks, conflict or transition unsettles the threshold.",
       detail:
-        "Reversed Four of Wands complicates the party at the gate (Biddy: personal celebration, inner harmony, conflict with others, transition). Rider–Waite's arch may still stand, but social friction, exclusion, or premature transition unsettles the scene. Photons flicker—joy available privately while public harmony cracks. Conflict with others can mean disputes about who belongs, who gets credit, or whether the home you built fits who you are becoming. Inner harmony is possible even when the guest list is wrong; reversed honors solo celebration when community performance would be dishonest. Transition warns against clinging to an old threshold because the garlands were pretty—some homecomings are temporary waystations. Enterprise suffers when teams celebrate symbols while avoiding the hard conversation about workload or values. Reversed asks whether you are forcing festivity to mask misalignment, or refusing festivity out of perfectionism. Personal celebration is medicine—not selfishness—when public space is unsafe or misrepresentative. Transition may require grieving an old home even as you decorate a new one. Photons need honest containers; fake harmony leaks heat as resentment.",
+        `When the Four of Wands reverses as the Quartet of Particles, festivity at the gate complicates—social friction, exclusion, or premature transition unsettles belonging. Photons flicker: joy available privately while public harmony cracks. Disputes about credit, inclusion, or whether this home fits who you are becoming are common.
+
+Inner harmony may exist without public peace—valid, but do not lie about which is true. Transition warns against clinging to an old threshold because garlands were pretty; some homecomings are waystations. Forced festivity masks misalignment; refused festivity from perfectionism wastes legitimate integration.
+
+In work, team celebrates while you feel excluded or over-credited; in love, moving in while values clash; in body, tension in crowds, relief alone—data, not defect. Quantumally, reversed Quartet is decoherence in shared field—celebration theater while workload truth avoided. Resolve one tension, name what transitions, or choose private joy honestly.`,
       guidance:
-        "Resolve one interpersonal tension before the public rite, or choose private joy if the party would be theater. Name what is transitioning—role, address, relationship—and mark it honestly. If conflict persists, negotiate boundaries rather than torching the arch.",
+        "Map who is in friction and what milestone is actually marked. Resolve one tension or postpone public rite until repair lands. Choose private joy if the square is unsafe—crossing still counts.",
     },
     transverse: {
       summary:
-        "Transverse Quartet: homecoming near—the arch forming, celebration approaching, community gathering but threshold not yet fully crossed.",
+        "Transverse Quartet: arch forming—celebration approaching, community gathering, threshold not yet fully crossed.",
       detail:
-        "Four of Wands upright: threshold, harmony, homecoming (Biddy). Transverse is the archway before the party—joy approaching, community not fully gathered. A crossing of transition into belonging. Rider–Waite's garlands hang, wands raised, castle visible—structure and festivity co-present, integration incomplete. You may stand in the doorway between old campaign and new stability, tired enough to crave rest yet superstitious about naming success too soon. Transverse Photons warm the space without requiring performance—preparation, invitations, small acknowledgments. Harmony here is emergent: rhythms forming, not yet hardened into tradition. Homecoming crosses as body memory—returning to bed, table, ritual—after months of launch intensity. Enterprise benefits from marking liminal wins: beta shipped, lease signed pending, relationship repaired but fragile. Celebration deferred entirely becomes cynicism; celebration forced too early becomes hollow. The crossing asks who belongs under the arch and whether you will let them in before resentment calcifies. Relaxation is strategic—nervous systems learn safety through repeated gentle thresholds. Let joy be modest and real.",
+        `When the Four of Wands crosses transversely as the Quartet of Particles, you stand in the doorway between old campaign and new stability—garlands hang, integration incomplete. Joy approaches; community not fully gathered. Transverse Photons warm the space without requiring performance—preparation, invitations, small acknowledgments.
+
+Harmony is emergent: rhythms forming, not yet tradition. Homecoming crosses as body memory after launch intensity. Enterprise benefits from marking liminal wins—beta shipped, lease signed pending, relationship repaired but fragile. Celebration deferred entirely becomes cynicism; forced too early becomes hollow.
+
+In work, win real but unannounced; in relationships, belonging felt before ritual scheduled; in inner life, integration lived, ceremony pending. Quantumally, transverse Quartet is threshold oscillation—almost belonging. Let joy be modest and real; negotiate who belongs before resentment calcifies.`,
       guidance:
-        "Prepare the space and people for belonging—simple rite, honest invitation. Celebrate modestly before the next quest. If the arch is not ready publicly, honor private joy without shame.",
+        "Prepare space and people for belonging—simple rite, honest invitation. Celebrate modestly before next quest. If arch not ready publicly, honor private joy without shame.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: conflict with others and transition cross celebration—social friction at the gate disputes who belongs under the arch.",
+        "Conjugate Quartet: conflict crosses celebration—social friction at the gate disputes who belongs under the arch.",
       detail:
-        "Reversed Four: inner harmony possible, but conflict with others, transition (Biddy). The conjugate crossing is social friction at the gate—disputes about credit, inclusion, or whether this home fits who you are becoming. Photons flicker between private peace and public strain. Transition may accelerate—moving, role change, relationship redefinition—while others cling to old festivity scripts. Conflict with others can be overt argument or quiet exclusion; both drain the quartet's harmony. Inner celebration remains available and may be the honest choice when public party would be theater. Enterprise teams at conjugate need one hard conversation before the toast— workload, values, money, boundaries. Forcing harmony wastes heat; negotiating truth preserves the arch. Some homecomings are temporary waystations; clinging to garlands past their season breeds resentment. Photons conjugate here ask: can you mark progress without lying about friction? Can you transition with ritual instead of ghosting? Private joy is not failure—it may be integrity.",
+        `When the Four of Wands crosses conjugately as the Quartet of Particles, conflict and transition cross festivity—disputes about credit, inclusion, or fit while garlands still hang. Photons flicker between private peace and public strain. Transition may accelerate—role, address, relationship redefining—while others cling to old celebration scripts.
+
+Forcing harmony wastes heat; negotiating truth preserves the arch. Some homecomings are temporary; clinging past season breeds resentment. Enterprise teams need one hard conversation before toast—workload, values, money, boundaries. Conjugate is active interference at the waterline, not absence of joy.
+
+In work, launch party before hard talk; in love, ritual erasing someone's name; in the body, tension in crowds, relief alone—data, not defect; in inner life, performing belonging while resenting role. Belonging negotiated honestly outlasts garlands hung over unspoken fracture.
+
+Quantumally, conjugate Quartet is destructive interference at threshold—can you mark progress without lying about friction? Private joy is integrity when public party would be theater. Resolve one tension, name what transitions, or choose modest celebration that matches the field's actual coherence.`,
       guidance:
-        "Resolve one interpersonal tension before the rite, or choose private celebration. Name what is transitioning and mark it honestly. Negotiate boundaries instead of torching the arch or faking harmony.",
+        "Resolve one interpersonal tension before rite, or choose private celebration. Name what is transitioning and mark it honestly. Negotiate boundaries instead of torching arch or faking harmony.",
     },
   },
   "wands-05": {
     upright: {
       summary:
-        "Photon Quintet: open field of crossed staves—conflict, competition, tension, and diversity without crowned victor yet.",
+        "Upright Quintet: scattered interference—conflict, competition, and diverse voices in open field before synthesis clarifies.",
       detail:
-        "Rider–Waite's Five of Wands depicts five youths crossing staves in open ground—no crown at stake, only energetic disagreement (Biddy: conflict, disagreements, competition, tension, diversity). Photons interfere: multiple ambitions occupy the same field, and the pattern is messy before it clarifies. Enterprise meets market reality—rivals, critics, collaborators with incompatible visions, or internal teams pulling in different directions. Competition can sharpen craft when stakes are named and cruelty is refused. Diversity of voice is a feature here; the card is not unanimity but friction that prevents groupthink. Passion expressed as sparring needs rules—time boxes, shared goals, consent to debate. Creativity thrives when ideas collide, provided you distinguish sparring from sabotage. The upright lesson is not to flee tension but to metabolize it: who is fighting for what, and is the fight worth the heat loss? Conflict without clarity burns fuel; conflict with shared purpose can forge better structures. The open sky says no hidden puppeteer—this is visible contest. Photons scatter into interference patterns that, if read, reveal which frequencies strengthen the work. Enterprise leaders must name shared stakes or watch rivalry become war.",
+        `When you draw the Five of Wands upright as the Quintet of Particles, five vectors occupy separate forcefields—energy high, unified vision absent, momentum slowed by cross-purposes. This is visible contest, not hidden puppeteer: rivals, critics, incompatible collaborators, or internal teams pulling different directions. Monochrome starkness marks point where ease curdled into hassle—derailments part of the package.
+
+As Quintet, competition can sharpen craft when stakes are named and cruelty refused. Diversity of voice prevents groupthink; card is not unanimity but friction metabolized. Passion as sparring needs rules—time boxes, shared goals, consent to debate. Ask who fights for what and whether heat loss is worth the fight.
+
+In work, brainstorm before strategy, market noise, scope fights; in relationships, petty irritations magnified—micromanage reflex; in body, irritability when energy lacks forum; in inner life, competing identities wielding vectors silently. Enterprise leaders must name shared stakes or rivalry becomes war.
+
+Quantumally, Quintet is destructive interference pattern—readable if observed. Reclaim vision, ride rough patch with patience, or redirect when energy drains without meaning. Reaction can make bumps worse; centered response re-harnesses vitality.`,
       guidance:
-        "State shared stakes aloud so rivalry does not become war. Engage competition with sportsmanship—clear roles, debrief after heated meetings. If you are one of the five, ask whether you want to win or to improve the work.",
+        "State shared stakes aloud so rivalry does not become war. Facilitate debate with clear roles and debrief. Ask whether you want to win or improve the work.",
     },
     reversed: {
       summary:
-        "Reversed quintet: inner conflict, conflict avoidance, or tension release—the battle moves inward or underground without resolution.",
+        "Reversed Quintet: battle inward or underground—inner conflict, avoidance, tension released without resolution or honest forum.",
       detail:
-        "Reversed Five of Wands moves the battle inward or underground (Biddy: inner conflict, conflict avoidance, tension release). The staves may lower without resolution—peace that is politeness, or explosion after long suppression. Photons scatter as anxiety when you debate everyone in your head but speak nowhere. Avoidance keeps enterprise frozen: the pitch unsent, the boundary unspoken, the creative difference un aired until it becomes resentment. Inner conflict can mean competing identities—artist versus provider, leader versus friend—each wielding a wand against the other. Tension release is possible upright-reversed: sometimes the card blesses ending a performative fight that never served growth. Reversed asks you to locate the real duel. Are you avoiding external conflict because you fear visibility, or inflaming internal conflict because it feels safer than negotiation? Release is healthy when it ends hollow competition; it is harmful when it abandons necessary truth. Passive aggression, side channels, and sarcasm are staves lowered dishonestly. Photons need a forum—meeting, letter, mediated conversation—or they heat tissue instead of air.",
+        `When the Five of Wands reverses as the Quintet of Particles, staves lower without resolution—peace as politeness, or explosion after suppression. Photons scatter as anxiety when you debate everyone in your head but speak nowhere. Avoidance freezes enterprise: pitch unsent, boundary unspoken, creative difference buried until resentment spikes.
+
+Inner conflict pits identities—artist versus provider, leader versus friend—each wielding force against the other. Tension release can bless ending hollow fights; harmful when it abandons necessary truth. Passive aggression and side channels are staves lowered dishonestly. Reversed is not peace—it is energy trapped in tissue instead of air.
+
+In work, meetings without decisions; in love, sarcasm instead of request; in body, tension with no outlet; in inner life, rehearsed arguments without send. The forum you fear may be the only place synthesis becomes possible.
+
+Quantumally, reversed Quintet leaks emission into noise—destructive interference internalized until the field cannot read shared stakes. Locate real duel—external negotiation feared or internal story untested? Forum required: meeting, letter, mediated conversation with ground rules.`,
       guidance:
-        "If you have been avoiding a needed debate, schedule it with ground rules. If the war is internal, journal both sides, then choose one aligned action. Release tension through movement or honest conversation—not through passive-aggressive side channels.",
+        "Schedule needed debate with ground rules, or journal both inner sides then choose one aligned action. Release tension through honest speech or movement—not side channels.",
     },
     transverse: {
       summary:
-        "Transverse Quintet: competition in the field—friction high, diverse voices clashing, outcome contested, agreement not yet forged.",
+        "Transverse Quintet: friction in the field—voices clashing, outcome contested, agreement not yet forged.",
       detail:
-        "Five of Wands upright: open contest, diverse voices clashing (Biddy). Transverse crossing is friction without victor—energy high, agreement absent. Photons scatter in interference patterns across the open ground. Rider–Waite's youths are not armored knights; this is scrimmage, brainstorm, market noise, or team debate before strategy crystallizes. Transverse honors productive mess—ideas colliding, egos flashing, values surfacing—if cruelty stays bounded. Enterprise at this crossing may feel like herding fire: everyone passionate, nobody aligned. Competition can sharpen craft when stakes are named: are we fighting for budget, credit, aesthetic, speed, ethics? Diversity of voice prevents groupthink but demands facilitation—time boxes, turn-taking, written summaries. Creative studios, startups, and families all know this field. The crossing is liminal: leave too early and you miss the synthesis; stay too long and heat becomes injury. Tension here is information about priorities, not proof of failure. Photons can constructively interfere when shared purpose exists beneath sparring. Your job is to name that purpose or exit the field.",
+        `When the Five of Wands crosses transversely as the Quintet of Particles, friction without victor—energy high, agreement absent. Photons scatter across open ground: scrimmage, brainstorm, market noise, team debate before strategy crystallizes. Transverse honors productive mess if cruelty stays bounded.
+
+Enterprise may feel like herding fire—everyone passionate, nobody aligned. Competition sharpens when stakes named: budget, credit, aesthetic, speed, ethics. Diversity prevents groupthink but demands facilitation—turn-taking, written summaries, time boxes. Liminal interference is not failure; premature exit misses synthesis.
+
+In work, herding cats before launch; in relationships, bickering before repair; in the body, irritability when energy lacks forum; in inner life, ideas colliding without synthesis. Heat becomes injury when shared purpose stays unnamed.
+
+Quantumally, transverse Quintet is superposition of outcomes—multiple positions plausible until measurement through honest debate. Name shared purpose beneath sparring or exit field. Leave too early miss synthesis; stay too long without facilitation and Photons burn tissue instead of forging agreement.`,
       guidance:
-        "Compete without cruelty; name shared stakes so rivalry does not become war. Facilitate debate with clear roles and debrief. Ask whether you want to win or to improve the work.",
+        "Name shared stakes; facilitate with debrief after heat. Compete without cruelty. Decide whether you want to win or improve the work.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: inner conflict and avoidance cross the open fight—battle moves inward or stays unspoken until it explodes.",
+        "Conjugate Quintet: avoidance crosses open fight—battle moves inward, stays unspoken until it explodes.",
       detail:
-        "Reversed Five: inner conflict, avoidance, or tension release (Biddy). The conjugate crossing moves battle inward—you dodge necessary debate, or fight yourself while blaming others. Photons become anxiety loops: rehearsed arguments without send button, boundaries unspoken until resentment spikes. Avoidance keeps enterprise frozen—pitch unsent, feedback ungiven, creative difference buried. Inner conflict may pit identities against each other—artist vs provider, leader vs friend—each wielding a wand silently. Tension release can be healthy when it ends hollow performative fights; harmful when it abandons truth that would save the project. Passive aggression, side channels, and sarcasm are staves lowered dishonestly. Conjugate asks you to locate the real duel: external negotiation feared, or internal story untested? Schedule the hard conversation with ground rules, or journal both inner sides then choose one aligned action. Photons need a forum or they burn tissue instead of illuminating work.",
+        `When the Five of Wands crosses conjugately as the Quintet of Particles, inner conflict and avoidance cross visible contest—you dodge necessary debate or fight yourself while blaming others. Photons become anxiety loops: rehearsed arguments without send, boundaries unspoken until resentment spikes.
+
+Avoidance keeps pitch unsent, feedback ungiven, difference buried. Inner war may pit identities silently. Tension release healthy when ending performative fights; harmful when abandoning truth that would save project. Conjugate is forum blocked—energy burns tissue while the room stays polite.
+
+In work, smile in room, rage in notes; in love, tests without cause; in the body, clenched jaw, shallow breath; in inner life, refusing intuition from shame. Passive channels are conjugate interference—side conversations that never touch the real stake.
+
+Quantumally, conjugate Quintet traps emission in closed loop—destructive interference between what you know and what you say aloud. Schedule hard conversation with ground rules; journal both sides then act. Cruelty refused; honesty required. Synthesis cannot arrive while battle stays underground.`,
       guidance:
-        "If avoiding, schedule the hard conversation with ground rules. If inner war, journal both sides then act. Release tension through honest speech or movement—not side channels.",
+        "Schedule hard conversation with ground rules if avoiding. Journal inner sides then one aligned action. No passive-aggressive side channels.",
     },
   },
   "wands-06": {
     upright: {
       summary:
-        "Photon Sextet: laurel procession—success, public recognition, progress, and self-confidence riding forward with allies beside.",
+        "Upright Sextet: ascent after friction—success, recognition, confidence rising with allies beside the procession.",
       detail:
-        "The Six of Wands upright shows a rider on a white horse, laurel wreath raised, companions with wands walking beside—public victory in motion (Biddy: success, public recognition, progress, self-confidence). Photons are visible: enterprise acknowledged, creative work landing, leadership recognized. This is the parade after competence—not luck alone, though grace plays a part. Self-confidence here is earned through prior trials; the crowd sees what you endured to arrive. Ambition fulfilled in public invites new responsibility: how you carry acclaim shapes the next campaign. Passion radiates as encouragement when you thank allies instead of hoarding spotlight. Rider–Waite emphasizes procession, not isolation—success is relational. Progress continues; the wreath is momentary. Use recognition to consolidate—secure resources, document lessons, mentor someone behind you. The card warns gently against confusing applause with arrival; still, receive it. Visibility is fuel for Photons when integrated, poison when it becomes identity's only food. The white horse suggests clarity of purpose; companions remind you the win was networked. Enterprise at this pip scales through gracious leadership—credit shared, standards maintained, next goal named without dimming today's joy.",
+        `When you draw the Six of Wands upright as the Sextet of Particles, you rise above the chaotic heap below—triumph after hassle, intuition and calm in motion while prior discord recedes into shadow. Public victory in progress: enterprise acknowledged, creative work landing, leadership recognized. Self-confidence earned through prior trials; crowd sees what you endured to arrive.
+
+As Sextet, acclaim is relational—success networked, not isolated. Progress continues; wreath is momentary. Use recognition to consolidate—resources, lessons documented, mentor someone behind you. Receive praise without outsourcing self-worth; visibility fuels Photons when integrated, poisons when it becomes identity's only food.
+
+In work, metrics, invitations, mentions ticking up; in relationships, being chosen, seen, celebrated together; in body, spine lengthens, breath eases; in inner life, internal triumph matters even when external quiet—both count. Interference is hoarding spotlight or shrinking from it equally.
+
+Quantumally, Sextet is constructive interference after quintet scatter—phase realigned, amplitude visible. Plan next chapter while energy high; thank allies by name; maintain standards while joy is allowed.`,
       guidance:
-        "Accept praise without outsourcing self-worth—note three private reasons you respect your own work. Thank allies by name; shared victory lasts longer than solo myth. Plan the next chapter while energy is high, not after the crowd disperses.",
+        "Note three private reasons you respect your own work. Thank allies by name. Plan next steps while energy is high—not after crowd disperses.",
     },
     reversed: {
       summary:
-        "Reversed sextet: private achievement, personal success definitions, fall from grace, or egotism—victory unseen or distorted by pride.",
+        "Reversed Sextet: victory unseen or distorted—private achievement, egotism, fall from grace, fear of visibility stealing the win.",
       detail:
-        "Reversed Six of Wands inverts the parade (Biddy: private achievement, personal definition of success, fall from grace, egotism). Victory may be real but unseen—success without platform, or public story diverging from private truth. Photons dim through fear of visibility: you win, then shrink from the wreath. Egotism is the shadow—performing triumph, exaggerating role, or punishing others when recognition is not total. Fall from grace warns that pedestals are narrow; one misstep from hubris or overpromising can undo goodwill. Personal definition of success is medicine here: perhaps the crowd's metric is wrong for your enterprise. Reversed honors quiet mastery—the book finished without bestseller status, the team saved without headline. It also flags hollow wins—titles without substance, viral moments without craft. Ask whether you chase applause to avoid deeper creative risk. Confidence rebuilt privately may be more durable than confidence rented from audience. Fear of visibility and hunger for visibility can coexist—both distort reception. Photons need integration: let the win land in body and ledger, not only in fantasy or dread.",
+        `When the Six of Wands reverses as the Sextet of Particles, parade inverts—success real but unseen, or public story diverging from private truth. Photons dim through fear of visibility: you win then shrink from wreath. Egotism exaggerates role, punishes allies, performs triumph without substance.
+
+Fall from grace warns pedestals are narrow—hubris or overpromising undo goodwill. Personal definition of success is medicine when crowd metrics misalign—honor quiet mastery. Hollow wins—titles without craft, viral without depth—also live here. Reversed is reception failure, not absence of achievement.
+
+In work, imposter after promotion; in love, deflecting praise; in the body, fatigue masking as attitude; in inner life, chasing recognition to avoid deeper risk. Integration matters as much as emission—praise that cannot land becomes identity drug or shrinks reception entirely.
+
+Quantumally, reversed Sextet scatters constructive interference after the win—phase misaligned between private truth and public amplitude. Define success in writing; scale visibility to tolerance; repair if ego harmed others. Victory without integration is incomplete measurement.`,
       guidance:
-        "Define success on your terms in writing; let public metrics be one input, not the throne. If fame stings, scale visibility to tolerance rather than quitting the work. Check ego: celebrate without humiliating losers, and repair if you already did.",
+        "Define success on your terms in writing. Scale visibility to tolerance rather than quitting work. Celebrate without humiliating; repair if you already did.",
     },
     transverse: {
       summary:
-        "Transverse Sextet: acclaim approaching—progress visible, confidence building, public chapter forming before laurel is fully claimed.",
+        "Transverse Sextet: acclaim approaching—progress visible, confidence building, public chapter forming before laurel fully claimed.",
       detail:
-        "Six of Wands upright: parade, recognition (Biddy). Transverse is acclaim approaching—progress seen, confidence building, public chapter not sealed. Crossing of visibility before integration. Rider–Waite's procession moves—horse mid-stride, wreath raised—not yet arrived at city gates. You may feel success adjacent: mentions, invitations, metrics ticking, impostor reflex flaring. Transverse Photons are bright and exposing; nervous systems need time to adjust. Enterprise here rewards gracious preparation for visibility—media training, financial hygiene, boundary scripts—without preemptively shrinking. Allies walk beside you in the image; transverse asks you to acknowledge them before the crowd does. Self-confidence at this crossing is emergent—tested in small receptions, not only imagined catastrophes. Progress continues; do not confuse approaching recognition with finished identity. Creative work may outpace your emotional capacity to be seen; scale exposure deliberately. The crossing blesses receiving praise as data—people resonate—while maintaining private reasons you respect your craft.",
+        `When the Six of Wands crosses transversely as the Sextet of Particles, acclaim approaches—progress seen, confidence building, public chapter not sealed. Procession mid-stride: mentions, invitations, metrics ticking, impostor reflex flaring. Transverse Photons bright and exposing; nervous system needs adjustment time.
+
+Prepare for visibility—boundaries, logistics, scripts—without preemptively shrinking. Allies beside you in the pattern; acknowledge them before crowd does. Self-confidence emergent—tested in small receptions, not only imagined catastrophes. Liminal triumph is lawful—not reversed shrink, not upright laurel.
+
+In work, traction not triumph; in relationships, warmth returning; in the body, spine lengthening while breath still catches; in inner life, hope without full confidence. Do not confuse approaching recognition with finished identity.
+
+Quantumally, transverse Sextet is ramping amplitude—constructive interference building before full reception. Receive praise as data while maintaining private reasons you respect craft. Plan next chapter while energy high; thank allies by name; maintain standards while joy is allowed.`,
       guidance:
-        "Receive praise without outsourcing self-worth; thank allies by name. Prepare calmly for visibility—boundaries, logistics—without shrinking. Plan next steps while energy is high.",
+        "Receive praise without outsourcing self-worth; thank allies. Prepare calmly for visibility. Plan next steps while energy is high.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: egotism or fall from grace cross victory—pride isolates, or fear of visibility steals the win at the parade.",
+        "Conjugate Sextet: pride or fear crosses victory—egotism isolates, or visibility refused as opportunities arrive.",
       detail:
-        "Reversed Six: private success, personal definition, fall from grace, egotism (Biddy). The conjugate crossing is pride—triumph that isolates, or fear of visibility that steals the win. Photons warp around ego: exaggerating role, punishing allies, performing humility while craving throne. Fall from grace warns pedestals are narrow—one hubristic decree, one overpromise, one cruelty masked as standards. Personal definition of success is medicine when crowd metrics misalign with your values—honor quiet mastery. Egotism can also hide as perpetual underdog story, refusing to integrate wins lest they obligate you. Fear of visibility shrinks reception just as opportunities arrive. Conjugate asks you to define success in writing, scale exposure to tolerance, and repair any harm done in prior triumphs. Photons integrated through gratitude and accountability last longer than applause rented for identity. Check whether you chase recognition to avoid deeper creative risk.",
+        `When the Six of Wands crosses conjugately as the Sextet of Particles, egotism or fear of visibility cross triumph—exaggerating role, punishing allies, or shrinking reception as opportunities arrive. Photons warp around ego: performing humility while craving throne, or underdog story refusing integration of wins.
+
+Fall from grace follows hubristic decree or overpromise. Personal success definition heals when crowd metrics wrong. Fear shrinks reception at parade moment—sabotaging after promotion, deflecting love. Conjugate distorts feedback loop—praise cannot land or becomes identity drug.
+
+In work, credit fights; in love, visibility panic; in the body, adrenaline without integration; in inner life, chasing recognition to avoid deeper risk. Triumph interfered with at the waterline—success present, reception refused or inflated beyond truth.
+
+Quantumally, conjugate Sextet is destructive interference between emission and aperture—amplitude arrives while shame or ego closes the lens. Define success in writing; scale exposure to tolerance; repair harm from prior triumphs. Victory requires honest reception, not only honest effort.`,
       guidance:
-        "Define success on your terms; let public metrics be one input. Scale visibility to tolerance. Celebrate without humiliating others; repair if ego already did damage.",
+        "Define success on your terms; let public metrics be one input. Scale visibility to tolerance. Repair if ego already damaged allies.",
     },
   },
   "wands-07": {
     upright: {
       summary:
-        "Photon Septet: high ground defense—challenge, competition, protection, and perseverance holding the hill worth keeping.",
+        "Upright Septet: high-ground defense—challenge, competition, perseverance holding strategic position worth keeping.",
       detail:
-        "Rider–Waite's Seven of Wands shows a figure on higher ground, warding off six rising staves—outnumbered but advantaged by position (Biddy: challenge, competition, protection, perseverance). Photons cohere under pressure: enterprise defended, creative vision contested, boundaries tested. This is not the open skirmish of the Five; it is holding a strategic hill you earned. Perseverance matters because quitting now would surrender disproportionate value—reputation, market niche, relationship standard, or artistic integrity. Competition may come from newcomers, critics, or institutional inertia; protection is not paranoia when stakes are real. Passion expressed as conviction can inspire allies if you avoid cruelty. The card asks which battles are worth the cost—some staves should be let through if they do not threaten the core. Challenge clarifies identity: you learn what you will stand for when tired. Courage here is maintenance, not spectacle—showing up again, documenting agreements, resting between repulses. The high ground is earned, not given; defend it with ethics, not only adrenaline. Photons lase under pressure when purpose is clear. Enterprise leaders at this pip model calm defense—sleep, delegation, selective engagement.",
+        `When you draw the Seven of Wands upright as the Septet of Particles, you hold elevated ground against multiple rising vectors—outnumbered but advantaged by position. Photons cohere under pressure: enterprise defended, creative vision contested, boundaries tested. Not open skirmish of the Quintet; this is hill you earned. Perseverance matters because quitting now surrenders disproportionate value—reputation, niche, standard, integrity.
+
+Competition may come from newcomers, critics, inertia; protection is not paranoia when stakes real. Passion as conviction inspires allies if cruelty refused. Ask which battles cost core versus skirmish; some vectors should pass if they do not threaten summit. Challenge clarifies identity under fatigue.
+
+In work, scope creep, critics, institutional resistance after early wins; in relationships, defending standard without cruelty; in body, tired but posted—sleep and food are defensive tools; in inner life, knowing what you stand for when tired. Courage is maintenance—documentation, delegation, selective engagement.
+
+Quantumally, Septet lases under pressure when purpose clear. High ground earned, not given; defend with ethics, not only adrenaline. Rest between repulses; ask ally to cover flank you cannot hold alone.`,
       guidance:
-        "Pick battles aligned with your highest stake; concede skirmishes that drain without protecting the summit. Rest between pushes—sleep and food are defensive tools. Ask one ally to cover a flank you cannot hold alone.",
+        "Pick battles aligned with highest stake; concede skirmishes that drain without protecting core. Rest between pushes. Ask one ally to cover a flank.",
     },
     reversed: {
       summary:
-        "Reversed septet: exhaustion, giving up, overwhelmed—perimeter defense collapses from depletion, not necessarily wrong strategy.",
+        "Reversed Septet: perimeter collapse—exhaustion, overwhelm, giving up from depletion not necessarily wrong strategy.",
       detail:
-        "Reversed Seven of Wands signals exhaustion on the hill (Biddy: exhaustion, giving up, overwhelmed). The high ground remains, but Photons lose coherence—perseverance curdles into siege mentality or collapse. Overwhelm may mean too many fronts, too few allies, or a position that was never worth defending but became identity. Giving up can be wisdom when the hill is sunk cost; reversed asks you to distinguish strategic retreat from shameful quit. Exhaustion breeds misreading threats—every comment feels like an assault, every request like invasion. Enterprise suffers when leaders confuse stubbornness with courage. Protection turns brittle—boundaries without nuance burn bridges you will need. Reversed also flags internal surrender: you stop advocating for the work while still occupying the role. If the body says no louder each week, the battle may be with your pacing, not the market. Surrender with a plan beats heroic depletion. Photons cannot hold coherence without recovery intervals. Ask allies for cover before you abandon a worthy position from fatigue alone.",
+        `When the Seven of Wands reverses as the Septet of Particles, high ground remains but Photons lose coherence—perseverance curdles into siege mentality or collapse. Overwhelm may mean too many fronts, too few allies, or position that became identity rather than purpose. Giving up can be wisdom when hill is sunk cost; reversed demands honest audit before exit.
+
+Exhaustion misreads threats—every comment assault, every request invasion. Protection turns brittle; boundaries without nuance burn bridges needed later. Internal surrender—stopping advocacy while keeping title—wastes remaining heat. Body signals—sleep debt, irritability—are data, not character verdict.
+
+In work, burnout defense; in love, walls without doors; in body, illness from unsustainable pace; in inner life, hill fused to ego so retreat feels like death. Strategic retreat with documentation beats ghosting; heroic depletion guarantees regret.
+
+Quantumally, reversed Septet decoheres under overload—emission continues while purpose blurs. Delegate one front; sleep before abandoning position you may regret. Verify threat versus habit; distinguish sunk cost from sacred ground before surrendering the perimeter.`,
       guidance:
-        "Delegate or drop one front today; verify whether the hill still matches your values. Sleep before you abandon a position you may regret—fatigue lies. If retreat is right, exit with documentation and dignity, not ghosting.",
+        "Delegate or drop one front; verify hill still matches values. Sleep before surrendering position you may regret. If retreat is right, exit with dignity and handoff.",
     },
     transverse: {
       summary:
-        "Transverse Septet: holding the high ground—defense active, competition real, perseverance required, outcome not yet settled.",
+        "Transverse Septet: holding the line—defense active, competition real, perseverance required, outcome unsettled.",
       detail:
-        "Seven of Wands upright: challenged but standing (Biddy). Transverse crossing is perimeter defense—competition real, perseverance required, outcome not settled. You are asked to hold line without cruelty. Rider–Waite's figure is elevated but alone against many—advantage positional, cost emotional. Transverse Photons cohere under pressure yet fatigue accumulates invisibly. Enterprise at this crossing may feel like endless comment threads, scope creep, or institutional resistance after early wins. Protection is legitimate when core values, safety, or finished work are threatened; distinguish from ego defense. Perseverance here is maintenance—document agreements, rest between repulses, delegate flanks. Challenge clarifies identity when you name what hill you defend and why. Allies can cover angles you cannot; asking is strategic, not weak. The crossing warns against both premature surrender and martyrdom—verify whether the hill still matches values before doubling down. Creative integrity often lives at this septet—saying no to dilution. Courage is mundane repetition, not spectacle.",
+        `When the Seven of Wands crosses transversely as the Septet of Particles, perimeter defense without settled outcome—competition real, perseverance required, fatigue accumulating invisibly. Elevated but pressured; advantage positional, cost emotional. Enterprise feels like endless comment threads, scope creep, resistance after wins.
+
+Protection legitimate when values, safety, or finished work threatened; distinguish from ego defense. Perseverance is maintenance—rest between repulses, delegate flanks, document why hill matters. Allies can cover angles; asking is strategic, not weakness. Transverse is sustained emission under load, not reversed collapse.
+
+In work, defending vision mid-launch; in relationships, boundary tested again; in the body, tired but posted—sleep and food are defensive tools; in inner life, integrity under scrutiny. Creative integrity often lives here—say no to dilution.
+
+Quantumally, transverse Septet lases under pressure when purpose clear—verify hill still matches values before doubling down. Concede one skirmish; rest between pushes; ask one ally to cover a flank you cannot hold alone.`,
       guidance:
-        "Pick battles worth the cost; concede skirmishes that drain without protecting core. Rest between pushes; ask one ally to cover a flank. Document why this hill matters.",
+        "Name why this hill matters in three sentences. Concede one skirmish; rest between pushes. Ask one ally to cover a flank.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: exhaustion and overwhelm cross perseverance—depletion threatens to surrender a hill worth keeping.",
+        "Conjugate Septet: depletion crosses perseverance—exhaustion threatens to surrender a hill worth keeping.",
       detail:
-        "Reversed Seven: exhaustion, giving up, overwhelmed (Biddy). The conjugate crossing is depletion—you may abandon a worthy hill from fatigue, not strategy. Photons lose coherence under sustained overload; every comment reads as assault, every request as theft. Too many fronts, too few allies, or a position that became identity rather than purpose amplifies overwhelm. Giving up can be wisdom when the hill is sunk cost; conjugate demands honest audit before exit. Exhaustion breeds paranoia and brittle boundaries that burn needed bridges. Internal surrender—stopping advocacy while keeping title— wastes remaining heat. Body signals—sleep debt, irritability, illness—are data, not weakness. Strategic retreat with documentation beats ghosting; heroic depletion serves no realm. Delegate one front, sleep before big decisions, verify threat versus habit. Photons recover when recovery is scheduled, not stolen.",
+        `When the Seven of Wands crosses conjugately as the Septet of Particles, depletion crosses defense—you may abandon worthy hill from fatigue, not strategy. Photons lose coherence under overload; paranoia and brittle boundaries burn needed bridges. Too many fronts, too few allies, or position fused to identity amplify overwhelm.
+
+Internal surrender while keeping title wastes heat. Body signals—sleep debt, irritability—are data. Strategic retreat with handoff beats heroic depletion; conjugate demands audit before exit. Quitting from burnout when hill still matches values is conjugate tragedy.
+
+In work, quitting from burnout not misalignment; in love, walls from exhaustion not truth; in the body, collapse warning before conscious choice; in inner life, siege mentality mistaking habit for purpose. Rest is defensive tool, not surrender unless values say otherwise.
+
+Quantumally, conjugate Septet is collapse from unsustainable duty cycle—emission exceeds recovery bandwidth. Delegate one front; sleep before big decisions; verify threat versus habit. Exit with dignity if retreat is right; hold the line if hill still sacred after honest audit.`,
       guidance:
-        "Delegate or drop one front; sleep before surrendering a position you may regret. Verify the hill still matches values. If retreat is right, exit with dignity and clear handoff.",
+        "Delegate or drop one front; sleep before surrendering position you may regret. Verify hill still matches values. Exit with dignity if retreat is right.",
     },
   },
   "wands-08": {
     upright: {
       summary:
-        "Photon Octet: staves in flight—movement, fast change, action, alignment, messages and opportunities accelerating toward landing.",
+        "Upright Octet: parallel flight—movement, fast change, action, alignment, messages and opportunities accelerating toward landing.",
       detail:
-        "The Eight of Wands upright is Rider–Waite's eight staves flying parallel through open sky—no figures, pure velocity (Biddy: movement, fast paced change, action, alignment, air travel). Photons arrive in burst: messages, opportunities, creative breakthroughs, travel, or project phases accelerating toward landing. Enterprise moves from planning to arrival; answers en route, signatures pending, inspiration cascading faster than you can file it. Alignment suggests channels cleared—team, tools, and timing synchronized enough that friction drops briefly. Action favors minimal interference: do not over-edit the arrow mid-flight. Passion expresses as momentum; body and schedule must match pace—hydration, sleep, realistic inbox triage. Air travel and digital equivalents compress distance; use the window to close loops, not open new ones without capacity. The card is exhilarating and risky—speed without steering invites crash. Treat acceleration as temporary weather; build buffers before you assume perpetual tailwinds. When staves land, be ready to integrate, not only to celebrate motion. Photons in octet phase favor decisive triage—what must be answered now versus what merely feels urgent.",
+        `When you draw the Eight of Wands upright as the Octet of Particles, eight vectors fly parallel through open sky—pure velocity, channels cleared, friction dropped briefly. Photons arrive in burst: messages, opportunities, breakthroughs, travel, project phases accelerating toward landing. Enterprise moves from planning to arrival; answers en route, signatures pending, inspiration faster than filing.
+
+Alignment means team, tools, timing synchronized enough that drag vanishes temporarily. Action favors minimal interference—do not over-edit arrow mid-flight. Passion as momentum requires body match—hydration, sleep, inbox triage.
+
+In work, rapid correspondence, launches, travel; in relationships, clarifying texts, visits scheduled, truth moving fast; in body, adrenaline with schedule protection; in inner life, downloads needing capture systems. Speed exhilarating and risky—build buffers before assuming permanent tailwind.
+
+Quantumally, Octet is coherent burst transmission—decisive triage: answer now versus merely urgent. When vectors land, integrate—do not only celebrate motion. Treat acceleration as temporary weather.`,
       guidance:
-        "Clear channels for incoming news—calendar, inbox, and decision authority. Align body with pace: eat, breathe, sleep even in the sprint. Finish one loop before chasing the next shiny arrival.",
+        "Clear channels for incoming news—calendar, inbox, decision authority. Align body with pace: eat, breathe, sleep even in sprint. Finish one loop before chasing next arrival.",
     },
     reversed: {
       summary:
-        "Reversed octet: delays, frustration, resisting change, internal misalignment—flight jammed, arrows stuck mid-air.",
+        "Reversed Octet: flight jammed—delays, frustration, resisting change, inner misalignment blocking landing.",
       detail:
-        "Reversed Eight of Wands jams the flight (Biddy: delays, frustration, resisting change, internal alignment). Staves hang or scatter—logistics fail, messages bounce, creative flow stutters. Photons hit medium mismatch: you push fire through wet wood. Delays may be external—approvals, visas, platforms—or internal misalignment where part of you resists the change your life already launched. Frustration compounds when you treat pause as personal failure rather than signal to adjust trajectory. Resisting change often means clinging to an old identity while the new chapter demands different skills. Internal alignment work belongs here: breath, values check, honest conversation with collaborators about realistic timelines. Reversed warns against forcing speed through manipulation or burnout; it also warns against using delay as excuse to never land. Some arrows need re-aiming, not more force. Identify whether the block is fear, infrastructure, or wrong target. Photons scatter when channels are clogged—unclear decision rights, missing tools, unspoken no's.",
+        `When the Eight of Wands reverses as the Octet of Particles, flight jams—logistics fail, messages bounce, flow stutters. Photons hit medium mismatch: pushing fire through wet wood. Delays external—approvals, platforms—or internal where part of you resists change already launched.
+
+Frustration compounds if pause read as personal failure rather than re-aim signal. Resisting change may cling to old identity while new chapter demands different skills. Forcing speed through manipulation or burnout; using delay as excuse never to land. Reversed scatters burst—channels clogged by unclear decision rights or unspoken nos.
+
+In work, bounced emails, stalled visas; in love, mixed signals; in the body, restlessness without movement; in inner life, inspiration outrunning willingness to integrate. Speed without landing is incomplete transmission.
+
+Quantumally, reversed Octet is destructive interference in burst—coherent emission blocked at aperture. Find bottleneck: fear, infrastructure, wrong target. Communicate slippage early instead of silent frustration; re-aim if target wrong rather than forcing fire through wrong medium.`,
       guidance:
-        "Find the bottleneck—one person, one tool, one fear—and address it directly. Stop resisting a change that already left the bow; update plans to match reality. If speed is unsafe, communicate slippage early instead of silent frustration.",
+        "Find bottleneck—person, tool, fear—and address directly. Stop resisting change that already left the bow; update plans. Communicate slippage early instead of silent frustration.",
     },
     transverse: {
       summary:
-        "Transverse Octet: arrows in flight—velocity high, change airborne, targets forming, landing not yet complete.",
+        "Transverse Octet: arrows in flight—velocity high, change airborne, targets forming, landing incomplete.",
       detail:
-        "Eight of Wands upright: swift motion, messages, alignment (Biddy). Transverse is acceleration without landing—change airborne, answers en route. Do not mistake speed for completion. Rider–Waite's staves fly parallel—coherent burst—yet no ground contact. You may live in inbox weather: pings, opportunities, travel bookings, creative downloads stacking faster than integration. Transverse Photons exhilarate and overwhelm; body must match pace or crash follows. Alignment crosses as temporary coherence—team, tools, timing briefly synchronized—use it to close loops, not spawn ten new ones. Air travel and digital speed compress distance; respect that human nervous systems lag behind calendars. Enterprise favors decision authority clarified before the burst—who can say yes when messages arrive. Creative breakthroughs at this crossing need capture systems—voice notes, tickets, editors—so flight becomes artifact. The liminal thrill can addict; schedule landing rituals—meals, sleep, debrief—even mid-sprint.",
+        `When the Eight of Wands crosses transversely as the Octet of Particles, acceleration without landing—change airborne, answers en route, integration pending. Do not mistake speed for completion. Inbox weather: pings, opportunities, bookings stacking faster than integration.
+
+Transverse Photons exhilarate and overwhelm; nervous systems lag calendars. Temporary alignment—use to close loops, not spawn ten new ones without capacity. Creative breakthroughs need capture—voice notes, tickets—or flight never becomes artifact. Burst in transit is lawful mechanics, not failure.
+
+In work, pending signatures; in relationships, momentum before clarity; in the body, adrenaline with schedule protection; in inner life, inspiration outrunning execution. Landing rituals matter even mid-sprint—meals, sleep, debrief.
+
+Quantumally, transverse Octet is coherent burst transmission without reception aperture fully open—decisive triage: answer now versus merely urgent. Clarify who decides when messages arrive; finish one loop before chasing next arrival.`,
       guidance:
-        "Clear channels for incoming news; clarify who decides. Align body with pace—eat, breathe, sleep. Finish one loop before chasing the next arrival.",
+        "Clarify who decides when messages arrive. Align body with pace. Finish one loop before chasing next arrival.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: delays and frustration cross momentum—logistics, resistance, or inner misalignment jam flight mid-air.",
+        "Conjugate Octet: delays cross momentum—logistics, resistance, or inner misalignment jam flight mid-air.",
       detail:
-        "Reversed Eight: delays, frustration, resisting change (Biddy). The conjugate crossing jams flight—logistics fail, inner resistance blocks, arrows stuck mid-air. Photons hit medium mismatch: forcing fire through wet wood. Delays may be external—approvals, visas, platforms—or internal where part of you resists change already launched. Frustration compounds if pause is read as personal failure rather than signal to re-aim. Resisting change often clings to old identity while new chapter demands different skills. Internal alignment work—values check, honest timeline talks—belongs here. Conjugate warns against forcing speed through manipulation or using delay as excuse never to land. Identify bottleneck: fear, infrastructure, wrong target? Communicate slippage early instead of silent rage. Some arrows need re-aiming, not more force. Photons scatter when decision rights unclear or unspoken no's clog channels.",
+        `When the Eight of Wands crosses conjugately as the Octet of Particles, delays and frustration cross velocity—logistics fail, inner resistance blocks, arrows stuck mid-air. Forcing fire through wrong medium; part of you resists chapter already launched. Conjugate is destructive interference in burst—decision rights unclear, unspoken nos clog channels.
+
+Frustration read as failure rather than re-aim signal. Conjugate warns manipulation-speed or delay-as-never-land. Identify bottleneck; communicate slippage early; re-aim if target wrong. External jam and internal refusal may cross simultaneously—both deserve honest naming.
+
+In work, approval loops; in love, hot-and-cold at speed; in the body, jitter without outlet; in inner life, wanting motion while sabotaging landing. Speed without integration wastes emission; delay without communication burns trust.
+
+Quantumally, conjugate Octet scatters parallel flight—Photons lose phase coherence when fear and logistics cross. Address bottleneck directly; update plans to match reality. One honest conversation about slippage restores more than ten frantic retries through the wrong medium.`,
       guidance:
-        "Find the bottleneck—person, tool, fear—and address directly. Stop resisting change that already launched; update plans. Communicate delays early; re-aim if target is wrong.",
+        "Address bottleneck directly. Update plans to match reality. Communicate delays early; re-aim if needed.",
     },
   },
   "wands-09": {
     upright: {
       summary:
-        "Photon Nonet: bandaged sentinel—resilience, courage, persistence, test of faith, boundaries near completion's final stretch.",
+        "Upright Nonet: bandaged sentinel—resilience, courage, persistence, boundaries near completion's final stretch.",
       detail:
-        "Rider–Waite's Nine of Wands shows a bandaged figure gripping a wand, eight staves planted behind like a palisade—wounded but still standing (Biddy: resilience, courage, persistence, test of faith, boundaries). Photons near completion wavelength: enterprise in final stretch, creative project almost done, relationship boundary tested and mostly holding. Resilience is not denial—you see the bandage, yet you remain at post. Courage here is mundane: another email, another revision, another night watch. Test of faith asks whether you trust the work without fresh applause. Boundaries protect accumulated effort—do not drop the fence because you are tired and someone calls you paranoid. Persistence differs from the Seven's active defense; this is endurance after prior blows. Ambition matures into stewardship—guarding what you built until it can stand without you. Passion cools into loyalty to the promise. The card acknowledges cost; honor it without romanticizing suffering. One more push may finish the cycle—discern whether the push is strategic or habitual. Photons at nonet hold steady emission despite damage—maintain rest intervals or coherence fails.",
+        `When you draw the Nine of Wands upright as the Nonet of Particles, wounded guard still at post—eight staves planted behind as palisade, one held despite bandage. Photons near completion wavelength: enterprise in final stretch, project almost done, boundary tested and mostly holding. Resilience is not denial—you see cost, yet remain.
+
+Courage mundane: another email, revision, night watch. Test of faith asks whether you trust work without fresh applause. Boundaries protect accumulated effort—do not drop fence because tired and someone calls you paranoid. Persistence differs from Septet's active defense; endurance after prior blows.
+
+In work, shipping phase, guarding scope; in relationships, boundary held after hurt; in body, tired but upright—rest tactical; in inner life, loyalty to promise when validation sparse. One more push may finish cycle—discern strategic versus habitual.
+
+Quantumally, Nonet holds steady emission despite damage—maintain rest intervals or coherence fails. Honor cost without romanticizing suffering. Nearly-finished work deserves one ally covering a watch so the wounded emitter can sleep without abandoning the post.`,
       guidance:
-        "Protect the boundary that guards nearly-finished work; say no without long apology. Ask one ally for cover before the final stretch. Rest is tactical—bandage the wound, then return to the post you chose.",
+        "Protect boundary guarding nearly-finished work. Ask one ally for cover before final push. Rest tactically—bandage, sleep, return to post you chose.",
     },
     reversed: {
       summary:
-        "Reversed nonet: inner resources strained—struggle, overwhelm, defensive posture, paranoia distorting vigilance at the finish line.",
+        "Reversed Nonet: vigilance distorted—overwhelm, paranoia, defensive posture, inner resources strained at finish line.",
       detail:
-        "Reversed Nine of Wands distorts vigilance (Biddy: inner resources, struggle, overwhelm, defensive, paranoia). The palisade may stand, but interpretation turns hostile—every noise reads as attack, every request as theft of your wands. Photons decoherence under chronic threat perception: enterprise becomes isolation, creativity becomes bunker. Overwhelm suggests the last mile is too heavy for solo carry; struggle may be noble or self-inflicted. Defensive posture can repel help that would finish the work. Paranoia is the shadow—seeing enemies where there is friction, burning bridges to avoid one more conversation. Inner resources are the medicine: therapy, body work, trusted friend who can mirror reality. Reversed also flags quitting at the true finish line because pain became identity. Ask whether the fence protects the garden or imprisons you. Some battles ended already; you are still fighting ghosts. Lower shoulders; verify facts before escalating. Photons recover with rest and reality-testing, not with tighter fences alone.",
+        `When the Nine of Wands reverses as the Nonet of Particles, palisade stands but interpretation hostile—every noise attack, every request theft. Photons decoherence under chronic threat perception; enterprise becomes bunker. Overwhelm suggests last mile too heavy solo; help repelled by pride or fear of theft.
+
+Paranoia burns bridges needed to finish. Quitting at true finish line because pain became identity is shadow. Ask whether fence protects garden or imprisons; some battles ended—you fight ghosts. Reversed amplifies noise—verify facts before escalating.
+
+In work, isolation at deadline; in love, suspicion without evidence; in the body, hypervigilance exhausting tissue; in inner life, vigilance performed as virtue while help refused. Inner resources—therapy, body work, trusted mirror—are medicine, not luxury.
+
+Quantumally, reversed Nonet is noise amplification in completion band—threat signal exceeds actual field conditions. Write evidence for and against before acting; accept one helpful offer preserving authorship. Rest without guilt—exhaustion fuels paranoia and threatens the finish you earned.`,
       guidance:
-        "Test threat versus habit—write evidence for and against before acting. Accept one offer of help that does not steal authorship. Rest without guilt; exhaustion makes paranoia plausible.",
+        "Write evidence for and against threat before acting. Accept one helpful offer preserving authorship. Rest without guilt—exhaustion fuels paranoia.",
     },
     transverse: {
       summary:
-        "Transverse Nonet: wounded guard still standing—courage present, boundary tested, last stretch uncertain before completion lands.",
+        "Transverse Nonet: wounded guard standing—courage present, boundary tested, last stretch uncertain before completion.",
       detail:
-        "Nine of Wands upright: bandaged sentinel, near completion (Biddy). Transverse crossing is fatigue before finish—courage present, boundary tested, last stretch uncertain. Rider–Waite's figure is injured yet posted—eight staves behind as palisade. You may be one deliverable from done yet feel oldest here: prior blows remembered, applause sparse, faith thinning. Transverse Photons hold steady emission despite damage—maintain rest intervals or coherence fails. Enterprise at this crossing is stewardship—protect nearly-finished work from scope creep, needy outsiders, and your own perfectionism. Boundaries are legitimate; explain them briefly without over-apologizing. Test of faith asks whether you trust process without fresh validation. Allies can cover one watch so you sleep; asking is tactical. The crossing distinguishes strategic last push from habitual overextension—body data matters. Creative projects need final protection—say no, ship, rest. Photons near completion wavelength; do not drop fence from fatigue alone.",
+        `When the Nine of Wands crosses transversely as the Nonet of Particles, fatigue before finish—courage present, boundary tested, last stretch uncertain. One deliverable from done yet feeling oldest: prior blows remembered, faith thinning. Transverse Photons hold emission despite damage—rest intervals mandatory.
+
+Steward nearly-finished work against scope creep, needy outsiders, perfectionism. Test of faith: trust process without fresh validation. Allies can cover one watch so you sleep. Liminal completion is lawful—not reversed bunker, not upright laurel at gate.
+
+In work, final QA under pressure; in relationships, repair almost complete; in the body, bandaged but posted; in inner life, almost done narrative with thinning applause. Do not drop fence from fatigue alone; do not tighten fence from habit when threat has passed.
+
+Quantumally, transverse Nonet is completion approach with wounded emitter—steady emission near wavelength end requires tactical rest. Protect nearly-finished work; ask one ally for cover; rest before final push without guilt.`,
       guidance:
-        "Protect boundaries guarding nearly-finished work. Ask one ally for cover before final push. Rest tactically—bandage, sleep, return.",
+        "Protect nearly-finished work from scope creep. Ask one ally for cover. Rest tactically before final push.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: paranoia and overwhelm cross resilience—vigilance distorts, help repelled, finish line threatened by exhaustion.",
+        "Conjugate Nonet: paranoia crosses resilience—vigilance distorts, help repelled, finish line threatened by exhaustion.",
       detail:
-        "Reversed Nine: struggle, overwhelm, defensive, paranoia (Biddy). The conjugate crossing distorts vigilance—you see attack in noise, or collapse fences from strain. Photons decoherence under chronic threat perception; enterprise becomes bunker, creativity isolated. Overwhelm suggests last mile too heavy solo; help repelled by pride or fear of theft. Paranoia burns bridges needed to finish—verify facts before escalating. Inner resources—therapy, body work, trusted mirror—are medicine. Quitting at true finish line because pain became identity is a shadow here. Ask whether fence protects garden or imprisons. Some battles ended; you fight ghosts. Conjugate honors rest and reality-testing over tighter control. Accept one offer of help that preserves authorship. Photons recover when recovery is scheduled. The bandaged sentinel in Rider–Waite still stands at post; conjugate asks whether your wound is data or destiny—tend it, adjust load, and let allies cover one watch so the work can actually finish.",
+        `When the Nine of Wands crosses conjugately as the Nonet of Particles, vigilance distorts—you see attack in noise or collapse fences from strain. Help repelled; paranoia burns bridges. Overwhelm makes last mile too heavy solo. Conjugate honors rest and reality-testing over tighter control.
+
+Quitting at true finish because pain became identity; fighting ghosts after battles ended. Sabotaging launch from fear; tests without cause in love. Vigilance crossed with exhaustion produces bunker logic—fence protects nothing when emitter cannot recover.
+
+In work, scope defended while help refused; in love, suspicion without evidence; in the body, hypervigilance as default; in inner life, suffering romanticized as proof of seriousness. Tend wound as data, not destiny.
+
+Quantumally, conjugate Nonet amplifies threat signal at completion band—destructive interference between resilience and paranoia. Test threat versus habit with written evidence; accept one offer preserving authorship. Rest without guilt before final push—the finish line deserves a coherent emitter, not a collapsed guard.`,
       guidance:
-        "Test threat versus habit with written evidence. Accept one helpful offer without surrendering authorship. Rest without guilt—exhaustion fuels paranoia.",
+        "Test threat versus habit with written evidence. Accept one helpful offer. Rest without guilt before final push.",
     },
   },
   "wands-10": {
     upright: {
       summary:
-        "Photon Decet: bent under ten staves—burden, extra responsibility, hard work, completion near with spine dangerously strained.",
+        "Upright Decet: overload toward town—burden, responsibility, hard work, completion near with spine dangerously strained.",
       detail:
-        "The Ten of Wands upright shows a figure bent under ten staves, walking toward a visible town—completion near, spine strained (Biddy: burden, extra responsibility, hard work, completion). Photons overloaded: enterprise succeeded into obligation mountain—every yes became a staff you alone carry. Hard work is honest; burden asks whether the weight is temporary or structural. Extra responsibility often follows visibility—promotions, caregiving, creative opportunities that multiply deliverables. Rider–Waite's town is close; this is not endless trudge without destination. Completion is possible if you stop collecting wands mid-stride. Ambition without delegation becomes martyrdom; passion without pacing becomes injury. Creativity may feel impossible because logistics consumed the muse. The upright card respects the grind while naming its limit—honor effort, redesign load. Some staves are not yours; some timelines are negotiable. The body is the final accountant. Finishing matters, but arriving broken serves no one. Photons at decet density need redistribution or they extinguish—systems, handoffs, honest nos.",
+        `When you draw the Ten of Wands upright as the Decet of Particles, figure bent under ten staves walking toward visible destination—completion near, spine strained. Photons overloaded: enterprise succeeded into obligation mountain—every yes became staff you alone carry. Hard work honest; burden asks whether weight temporary or structural.
+
+Extra responsibility follows visibility—promotions, caregiving, creative opportunities multiplying deliverables. Destination real; this is not endless trudge. Completion possible if you stop collecting mid-stride. Ambition without delegation becomes martyrdom; passion without pacing becomes injury.
+
+In work, too many roles; in relationships, carrying everyone's emotional labor; in the body, back, jaw, fatigue—accountant is somatic; in inner life, worth tied to carrying. Some staves not yours; some timelines negotiable.
+
+Quantumally, Decet density needs redistribution—systems, handoffs, honest nos—or emission extinguishes. Finishing matters; arriving broken serves no one. Town is close; clinging to every staff guarantees bent arrival. Ask which burdens are identity performance versus true obligation before the last mile costs your spine.`,
       guidance:
-        "Drop or delegate one staff that is not yours before the last mile. Plan completion with rest built in—sleep, celebration, handoff. Ask which burdens are identity performance versus true obligation.",
+        "Drop or delegate one staff not yours before last mile. Plan completion with rest built in. Ask which burdens are identity performance versus true obligation.",
     },
     reversed: {
       summary:
-        "Reversed decet: doing it all, carrying burden, or needed delegation and release—staves fall or cling from guilt.",
+        "Reversed Decet: release or refusal—doing it all, martyrdom, needed delegation, staves fall or cling from guilt.",
       detail:
-        "Reversed Ten of Wands focuses on release or refusal to release (Biddy: doing it all, carrying the burden, delegation, release). The figure may straighten—staves falling—or cling tighter from guilt. Photons scatter when control masquerades as responsibility: you will not hand off because no one else does it right, so enterprise stalls at capacity ceiling. Doing it all wins praise briefly, then erodes craft and health. Delegation is not abandonment; it is how fires scale beyond one pair of hands. Release can mean quitting a role, ending a volunteer spiral, or admitting the project should shrink. Reversed blesses putting down what was never sustainable. It also warns against dumping obligations without communication—ghosting teams, clients, or family. Inner pattern: worth tied to carrying weight. Creative life returns when bandwidth returns. Choose release with integrity—clear handoffs, documented state, kind boundaries. Photons lase again when aperture clears.",
+        `When the Ten of Wands reverses as the Decet of Particles, figure may straighten—staves falling—or cling tighter from guilt. Control masquerades as responsibility: won't hand off because no one else does it right, so capacity ceiling stalls enterprise.
+
+Doing it all wins brief praise then erodes craft and health. Delegation is scaling mechanism, not abandonment. Release may mean quitting role, shrinking project—blessed when unsustainable. Dumping without communication is shadow release; martyrdom is conjugate refusal dressed as virtue.
+
+In work, burnout from solo carry; in love, resentment from overload; in the body, collapse warning; in inner life, worth tied to weight alone. Creative life returns when bandwidth returns—aperture clears when one staff drops with clarity.
+
+Quantumally, reversed Decet scatters when aperture clogged—Photons heat tissue instead of illuminating realm. Delegate one task with instructions, not micromanagement; release guilt about not being sole carrier. Communicate clearly if dropping a burden; town gates near if redistribution begins today.`,
       guidance:
-        "Delegate one task today with instructions, not micromanagement. Release guilt about not being the only carrier—competence includes building systems. If you drop a burden, communicate clearly to everyone affected.",
+        "Delegate one task with instructions, not micromanagement. Release guilt about not being sole carrier. Communicate clearly if dropping a burden.",
     },
     transverse: {
       summary:
-        "Transverse Decet: burden carried toward visible town—hard work honest, finish line near, spine strained under overload crossing the path.",
+        "Transverse Decet: burden toward destination—hard work honest, finish visible, spine strained under overload crossing path.",
       detail:
-        "Ten of Wands upright: carrying many staffs (Biddy). Transverse is overload crossing the path—work honest, finish line visible, spine strained. Not failure—weight. Rider–Waite's figure moves toward town—destination real—yet bent. You may be completing while accumulating new obligations mid-stride, confusing busyness with progress. Transverse Photons are dense; without redistribution they heat tissue instead of illuminating realm. Enterprise at this crossing asks which staves are yours, borrowed, or stolen from others' hands. Extra responsibility followed visibility—promotions, caregiving, creative opportunity multipliers. Completion possible if you stop collecting mid-walk. Ambition without delegation becomes martyrdom; passion without pacing becomes injury. Creative muse may be suffocated by logistics—schedule handoffs before the last mile. The crossing honors grind while naming limits—body is accountant. Town near means rest soon if you design it; otherwise you arrive broken and call it virtue.",
+        `When the Ten of Wands crosses transversely as the Decet of Particles, overload crossing path—work honest, finish line visible, spine strained. Not failure—weight. Moving toward town while accumulating new obligations mid-stride, confusing busyness with progress.
+
+Transverse Photons dense; without redistribution they heat tissue instead of illuminating realm. Which staves yours, borrowed, stolen? Completion possible if collection stops mid-walk. Liminal burden is lawful—destination real, spine dangerously strained.
+
+In work, sprint to deadline with scope creep; in relationships, carrying more than agreed; in the body, fatigue with town visible; in inner life, almost done but adding tasks. Identity performance masquerades as true obligation until honest audit.
+
+Quantumally, transverse Decet is high flux before boundary—design handoffs before last mile. Drop or delegate one staff not yours; plan completion with rest built in. Town near means rest soon if planned, injury soon if martyrdom continues.`,
       guidance:
-        "Drop or delegate one staff not yours before last mile. Plan completion with rest and celebration built in. Distinguish identity performance from true obligation.",
+        "Drop or delegate one staff not yours. Plan completion with rest built in. Distinguish identity performance from true obligation.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: refusal to delegate crosses release—martyrdom and control prevent staves from falling before town gates.",
+        "Conjugate Decet: martyrdom crosses release—refusal to delegate prevents staves falling before town gates.",
       detail:
-        "Reversed Ten: doing it all, carrying burden, or need to delegate/release (Biddy). The conjugate crossing is martyrdom or control—you won't hand off, so completion becomes injury. Photons scatter when worth ties to carrying weight alone. Doing it all wins brief praise then erodes craft and health. Delegation is scaling mechanism, not abandonment—competence includes systems. Release may mean quitting role, shrinking project, ending volunteer spiral—blessed when unsustainable. Dumping obligations without communication is shadow release; choose integrity—handoffs, documentation, kind boundaries. Inner story may equate love with overload; conjugate invites new equation. Creative life returns when bandwidth returns. Straighten by dropping one staff today with clear instructions, not micromanagement. Photons lase when aperture clears. Rider–Waite's town is close; conjugate warns that clinging to every wand guarantees you arrive bent—put one down with clarity and let completion be shared, not solo martyrdom.",
+        `When the Ten of Wands crosses conjugately as the Decet of Particles, martyrdom or control crosses completion—you won't hand off, so arrival becomes injury. Worth ties to carrying weight alone; doing it all erodes craft and health. Conjugate blocks aperture clearing at town gates.
+
+Delegation refused from fear or identity; release without communication harms others. Inner story equates love with overload—conjugate invites new equation where completion and rest coexist. Heroics at deadline feel noble while spine bends toward collapse.
+
+In work, solo carry at finish line; in love, resentment while refusing help; in the body, collapse warning ignored; in inner life, martyrdom as moral identity. Town is close; clinging to every staff guarantees bent arrival.
+
+Quantumally, conjugate Decet is destructive interference at completion wavelength—emission continues while redistribution refused. Drop one staff today with clarity, not drama. Delegate one task with instructions; release guilt about not being sole carrier. Arriving whole serves the realm better than arriving broken under praise.`,
       guidance:
         "Delegate one task with instructions today. Release guilt about not being sole carrier. Communicate clearly if dropping a burden.",
     },
@@ -348,67 +580,107 @@ export const WANDS_DEPTH: Record<string, CardDepth> = {
   "wands-page": {
     upright: {
       summary:
-        "Photon Initiate: desert messenger— inspiration, ideas, discovery, limitless potential, free spirit carrying fire's first letter.",
+        "Upright Initiate: messenger pulse—inspiration, discovery, limitless potential, free spirit carrying fire's first letter.",
       detail:
-        "Rider–Waite's Page of Wands shows a youth in desert landscape, holding a sprouting wand, looking at it with curious alertness—message of fire arriving (Biddy: inspiration, ideas, discovery, limitless potential, free spirit). Photons as apprentice pulse: enterprise not yet expert, creativity willing to look foolish, passion expressed as exploration. This is the email before the company, the sketch before the show, the flirtation before the commitment. Discovery favors beginners' mind—follow one thread without pretending mastery. Limitless potential is real and also requires training; the page is invitation, not certificate. Free spirit energy can revitalize stale teams if paired with listening. Intuition arrives as itch—new medium, new genre, new collaboration. Rider–Waite's desert suggests space to experiment; protect margins for play. Ambition here starts small and vivid. Learn before you perform expertise; send the message you drafted; ask the question that reveals you as new. The page blesses honest inexperience over counterfeit authority. Photons at initiate frequency are bright but un collimated—mentorship and practice give direction.",
+        `When you draw the Page of Wands upright as the Initiate of Particles, apprentice pulse arrives—enterprise not yet expert, creativity willing to look foolish, passion expressed as exploration. This is message before company, sketch before show, flirtation before commitment. Discovery favors beginner's mind—follow one thread without performing mastery already.
+
+Limitless potential is real and requires training; Initiate is invitation, not certificate. Free spirit revitalizes stale teams when paired with listening. Intuition arrives as itch—new medium, genre, collaboration. Protect margins for play; ambition starts small and vivid.
+
+In work, send draft, ask question, apply before ready; in relationships, honest curiosity over performance; in the body, restlessness seeking container; in inner life, honest inexperience beats counterfeit authority. Learn publicly where safe; one precise mentor question beats endless research.
+
+Quantumally, Initiate Photons are bright but uncollimated—mentorship and practice give direction. Message of fire wants sending, not endless private revision. Apprenticeship remains available when you stop disqualifying yourself before first honest emission.`,
       guidance:
-        "Follow one curiosity thread this week with a tangible output—notes, sample, conversation. Learn publicly where safe; ask mentors one precise question. Send the message or pitch you keep revising without sending.",
+        "Follow one curiosity thread with tangible output this week. Ask one precise mentor question. Send the message or pitch you keep revising.",
     },
     reversed: {
       summary:
-        "Reversed initiate: newly-formed ideas redirected—self-limiting beliefs, scattered energy, spiritual bypass blocking the messenger.",
+        "Reversed Initiate: messenger blocked—ideas redirected into doubt, scattered energy, self-limiting beliefs before first send.",
       detail:
-        "Reversed Page of Wands blocks the messenger (Biddy: newly-formed ideas, redirecting energy, self-limiting beliefs, a spiritual path). Ideas redirect into doubt—Photons bounce off who am I to try? Creative sparks die in private because sharing feels dangerous. Self-limiting beliefs dress as realism: you need one more course, one more year, one more permission slip before acting. Spiritual path language can become bypass—vision boards without verbs. Newly-formed ideas need protection, not silence; reversed warns against telling everyone too soon, but also against telling no one forever. Energy scattered across hobbies prevents depth. Emotional immaturity may show as moody withdrawal when feedback arrives. Reversed asks you to test beliefs with small experiments rather than debate them abstractly. Redirect energy from self-surveillance to craft. The page reversed is still a page—apprenticeship remains available if you stop disqualifying yourself. Photons return when you send one small true thing.",
+        `When the Page of Wands reverses as the Initiate of Particles, messenger blocks—ideas redirect into doubt, Photons bounce off who am I to try? Creative sparks die private because sharing feels dangerous. Self-limiting beliefs dress as realism—one more course, year, permission before acting.
+
+Spiritual language can become bypass—vision without verbs. New ideas need protection not eternal silence; reversed warns against telling everyone too soon and telling no one forever. Energy scattered across hobbies prevents depth; moody withdrawal when feedback arrives signals immaturity to heal gently.
+
+In work, almost-sends; in love, vulnerability offered then retracted; in body, adrenaline without outlet. Quantumally, reversed Initiate refracts instead of lasing—test beliefs with small experiments; redirect energy from self-surveillance to craft. One small true send to safe audience restores pulse.`,
       guidance:
-        "Write one self-limiting belief and design a week-long test against it. Send a small piece of work to a safe audience. If energy is scattered, choose one thread and pause the others without shame.",
+        "Write one limiting belief and run week-long test against it. Send small work to safe audience. Choose one thread; pause others without shame.",
     },
     transverse: {
       summary:
-        "Transverse Initiate: message of fire arriving—ideas plentiful, apprenticeship open, role not yet embodied in the world.",
+        "Transverse Initiate: fire's message arriving—ideas plentiful, apprenticeship open, role not yet embodied.",
       detail:
-        "Page of Wands upright: curious messenger, discovery (Biddy). Transverse is youthful fire crossing as invitation—ideas plentiful, apprenticeship open. Rider–Waite's youth studies the sprouting wand in desert openness—space to experiment, no court yet. You may feel beginner energy in a domain that matters—excited, clumsy, visible if you act. Transverse Photons are bright but uncollimated; mentorship and practice give direction. Enterprise here favors tiny shipments over performance of expertise—notes, samples, questions sent. Discovery crosses as itch for new medium, genre, collaboration; follow one thread with tangible output. Free spirit revitalizes stale teams when paired with listening. Limitless potential requires training; page is invitation not certificate. The crossing protects honest inexperience—better than counterfeit authority. Spiritual curiosity belongs if it touches verbs—walks, drafts, conversations—not only vision boards. Message of fire wants sending, not endless revision in private.",
+        `When the Page of Wands crosses transversely as the Initiate of Particles, youthful fire crosses as invitation—ideas plentiful, apprenticeship open, role not yet embodied. Beginner energy in domain that matters—excited, clumsy, visible if you act. Transverse Photons uncollimated; mentorship gives direction.
+
+Enterprise favors tiny shipments over expertise performance—notes, samples, questions sent. Discovery crosses as itch for new collaboration; follow one thread with tangible output. Limitless potential requires training; page is invitation not certificate. Threshold enrollment is lawful—not reversed block, not upright mastery.
+
+In work, enrollment pending; in relationships, crush or curiosity uncollapsed; in the body, restlessness seeking container; in inner life, call heard, answer forming. Spiritual curiosity belongs if it touches verbs—walks, drafts, conversations.
+
+Quantumally, transverse Initiate is threshold enrollment—message wants sending before identity catches up. Follow one curiosity thread with tangible output; learn publicly where safe. Send drafted message or pitch this week; apprenticeship opens when aperture admits first honest emission.`,
       guidance:
-        "Follow one curiosity thread with tangible output this week. Learn publicly where safe; ask one precise mentor question. Send the drafted message or pitch.",
+        "Follow one curiosity thread with tangible output. Learn publicly where safe. Send drafted message or pitch this week.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: self-limiting beliefs cross the messenger—ideas redirected into doubt, energy scattered before first send.",
+        "Conjugate Initiate: self-limiting beliefs cross messenger—ideas into doubt, energy scattered before first send.",
       detail:
-        "Reversed Page: redirecting energy, self-limiting beliefs (Biddy). The conjugate crossing is the student who won't believe admission—ideas redirected into doubt. Photons bounce off who am I to try? Creative sparks die private because sharing feels dangerous. Beliefs dress as realism—one more course, year, permission before acting. Spiritual language can bypass into vision boards without verbs. Newly-formed ideas need protection not eternal silence; conjugate warns against telling everyone too soon and telling no one forever. Energy scattered across hobbies prevents depth; moody withdrawal when feedback arrives signals immaturity to heal gently. Test beliefs with small experiments rather than abstract debate. Redirect energy from self-surveillance to craft—one small true send to safe audience. Page reversed remains page; apprenticeship available if you stop disqualifying yourself. The desert in Rider–Waite is wide enough for practice; conjugate asks you to occupy it with one shipped fragment instead of infinite preparation.",
+        `When the Page of Wands crosses conjugately as the Initiate of Particles, student who won't believe admission—ideas into doubt while hunger stays loud. Photons refract: almost-sends, vulnerability retracted, talent and disqualification arguing in one chest. Conjugate is interference at aperture, not absence of gift.
+
+Beliefs dress as realism; spiritual bypass as vision without verbs. Energy scattered prevents depth; conjugate asks one shipped fragment instead of infinite preparation. Portfolio hidden; almost-confession; hunger narrated as why you cannot.
+
+In work, almost-sends; in love, vulnerability offered then retracted; in the body, adrenaline without outlet; in inner life, who am I to try? looping while charge stays hot. Test one belief with small experiment; send one small true thing to safe witness.
+
+Quantumally, conjugate Initiate refracts instead of lasing—destructive interference between hunger and self-limiting narrative. Choose one thread; pause others without shame. Apprenticeship remains available if you stop disqualifying yourself before first honest emission couples to the field.`,
       guidance:
-        "Write one limiting belief and run a week-long test against it. Send small work to a safe audience. Choose one thread; pause others without shame.",
+        "Write one limiting belief; test it one week. Send small work to safe audience. Choose one thread; pause others.",
     },
   },
   "wands-knight": {
     upright: {
       summary:
-        "Photon Propagator: rearing horse charge—energy, passion, inspired action, adventure, impulsiveness riding fire into motion.",
+        "Upright Propagator: charge in motion—energy, passion, inspired action, adventure, impulsiveness riding fire into the field.",
       detail:
-        "Rider–Waite's Knight of Wands charges on a rearing horse, desert behind, wand raised—fire in motion (Biddy: energy, passion, inspired action, adventure, impulsiveness). Photons propagate: enterprise as campaign, creativity as pursuit, passion that moves rooms and markets. Inspired action favors bold launches, travel, performances, pitches delivered with heat. Adventure calls—new role, new city, new relationship rhythm—provided you pack repair tools for the horse. Impulsiveness is the shadow named openly; speed excites and can trample. Ambition here is kinetic; planning happens mid-gallop. Leadership by example, not by spreadsheet—people follow heat when it points somewhere. Knight energy suits short intense pushes more than decade maintenance unless paired with queen or king maturity. Romance and creative affairs start fast; verify consent and follow-through. The card celebrates motion after too much waiting. Check gear before speed—legal, financial, relational—but do not use checklists to never ride. Photons at propagator frequency need steering and apology skills when trampling occurs.",
+        `When you draw the Knight of Wands upright as the Propagator of Particles, fire moves—enterprise as campaign, creativity as pursuit, passion that shifts rooms and markets. Inspired action favors bold launches, travel, performances, pitches delivered with heat. Adventure calls—new role, city, relationship rhythm—provided you pack repair tools for velocity.
+
+Impulsiveness is shadow named openly; speed excites and can trample. Ambition here is kinetic; planning happens mid-gallop. Leadership by example, not spreadsheet—people follow heat when it points somewhere. Propagator energy suits short intense pushes more than decade maintenance unless paired with Eigenstate or Sovereign maturity. Romance and creative affairs start fast; verify consent and follow-through. Motion after too much waiting is blessed—check gear before speed, legal, financial, relational—but do not use checklists to never ride.
+
+In work, campaign mode; in relationships, pursuit with follow-through; in body, adrenaline needing direction; in inner life, courage to act after analysis paralysis. Quantumally, Propagator Photons need steering and apology skills when trampling occurs—finish lines, milestones, allies or scatter into drama.`,
       guidance:
         "Channel passion into one campaign with a finish line, not endless detours. Apologize quickly if speed hurt someone; adjust pace without killing fire. Verify essentials—budget, boundaries, backup plan—then ride.",
     },
     reversed: {
       summary:
-        "Reversed propagator: passion project scattered—haste, delays, frustration when charge stalls or tramples without steering.",
+        "Reversed Propagator: passion scattered—haste, delays, frustration when charge stalls or tramples without steering.",
       detail:
-        "Reversed Knight of Wands stalls or scatters the charge (Biddy: passion project, haste, scattered energy, delays, frustration). The horse rears without road—Photons spark, then dissipate across unfinished quests. Haste produces sloppy work, burned bridges, or promises your calendar cannot keep. Delays frustrate because identity tied to motion; when movement stops, self-worth crashes. Passion project may be valid but unsupported—no structure, no allies, no realistic scope. Scattered energy looks like starting three businesses, three novels, three situationships in one season. Frustration turns outward as blame or inward as shame. Reversed can also mean passion redirected into drama instead of deliverables—arguments as substitute for building. Adventure without ethics becomes extraction. Slow enough to steer: choose one vector, finish a chapter, repair one relationship strained by your velocity. Knight reversed is not never ride; it is ride with reins. Photons need finish lines and repair tools.",
+        `When the Knight of Wands reverses as the Propagator of Particles, charge stalls or scatters—Photons spark then dissipate across unfinished quests. Haste produces sloppy work, burned bridges, promises calendar cannot keep. Delays frustrate when identity ties to motion; stillness crashes self-worth.
+
+Passion project may be valid yet unsupported—no structure, allies, realistic scope. Scattered energy starts three ventures in one season; frustration becomes blame or shame. Passion redirected into drama substitutes for deliverables. Adventure without ethics extracts.
+
+In work, unfinished launches; in love, hot pursuit without repair; in the body, spike without container; in inner life, boredom masking fear dressed as restlessness. Reversed is flame without steering—not never ride, but ride with reins.
+
+Quantumally, reversed Propagator scatters burst across too many uncollapsed campaigns—emission without integration. Slow enough to choose one channel; finish one chapter; repair one relationship strained by velocity. Communicate external delays honestly; examine internal fear if stillness feels like death.`,
       guidance:
         "Pick one passion project and define done for this month. Slow pace until steering returns—one commitment honored beats five begun. If delays are external, communicate; if internal, examine fear dressed as boredom.",
     },
     transverse: {
       summary:
-        "Transverse Propagator: charge begun—adventure in motion, vector strong, destination still clarifying under the hooves.",
+        "Transverse Propagator: charge begun—adventure in motion, vector strong, destination still clarifying under momentum.",
       detail:
-        "Knight of Wands upright: passionate pursuit (Biddy). Transverse crossing is adventure in motion—vector strong, destination still clarifying. Rider–Waite's horse rears—fire visible, road unfolding—momentum before map fully legible. You may feel pulled into campaign—launch, move, perform, pitch—before all details settle. Transverse Photons propagate; leadership by example energizes others if heat points somewhere ethical. Impulsiveness shadow named: speed excites and tramples—pack repair tools—apology, budget, boundaries. Knight energy suits intense pushes more than decade maintenance unless paired with queen/king maturity. Inspired action favors bold starts with consent and follow-through verified. Adventure calls—role, city, relationship rhythm—check gear before speed but do not use checklists to never ride. Creative affairs and enterprises start fast here; steering mid-gallop is skill. Crossing asks one campaign with finish line, not endless detours. Photons need direction surface—deadline, milestone, ally— or they scatter as drama.",
+        `When the Knight of Wands crosses transversely as the Propagator of Particles, adventure is in motion—vector strong, destination still clarifying. You may feel pulled into campaign—launch, move, perform, pitch—before all details settle. Transverse Photons propagate; leadership by example energizes others if heat points somewhere ethical.
+
+Impulsiveness shadow named: speed excites and tramples—pack repair tools—apology, budget, boundaries. Propagator energy suits intense pushes more than decade maintenance unless paired with court maturity. Inspired action favors bold starts with consent and follow-through verified. Adventure calls—role, city, relationship rhythm—check gear before speed but do not use checklists to never ride.
+
+In work, momentum before map legible; in relationships, pursuit crossing threshold; in inner life, motion ethically paused. Quantumally, transverse Propagator needs direction surface—deadline, milestone, ally—or scatter as drama. One campaign with finish line, not endless detours.`,
       guidance:
         "Channel passion into one campaign with a finish line. Apologize quickly if speed hurt someone; adjust pace without killing fire. Verify budget, boundaries, backup—then ride.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: haste and scattered energy cross the ride—flame without steering, passion projects stalling in frustration.",
+        "Conjugate Propagator: haste and scattered energy cross the ride—flame without steering, passion projects stalling in frustration.",
       detail:
-        "Reversed Knight: haste, scattered energy, delays, frustration (Biddy). The conjugate crossing is reckless charge or stalled passion—flame without steering. Horse rears without road; Photons spark then dissipate across unfinished quests. Haste produces sloppy work, burned bridges, promises calendar cannot keep. Delays frustrate when identity ties to motion; stillness crashes self-worth. Passion project may be valid yet unsupported—no structure, allies, realistic scope. Scattered energy starts three ventures in one season; frustration becomes blame or shame. Passion redirected into drama substitutes for deliverables. Adventure without ethics extracts. Conjugate medicine: slow enough to steer—one vector, one chapter finished, one relationship repaired after velocity harm. Define done for this month on one project. Communicate external delays; examine internal fear dressed as boredom. Knight reversed is ride with reins, not never ride.",
+        `When the Knight of Wands crosses conjugately as the Propagator of Particles, reckless charge or stalled passion—flame without steering. Photons spark then dissipate across unfinished quests. Haste produces sloppy work, burned bridges, promises calendar cannot keep. Delays frustrate when identity ties to motion; stillness crashes self-worth.
+
+Passion project valid yet unsupported—no structure, allies, realistic scope. Scattered energy starts three ventures in one season; frustration becomes blame or shame. Passion redirected into drama substitutes for deliverables. Adventure without ethics extracts.
+
+In work, conjugate interference at launch; in love, velocity without repair; in inner life, boredom masking fear. Quantumally, conjugate medicine: slow enough to steer—one vector, one chapter finished, one relationship repaired after velocity harm. Define done for this month on one project. Ride with reins, not never ride.`,
       guidance:
         "Pick one passion project; define done for this month. Slow until steering returns—honor one commitment. Communicate delays; repair one relationship strained by speed.",
     },
@@ -416,17 +688,29 @@ export const WANDS_DEPTH: Record<string, CardDepth> = {
   "wands-queen": {
     upright: {
       summary:
-        "Photon Eigenstate: throne of sunflowers and lions—courage, confidence, independence, social warmth, determination in steady radiance.",
+        "Upright Eigenstate: steady radiance—courage, confidence, independence, social warmth, determination in integrated fire.",
       detail:
-        "Rider–Waite's Queen of Wands sits on a throne adorned with lions and sunflowers, black cat at her feet, wand upright—warm authority, confident gaze (Biddy: courage, confidence, independence, social butterfly, determination). Photons in steady emission: enterprise led with encouragement, creativity that invites rather than intimidates, passion integrated with self-possession. Courage here is relational—you hold space while others shine. Independence does not mean isolation; the social butterfly aspect networks with authenticity, not performance alone. Determination shows as follow-through on promises and boundaries alike. The black cat signals intuition and shadow comfort—you know your moods and do not dump them on the court. Ambition mature enough to mentor, delegate, and celebrate. Leadership through radiant competence: you model the ethic you expect. Creativity flourishes in environments you heat without scorching. Confidence is magnetic when rooted in self-respect, not comparison. Queen energy asks you to occupy visibility without shrinking or dominating. Photons at eigenstate frequency are stable enough to entrain others—warmth generous because boundaries exist.",
+        `When you draw the Queen of Wands upright as the Eigenstate of Particles, fire stabilizes into warm authority—enterprise led with encouragement, creativity that invites rather than intimidates, passion integrated with self-possession. Courage here is relational: you hold space while others shine. Independence does not mean isolation; social warmth networks with authenticity, not performance alone.
+
+Determination shows as follow-through on promises and boundaries alike. Intuition and shadow comfort—you know your moods and do not dump them on the court. Ambition mature enough to mentor, delegate, celebrate. Leadership through radiant competence: model the ethic you expect. Creativity flourishes in environments you heat without scorching.
+
+In work, mentor without smothering; in relationships, warmth with boundaries; in the body, sustainable radiance; in inner life, visibility without shrinking or dominating. Confidence magnetic when rooted in self-respect, not comparison.
+
+Quantumally, Eigenstate Photons are stable enough to entrain others—warmth generous because boundaries exist. Protect your flame from envy without paranoia; take one visible stand aligned with values this week.`,
       guidance:
         "Lead with encouragement—name others' strengths publicly. Protect your flame from envy without paranoia; boundaries keep warmth generous. Take one visible stand aligned with your values this week.",
     },
     reversed: {
       summary:
-        "Reversed eigenstate: self-respect and confidence wobble—introverted retreat, charisma eclipsed, sense of self needing re-establishment.",
+        "Reversed Eigenstate: self-respect and confidence wobble—introverted retreat, charisma eclipsed, sense of self needing re-establishment.",
       detail:
-        "Reversed Queen of Wands eclipses the throne's warmth (Biddy: self-respect, self-confidence, introverted, re-establish sense of self). Social butterfly cocooned—Photons dim through burnout, jealousy, or retreat after overgiving. Introverted phase may be healing, not failure: re-establish sense of self away from audience. Self-respect work surfaces when you notice people-pleasing, sexual or creative performance without joy, or controlling heat to avoid vulnerability. Confidence wobbles; you may provoke tests from others or test yourself harshly. Reversed warns against smothering—help that becomes control—or against disappearing when one criticism lands. Inner resources need refill: sleep, solitude, art without agenda. Enterprise suffers when the queen performs strength while depleted. Self-love here is strategic—return to court when body says yes, not when guilt says perform. Shadow: bitterness masked as honesty. Photons return when refill is honored, not performed.",
+        `When the Queen of Wands reverses as the Eigenstate of Particles, warmth eclipses—Photons dim through burnout, jealousy, retreat after overgiving. Introverted phase may heal, not fail: re-establish self away from audience. Self-respect work surfaces with people-pleasing, creative performance without joy, control masked as help.
+
+Confidence wobbles; criticism lands disproportionately. Smothering help becomes control; disappearing avoids vulnerability. Inner resources need refill—sleep, solitude, art without agenda. Enterprise suffers when strength is performed while depleted. Return to court when body says yes, not guilt. Shadow: bitterness masked as honesty.
+
+In work, charm as armor; in love, withdrawal after one wounded comment; in the body, fatigue behind performance; in inner life, warmth performed for audience no longer needed. Reversed dims emission until refill is honored, not performed.
+
+Quantumally, reversed Eigenstate decoheres under overgiving—stable radiance requires boundaries and recovery bandwidth. Honor retreat if it restores self-respect; examine where charm became armor; speak one need plainly before re-entry.`,
       guidance:
         "Honor retreat if it restores self-respect; set a gentle re-entry date. Refill before you lead—one day off, one creative act with no audience. Examine where charm became armor; speak one need plainly.",
     },
@@ -434,15 +718,23 @@ export const WANDS_DEPTH: Record<string, CardDepth> = {
       summary:
         "Transverse Eigenstate: warm authority forming—presence radiant yet tested, leadership crossing as becoming in the social field.",
       detail:
-        "Queen of Wands upright: magnetic confidence (Biddy). Transverse is leadership crossing as becoming—you radiate, but the room still tests you. Rider–Waite's queen sits forward—sunflowers, lions, black cat—warmth and shadow integrated, yet role not fully settled in every context. You may feel competent yet scrutinized—new title, public platform, relationship where visibility increased. Transverse Photons entrain others when boundaries keep warmth generous; without boundaries, overgiving leads to eclipse. Social butterfly energy networks authentically; performance alone burns out. Courage here is relational—hold space while others shine. Determination shows in follow-through on promises and nos alike. Intuition—black cat—signals moods known, not dumped on court. Enterprise favors encouragement as leadership—name strengths publicly, mentor without smothering. Confidence rooted in self-respect, not comparison, is still forming under pressure. Crossing invites one visible stand aligned with values this week, sized to capacity.",
+        `When the Queen of Wands crosses transversely as the Eigenstate of Particles, leadership crosses as becoming—you radiate, but the room still tests you. You may feel competent yet scrutinized—new title, public platform, relationship where visibility increased. Transverse Photons entrain others when boundaries keep warmth generous; without boundaries, overgiving leads to eclipse.
+
+Social warmth networks authentically; performance alone burns out. Courage relational—hold space while others shine. Determination in follow-through on promises and nos alike. Intuition signals moods known, not dumped on court. Enterprise favors encouragement as leadership—name strengths publicly, mentor without smothering. Confidence rooted in self-respect still forming under pressure.
+
+In work, role not fully settled; in relationships, visibility increasing; in inner life, warmth and doubt alternating. Quantumally, transverse Eigenstate invites one visible stand aligned with values, sized to capacity.`,
       guidance:
         "Lead with encouragement; name others' strengths. Protect flame with boundaries—not paranoia. Take one visible stand aligned with values.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: withdrawn self-doubt crosses charisma—social warmth cocooned, confidence rebuilding in private eclipse.",
+        "Conjugate Eigenstate: withdrawn self-doubt crosses charisma—social warmth cocooned, confidence rebuilding in private eclipse.",
       detail:
-        "Reversed Queen: introverted, re-establish self (Biddy). The conjugate crossing is eclipse—social butterfly cocooned, confidence rebuilding in private. Photons dim through burnout, jealousy, retreat after overgiving. Introverted phase may heal, not fail—re-establish self away from audience. Self-respect work surfaces with people-pleasing, creative performance without joy, control masked as help. Confidence wobbles; criticism lands disproportionately. Smothering help becomes control; disappearing avoids vulnerability. Inner resources need refill—sleep, solitude, art without agenda. Enterprise suffers when queen performs strength depleted. Return to court when body says yes, not guilt. Shadow: bitterness masked as honesty. Conjugate honors retreat with gentle re-entry date; speak one need plainly where charm became armor. The black cat at the queen's feet knows shadow; let it teach you which warmth is genuine and which was performance for an audience you no longer need to impress.",
+        `When the Queen of Wands crosses conjugately as the Eigenstate of Particles, eclipse—social warmth cocooned, confidence rebuilding in private. Photons dim through burnout, jealousy, retreat after overgiving. Introverted phase may heal—re-establish self away from audience. Self-respect work surfaces with people-pleasing, creative performance without joy, control masked as help.
+
+Confidence wobbles; criticism lands disproportionately. Smothering help becomes control; disappearing avoids vulnerability. Inner resources need refill—sleep, solitude, art without agenda. Enterprise suffers when strength is performed depleted. Return when body says yes, not guilt. Shadow: bitterness masked as honesty.
+
+In work, conjugate interference at visibility threshold; in love, charm as armor; in inner life, warmth performed for audience no longer needed. Quantumally, conjugate Eigenstate honors retreat with gentle re-entry date; speak one need plainly where charm became armor.`,
       guidance:
         "Honor retreat; set gentle re-entry date. Refill before leading—day off, private creative act. Speak one need plainly; examine charm as armor.",
     },
@@ -450,17 +742,25 @@ export const WANDS_DEPTH: Record<string, CardDepth> = {
   "wands-king": {
     upright: {
       summary:
-        "Photon Sovereign: lion throne command—natural leadership, vision, entrepreneurship, honour channeling fire into legacy-scale enterprise.",
+        "Upright Sovereign: command of fire—natural leadership, vision, entrepreneurship, honour channeling Particles into legacy-scale enterprise.",
       detail:
-        "Rider–Waite's King of Wands sits forward on a throne carved with lions and salamanders, wand in one hand, facing the future—command of fire (Biddy: natural-born leader, vision, entrepreneur, honour). Photons governed: enterprise at scale, creativity institutionalized, passion channeled into legacy. Natural-born leader does not mean born flawless; it means willingness to decide, absorb heat, and stand visible when outcomes land. Vision is the king's primary tool—story that aligns team, market, and values. Entrepreneur energy builds systems beyond personal charisma—succession, standards, ethics. Honour separates king from tyrant: keep promises, credit labor, punish betrayal without cruelty for sport. Ambition serves realm—family, company, community, craft tradition. Salamander symbolizes transformation through fire; you have survived enough cycles to guide others. Leadership invites scrutiny; welcome feedback that improves the realm. Creative kings protect makers while demanding excellence. The card favors bold ethical moves—launch, restructure, public stand—when grounded in long horizon. Photons at sovereign frequency require repair skills and praise before push.",
+        `When you draw the King of Wands upright as the Sovereign of Particles, fire is governed—enterprise at scale, creativity institutionalized, passion channeled into legacy. Natural-born leader does not mean born flawless; it means willingness to decide, absorb heat, stand visible when outcomes land. Vision is primary tool—story aligning team, market, values.
+
+Entrepreneur energy builds systems beyond personal charisma—succession, standards, ethics. Honour separates sovereign from tyrant: keep promises, credit labor, punish betrayal without cruelty for sport. Ambition serves realm—family, company, community, craft tradition. Transformation through fire acknowledged; you have survived enough cycles to guide others. Leadership invites scrutiny; welcome feedback that improves realm. Creative sovereigns protect makers while demanding excellence.
+
+In work, bold ethical moves with long horizon; in relationships, visible accountability; in body, sustained command without collapse; in inner life, legacy thinking. Quantumally, Sovereign Photons require repair skills and praise before push—power lasts when people choose to follow.`,
       guidance:
         "Write vision in one paragraph and share it with those affected. Model the ethic you demand—punctuality, honesty, courage. Praise labor before pushing harder; power lasts when people choose to follow.",
     },
     reversed: {
       summary:
-        "Reversed sovereign: impulsiveness, haste, ruthlessness, impossible expectations—command warped into blast that burns the court.",
+        "Reversed Sovereign: impulsiveness, haste, ruthlessness, impossible expectations—command warped into blast that burns the court.",
       detail:
-        "Reversed King of Wands warps command (Biddy: impulsiveness, haste, ruthless, high expectations). Photons become blast—vision without mercy, entrepreneurship as extraction, honour traded for control. Impulsiveness at the top multiplies damage—fired messages, reckless pivots, public scapegoating. Haste skips consultation; high expectations become moving goalposts that burn the court. Ruthless may win quarters and lose decades—talent exits, trust erodes, family flinches. Reversed can also mean abdication—throne empty while chaos enters—or leader performing calm while resentful. Tyrant heat punishes vulnerability; makers hide innovation. Expectations unspoken ensure failure; micromanagement masquerades as standards. Shadow king uses charisma to avoid accountability. Reversed asks whether you lead to serve outcome or ego. Lower one impossible standard; repair one relationship damaged by haste. True kingship includes repair, not only decree. Photons regain coherence through pause, consultation, and changed behavior—not only apology words.",
+        `When the King of Wands reverses as the Sovereign of Particles, command warps—Photons become blast, vision without mercy, entrepreneurship as extraction, honour traded for control. Impulsiveness at the top multiplies damage—reckless pivots, public scapegoating. Haste skips consultation; high expectations become moving goalposts burning the court.
+
+Ruthless may win quarters, lose decades—talent exits, trust erodes, family flinches. Reversed can mean abdication—throne empty while chaos enters—or calm performed while resentful. Tyrant heat punishes vulnerability; makers hide innovation. Expectations unspoken ensure failure; micromanagement masquerades as standards. Shadow sovereign uses charisma to avoid accountability.
+
+In work, decree without repair; in love, dominance masked as standards; in inner life, ego driving realm. Quantumally, reversed Sovereign asks whether you lead for outcome or ego. Lower one impossible standard; repair one relationship damaged by haste. True sovereignty includes repair, not only decree.`,
       guidance:
         "Pause major decrees twenty-four hours; consult one dissenting voice. Lower a standard that exists only to prove dominance. If you have been harsh, apologize with changed behavior, not only words.",
     },
@@ -468,15 +768,23 @@ export const WANDS_DEPTH: Record<string, CardDepth> = {
       summary:
         "Transverse Sovereign: vision declared—command forming, standards set, realm aligning but not yet fully in accord.",
       detail:
-        "King of Wands upright: entrepreneurial honour (Biddy). Transverse crossing is command forming—standards set, followers not yet all in accord. Rider–Waite's king faces future—wand ready, lions and salamanders carved—transformation through fire acknowledged. You may hold title or influence while culture still calibrates—policies new, team testing, family adjusting. Transverse Photons require vision spoken plainly—one paragraph shared—so alignment can begin. Honour separates sovereign from tyrant: credit labor, keep promises, punish betrayal without sport cruelty. Entrepreneur builds systems beyond charisma—succession, standards, ethics. Leadership invites scrutiny; welcome dissent that improves realm. Bold moves—launch, restructure, public stand—need long horizon grounding. Makers need protection and excellence demands; balance is live negotiation. Crossing asks you model ethic demanded—punctuality, honesty, courage—and praise before push. Power lasts when people choose to follow.",
+        `When the King of Wands crosses transversely as the Sovereign of Particles, command forming—standards set, followers not yet all in accord. You may hold title or influence while culture still calibrates—policies new, team testing, family adjusting. Transverse Photons require vision spoken plainly—one paragraph shared—so alignment can begin.
+
+Honour separates sovereign from tyrant: credit labor, keep promises, punish betrayal without sport cruelty. Entrepreneur builds systems beyond charisma—succession, standards, ethics. Leadership invites scrutiny; welcome dissent that improves realm. Bold moves—launch, restructure, public stand—need long horizon grounding. Makers need protection and excellence demands; balance is live negotiation.
+
+In work, influence without full buy-in; in relationships, standards declared, habits catching up; in inner life, vision ahead of embodiment. Quantumally, transverse Sovereign asks you model ethic demanded and praise before push.`,
       guidance:
         "Write vision in one paragraph; share with those affected. Model the ethic you demand daily. Praise labor before pushing harder; power lasts when people choose to follow.",
     },
     conjugate: {
       summary:
-        "Conjugate crossing: ruthless haste crosses honourable rule—vision without mercy, expectations that burn court and talent.",
+        "Conjugate Sovereign: ruthless haste crosses honourable rule—vision without mercy, expectations that burn court and talent.",
       detail:
-        "Reversed King: impulsiveness, haste, ruthless, high expectations (Biddy). The conjugate crossing is tyrant heat—vision without mercy, expectations burning court. Photons become blast—reckless pivots, fired messages, scapegoating. Haste skips consultation; goalposts move silently. Ruthless wins quarters, loses decades—talent exits, trust erodes. Abdication shadow—empty throne, chaos enters—or calm performed while resentful. Makers hide innovation when vulnerability punished. Micromanagement masquerades as standards; charisma avoids accountability. Conjugate asks: lead for outcome or ego? Pause major decrees twenty-four hours; consult dissent. Lower one impossible standard; repair relationship damaged by haste. True kingship includes repair—changed behavior, not only words. Photons regain coherence through pause and praise before push. Rider–Waite's salamander survives fire; conjugate demands you survive your own heat without scorching the realm you claim to serve.",
+        `When the King of Wands crosses conjugately as the Sovereign of Particles, tyrant heat—vision without mercy, expectations burning court. Photons become blast—reckless pivots, scapegoating. Haste skips consultation; goalposts move silently. Ruthless wins quarters, loses decades—talent exits, trust erodes.
+
+Abdication shadow—empty throne, chaos enters—or calm performed while resentful. Makers hide innovation when vulnerability punished. Micromanagement masquerades as standards; charisma avoids accountability. Conjugate asks: lead for outcome or ego? Pause major decrees twenty-four hours; consult dissent. Lower one impossible standard; repair relationship damaged by haste.
+
+In work, conjugate interference at top; in love, standards weaponized; in inner life, heat scorching realm you claim to serve. Quantumally, conjugate Sovereign regains coherence through pause, consultation, changed behavior—not only apology words.`,
       guidance:
         "Pause decrees twenty-four hours; consult one dissenting voice. Lower a dominance standard. Apologize with changed behavior if harshness landed.",
     },

@@ -31,17 +31,17 @@ export const MAJOR_CONTENT: Record<string, Orientations> = {
   "major-01": {
     upright: {
       summary:
-        "The Operator aligns will, skill, and tools—what you focus on can be brought into form.",
+        "The Catalyst aligns will, skill, and tools—what you focus on can be brought into form.",
       detail:
-        "The Magician traditionally signifies resourcefulness, communication, and translating vision into action—all tools on the table. As The Operator, you compose reality with sequenced operations: knowledge, speech, timing, and craft acting on the state of what is possible. Intention is the first operator; discipline is the second. This card favors launches, pitches, teaching, and recommitment to work that channels energy rather than leaking it.",
+        "The Magician traditionally signifies resourcefulness, communication, and translating vision into action—all tools on the table. As The Catalyst, you spark change through sequenced catalysis: knowledge, speech, timing, and craft acting on what is possible. Intention is the first spark; discipline is the second. This card favors launches, pitches, teaching, and recommitment to work that channels energy rather than leaking it.",
       guidance:
         "Define one outcome for two weeks. Gather literal tools—time, words, materials—and apply them in one focused session.",
     },
     reversed: {
       summary:
-        "Operators misapplied—scattered talent, manipulation, or plans without execution.",
+        "Catalyst misapplied—scattered talent, manipulation, or plans without execution.",
       detail:
-        "Magician reversed signals blocked channel, trickster shadow, or confidence without substance. The Operator sequence is wrong: you have pieces but not order, or you persuade without delivering. Ideas stay in superposition forever—never measured into action.",
+        "Magician reversed signals blocked channel, trickster shadow, or confidence without substance. The Catalyst sequence is wrong: you have pieces but not order, or you persuade without delivering. Ideas stay in superposition forever—never measured into action.",
       guidance:
         "Simplify to one priority. Cancel a focus-draining commitment. Lead with evidence, not charm.",
     },
@@ -121,15 +121,15 @@ export const MAJOR_CONTENT: Record<string, Orientations> = {
   "major-06": {
     upright: {
       summary:
-        "Entanglement highlights union, values aligned, and choices of the heart.",
+        "The Entangled highlights union, values aligned, and choices of the heart.",
       detail:
-        "The Lovers traditionally concern partnership, ethics in love, meaningful choice—not only romance but values made visible. As Entanglement, states correlate: what you admire or resent in another may be coupled to your own configuration. Distance does not always decouple—patterns repeat until observed. This favors honest attraction, conscious commitment, integrating head with heart before you sign the contract.",
+        "The Lovers traditionally concern partnership, ethics in love, meaningful choice—not only romance but values made visible. As The Entangled, states correlate: what you admire or resent in another may be coupled to your own configuration. Distance does not always decouple—patterns repeat until observed. This favors honest attraction, conscious commitment, integrating head with heart before you sign the contract.",
       guidance:
         "State values before negotiating. Have the postponed conversation. Choose alignment over convenience.",
     },
     reversed: {
       summary:
-        "Entanglement strained—disharmony, secrecy, or self-betrayal for approval.",
+        "The Entangled strained—disharmony, secrecy, or self-betrayal for approval.",
       detail:
         "Lovers reversed: breakup energy, triangulation, split between paths unable to commit. The bond decoheres—perhaps needed, perhaps avoided. Name what staying divided protects you from facing.",
       guidance:

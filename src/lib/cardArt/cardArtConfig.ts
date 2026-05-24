@@ -20,7 +20,7 @@ const DEFAULT_PROFILE: CardArtProfile = {
 export const CARD_ART_OVERRIDES: Partial<
   Record<string, Partial<CardArtProfile> & { glyphScale?: number }>
 > = {
-  // Example: emphasize Nine of Fluids (Nine of Cups)
+  // Example: emphasize Nine of Waves (Nine of Cups)
   "cups-09": {
     glyphScale: 1.15,
     backgroundOpacity: 0.32,
@@ -30,7 +30,7 @@ export const CARD_ART_OVERRIDES: Partial<
 
 const MAJOR_GLYPH_IDS: MajorGlyphId[] = [
   "observer",
-  "operator",
+  "catalyst",
   "superposition",
   "field",
   "constant",

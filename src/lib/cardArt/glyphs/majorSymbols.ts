@@ -5,7 +5,7 @@ export function majorSymbolPaths(id: MajorGlyphId): string {
   switch (id) {
     case "observer":
       return `<circle cx="0" cy="8" r="6" fill="inherit"/><path d="M0,-28 L8,-8 -8,-8 Z" fill="none" stroke-width="inherit"/><circle cx="0" cy="-20" r="3" fill="inherit"/>`;
-    case "operator":
+    case "catalyst":
       return `<path d="M-22,0 Q-22,-18 0,-18 Q22,-18 22,0 Q22,18 0,18 Q-22,18 -22,0 M-22,0 Q-22,18 0,18 Q22,18 22,0 Q22,-18 0,-18 Q-22,-18 -22,0" fill="none" stroke-width="inherit"/><line x1="0" y1="-24" x2="0" y2="24" stroke-width="inherit" opacity="0.5"/>`;
     case "superposition":
       return `<ellipse cx="-12" cy="0" rx="14" ry="22" fill="none" stroke-width="inherit"/><ellipse cx="12" cy="0" rx="14" ry="22" fill="none" stroke-width="inherit"/><rect x="-4" y="-28" width="8" height="56" fill="inherit" fill-opacity="0.2"/>`;

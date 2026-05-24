@@ -27,9 +27,9 @@ const SUIT_META: Record<Suit, SuitMeta> = {
   cups: {
     element: "water",
     domain: "emotion, relationships, intuition, and the inner life",
-    quantum: "Fluids",
+    quantum: "Waves",
     lens:
-      "Fluids seek level, fill vessels, and remember shape—feelings flow, pool, and press on boundaries; denial creates pressure that eventually finds a leak.",
+      "Waves rise, crest, and carry feeling through the medium—emotion propagates, builds, and breaks on boundaries; denial creates interference that eventually finds release.",
   },
   swords: {
     element: "air",

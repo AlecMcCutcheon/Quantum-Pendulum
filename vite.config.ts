@@ -21,6 +21,16 @@ export default defineConfig(({ mode }) => {
             if (id.includes("readingDepth/swords")) return "readings-depth-swords";
             if (id.includes("readingDepth/pentacles"))
               return "readings-depth-pentacles";
+            if (id.includes("readingPersonal/majors"))
+              return "readings-personal-majors";
+            if (id.includes("readingPersonal/wands"))
+              return "readings-personal-wands";
+            if (id.includes("readingPersonal/cups"))
+              return "readings-personal-cups";
+            if (id.includes("readingPersonal/swords"))
+              return "readings-personal-swords";
+            if (id.includes("readingPersonal/pentacles"))
+              return "readings-personal-pentacles";
             if (id.includes("/data/readings/")) return "readings-core";
             if (id.includes("/lib/cardArt/")) return "card-art";
             if (id.includes("node_modules/framer-motion")) return "motion";

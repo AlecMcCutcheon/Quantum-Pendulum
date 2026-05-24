@@ -14,7 +14,7 @@ export interface CardArtProfile {
 
 export type MajorGlyphId =
   | "observer"
-  | "operator"
+  | "catalyst"
   | "superposition"
   | "field"
   | "constant"

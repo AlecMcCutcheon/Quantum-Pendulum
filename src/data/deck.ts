@@ -2,10 +2,10 @@ import type { Suit, TarotCard } from "../types/deck";
 import { toRoman } from "../lib/romanNumerals";
 
 const SUIT_QUANTUM: Record<Suit, string> = {
-  wands: "Photons",
-  cups: "Fluids",
+  wands: "Particles",
+  cups: "Waves",
   swords: "Operators",
-  pentacles: "Lattice",
+  pentacles: "Lattices",
 };
 
 const SUIT_CLASSIC: Record<Suit, string> = {
@@ -22,12 +22,12 @@ const MAJOR: Array<{
   rank: number;
 }> = [
   { classic: "The Fool", quantum: "The Observer", roman: "0", rank: 0 },
-  { classic: "The Magician", quantum: "The Operator", roman: "I", rank: 1 },
+  { classic: "The Magician", quantum: "The Catalyst", roman: "I", rank: 1 },
   { classic: "The High Priestess", quantum: "The Superposition", roman: "II", rank: 2 },
   { classic: "The Empress", quantum: "The Field", roman: "III", rank: 3 },
   { classic: "The Emperor", quantum: "The Constant", roman: "IV", rank: 4 },
   { classic: "The Hierophant", quantum: "The Axiom", roman: "V", rank: 5 },
-  { classic: "The Lovers", quantum: "Entanglement", roman: "VI", rank: 6 },
+  { classic: "The Lovers", quantum: "The Entangled", roman: "VI", rank: 6 },
   { classic: "The Chariot", quantum: "The Trajectory", roman: "VII", rank: 7 },
   { classic: "Strength", quantum: "Coherence", roman: "VIII", rank: 8 },
   { classic: "The Hermit", quantum: "The Soliton", roman: "IX", rank: 9 },

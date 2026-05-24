@@ -99,6 +99,10 @@ export const OPENING_QUOTES: OpeningQuote[] = [
     text: "The world is not something separate from you and me; we are the world, and our problems are the world’s problems.",
     author: "Jiddu Krishnamurti",
   },
+  {
+    text: "The stars above are merely scattered dots until the mind draws its own constellation. We are bound to the cosmos, finding our own patterns of meaning in the vastness, where the universe becomes a reflection of the self.",
+    author: "Alec McCutcheon",
+  },
 ];
 
 export function pickOpeningQuote(): OpeningQuote {

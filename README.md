@@ -45,7 +45,7 @@ See [docs/quantum-random-api.md](docs/quantum-random-api.md) for API details.
 |---------|---------|
 | Major Arcana | e.g. *The Fool* → **The Observer** |
 | Wands | **Photons** |
-| Cups | **Fluids** |
+| Cups | **Waves** |
 | Swords | **Operators** |
 | Pentacles | **Lattice** |
 
@@ -63,7 +63,7 @@ Local `npm run dev` uses the Vite `/api/qrng` middleware in [vite-plugin-qrng.ts
 
 Each card’s **prominent glyphs** (cups, blades, photon rods, lattice coins, major arcana symbols, pip layouts) are driven by [`src/lib/cardArt/cardArtConfig.ts`](src/lib/cardArt/cardArtConfig.ts). Procedural patterns stay in the background at lower opacity.
 
-Edit `CARD_ART_OVERRIDES` to tune any card by id (e.g. `cups-09` for Nine of Fluids / Nine of Cups):
+Edit `CARD_ART_OVERRIDES` to tune any card by id (e.g. `cups-09` for Nine of Waves / Nine of Cups):
 
 ```ts
 "cups-09": {

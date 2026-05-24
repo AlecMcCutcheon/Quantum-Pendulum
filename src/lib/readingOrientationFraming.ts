@@ -49,5 +49,6 @@ export function frameReadingForOrientation(
     summary: reframeSummary(reading.summary, pole),
     detail: reframeDetailLead(reading.detail, pole),
     guidance: reading.guidance,
+    personal: reading.personal,
   };
 }

@@ -3,7 +3,7 @@ import { pickOpeningQuote } from "../data/openingQuotes";
 import { ReadabilityBlob } from "./ReadabilityBlob";
 import { Starfield } from "./Starfield";
 
-const DISPLAY_MS = 10000;
+const DISPLAY_MS = 12000;
 const QUOTE_FADE_MS = 1100;
 const FADE_OUT_MS = 900;
 

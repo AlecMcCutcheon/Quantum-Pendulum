@@ -52,13 +52,13 @@ For each card record:
 
 ---
 
-### major-01 — The Magician / The Operator
+### major-01 — The Magician / The Catalyst
 
 **Sources:** Biddy Magician; RW tools on table.
 
 | Pole | Traditional basis | Lateral meaning |
 |------|-------------------|-----------------|
-| **Transverse** | Reversed: untapped talents, poor planning — power **present but not sequenced** | Operators on table, no applied transform |
+| **Transverse** | Reversed: untapped talents, poor planning — power **present but not sequenced** | Tools on table, reaction not yet sparked |
 | **Conjugate** | Reversed: **manipulation**, trickster use of skill | Crossing = influence without integrity |
 
 ---
@@ -108,7 +108,7 @@ For each card record:
 
 ---
 
-### major-06 — The Lovers / Entanglement
+### major-06 — The Lovers / The Entangled
 
 **Sources:** Biddy Lovers; RW angel, choice, Adam/Eve.
 
@@ -300,10 +300,10 @@ For each card record:
 
 | Suit | Pips documented |
 |------|-----------------|
-| Wands / Photons | `wands-ace` … `wands-king` (14) |
-| Cups / Fluids | `cups-ace` … `cups-king` (14) |
+| Wands / Particles | `wands-ace` … `wands-king` (14) |
+| Cups / Waves | `cups-ace` … `cups-king` (14) |
 | Swords / Operators | `swords-ace` … `swords-king` (14) |
-| Pentacles / Lattice | `pentacles-ace` … `pentacles-king` (14) |
+| Pentacles / Lattices | `pentacles-ace` … `pentacles-king` (14) |
 
 **Future depth (optional):** fetch individual Biddy articles per pip for longer LWB narrative; add to research doc as upgraded entries.
 
@@ -311,7 +311,9 @@ For each card record:
 
 ## 5. Quality bar (definition of done)
 
-Each built reading (`summary`, `detail`, `guidance`) must pass `npm run audit:readings` thresholds:
+Each built reading must pass `npm run audit:readings` (scholarly + personal after `loadReadingDepth()` and `loadReadingPersonal()`).
+
+### 5.0 Scholarly tab (`summary`, `detail`, `guidance`)
 
 | Field | Minimum length | Content |
 |-------|----------------|---------|
@@ -331,22 +333,43 @@ Each built reading (`summary`, `detail`, `guidance`) must pass `npm run audit:re
 
 **Gold references:** `minorVertical/cups.ts` (Ace of Cups upright); `majorContent.ts` (Fool reversed); exemplar `major-02` in `majorVertical.ts` + `majorTransverse.ts` + `majorConjugate.ts`.
 
+### 5.0.1 Personal tab (`personal` — “For you”)
+
+Stored in `src/data/readings/readingPersonal/{majors,wands,cups,swords,pentacles}.ts`. Lazy-loaded via `readingPersonalLoader.ts`; merged in `applyReadingDepth.ts`. **Do not** append into `detail`.
+
+| Part | Minimum length | Voice |
+|------|----------------|-------|
+| `hook` | 280 chars | Second person; pole-aware opener |
+| Each `sections[].body` | 400 chars | Typically 2 sections (e.g. core situation, interference) |
+| Each `protocol.steps[].body` | 120 chars | Exactly 3 steps under “Your operational protocol” |
+| `takeaway` | 150 chars | Human closing |
+
+**Pole openers (adapt classic + quantum name each time):**
+
+- **Upright:** “When you draw [classic] upright as [quantum]…”
+- **Reversed:** “When [classic] shows up reversed in your reading…”
+- **Transverse:** “When [classic] crosses you laterally (transverse)…”
+- **Conjugate:** “When the conjugate crossing of [classic] hits…” (shadow cluster crossing talent)
+
+`frameReadingForOrientation` reframes scholarly `summary`/`detail` for lateral poles only; **`personal` is passed through unchanged.**
+
+**Gold exemplar:** `swords-07` conjugate in `readingPersonal/swords.ts` (imposter loop, allies blind spot, 3-step protocol).
+
 ### 5.1 Completion matrix
 
 Run `npm run audit:readings` for backlog (shortest first). Per card: `npm run audit:readings -- --card=major-02`.
 
-Mark **U**pright / **R**eversed / **T**ransverse / **C**onjugate when all three fields pass audit.
+Mark **U**pright / **R**eversed / **T**ransverse / **C**onjugate when scholarly fields pass; **P** when `personal` passes audit.
 
-| Card ID | U | R | T | C | Primary files |
-|---------|---|---|---|---|---------------|
-| major-00 | | | | | `majorVertical.ts`, `majorTransverse.ts`, `majorConjugate.ts` |
-| major-01 | | | | | same |
-| major-02 | | | | | same (exemplar) |
-| major-03 … major-21 | | | | | same |
-| wands-ace … wands-king | | | | | `minorVertical/wands.ts`, `minorLateral/wands.ts` |
-| cups-ace … cups-king | | | | | `minorVertical/cups.ts`, `minorLateral/cups.ts` |
-| swords-ace … swords-king | | | | | `minorVertical/swords.ts`, `minorLateral/swords.ts` |
-| pentacles-ace … pentacles-king | | | | | `minorVertical/pentacles.ts`, `minorLateral/pentacles.ts` |
+| Card ID | U | R | T | C | P | Primary files |
+|---------|---|---|---|---|---|---------------|
+| major-00 | ✓ | ✓ | ✓ | ✓ | ✓ | `readingDepth/majors.ts`, `readingPersonal/majors.ts` |
+| major-01 … major-21 | ✓ | ✓ | ✓ | ✓ | ✓ | same |
+| major-02 | ✓ | ✓ | ✓ | ✓ | ✓ | scholarly exemplar in depth; personal in suit files |
+| wands-ace … wands-king | ✓ | ✓ | ✓ | ✓ | ✓ | `readingDepth/wands.ts`, `readingPersonal/wands.ts` |
+| cups-ace … cups-king | ✓ | ✓ | ✓ | ✓ | ✓ | `readingDepth/cups.ts`, `readingPersonal/cups.ts` |
+| swords-ace … swords-king | ✓ | ✓ | ✓ | ✓ | ✓ | `readingDepth/swords.ts`, `readingPersonal/swords.ts` (`swords-07` conjugate gold) |
+| pentacles-ace … pentacles-king | ✓ | ✓ | ✓ | ✓ | ✓ | `readingDepth/pentacles.ts`, `readingPersonal/pentacles.ts` |
 
 ### 5.2 Authoring checklist (infrastructure)
 
@@ -354,10 +377,18 @@ Mark **U**pright / **R**eversed / **T**ransverse / **C**onjugate when all three 
 - [x] `majorConjugate.ts` / `majorTransverse.ts` split  
 - [x] Minors: `minorLateral/` + `minorVertical/` (56 pips)  
 - [x] `scripts/audit-readings.ts` + `npm run audit:readings`  
-- [x] All 312 cells pass audit (`readingDepth/` overrides; `npm run audit:readings`)  
+- [x] All 312 cells pass scholarly audit (`readingDepth/` overrides)  
+- [x] All 312 cells pass personal audit (`readingPersonal/`; hook/sections/protocol/takeaway thresholds)  
 - [x] `*_EXPAND` maps trimmed (`majorReadingEnrich.ts`, `minorReadingEnrich.ts` no-op)  
-- [x] Lazy depth chunks: `readingDepthLoader.ts` + `initReadings()` during splash  
-- [x] Gold exemplar: `major-02` in `readingDepth/majors.ts`  
+- [x] Lazy chunks: `readingDepthLoader.ts` + `readingPersonalLoader.ts` + `initReadings()` during splash  
+- [x] Tabbed UI: Card reading vs For you (`ReadingTabs`, `PersonalReadingView`, `ReadingPanel`, `CardLibrary`)  
+- [x] Gold exemplars: `major-02` depth; `swords-07` conjugate personal  
+
+### 5.3 Fidelity audit (traditional roots)
+
+Semantic quality bar beyond character counts. Full rubric: **[READING_FIDELITY.md](./READING_FIDELITY.md)**.
+
+Run `npm run audit:fidelity` after `audit:readings`. Fix order: boilerplate → missing keywords → near-floor expansion. Swords depth `swords-03`…`king` was the first known template batch; use `swords-ace`/`swords-02` as rewrite models.
 
 ---
 

@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import type { ReadingText } from "../types/reading";
 import type { Orientation, TarotCard } from "../types/deck";
 import { ORIENTATION_SHORT } from "../lib/cardOrientationUi";
+import { PersonalReadingView } from "./PersonalReadingView";
+import { ReadingTabs } from "./ReadingTabs";
+import { ScholarlyReadingBody } from "./ScholarlyReadingBody";
 
 interface ReadingPanelProps {
   card: TarotCard;
@@ -12,15 +15,6 @@ interface ReadingPanelProps {
   variant?: "full" | "solo";
   sectionLabel?: string;
 }
-
-const ORIENTATION_NOTE: Record<Orientation, string> = {
-  upright: "Direct pole—expression of the card’s archetype without tilt.",
-  reversed: "Inverted pole—internalized energy, delays, shadows, or resistance.",
-  transverse:
-    "First lateral crossing—this archetype blocking or stretching the path sideways (often liminal, not yet decided).",
-  conjugate:
-    "Second lateral crossing—another way this archetype crosses you; not “more reversed.” Pair differs per card.",
-};
 
 export function ReadingPanel({
   card,
@@ -32,6 +26,7 @@ export function ReadingPanel({
   const [expanded, setExpanded] = useState(variant === "full");
 
   const isSolo = variant === "solo";
+  const hasPersonal = Boolean(reading.personal);
 
   return (
     <motion.article
@@ -66,49 +61,40 @@ export function ReadingPanel({
       <p className={`text-star/50 italic ${isSolo ? "text-xs" : "text-sm"}`}>
         {card.classicName}
       </p>
-      {!isSolo && (
-        <p className="mt-2 text-xs text-star/45">{ORIENTATION_NOTE[orientation]}</p>
+
+      {!expanded && (
+        <p
+          className={`leading-relaxed font-medium text-star/95 ${
+            isSolo ? "mt-3 text-sm" : "mt-5 text-base"
+          }`}
+        >
+          {reading.summary}
+        </p>
       )}
 
-      <p
-        className={`leading-relaxed font-medium text-star/95 ${
-          isSolo ? "mt-3 text-sm" : "mt-5 text-base"
-        }`}
-      >
-        {reading.summary}
-      </p>
-
       {expanded && (
-        <>
-          {isSolo && (
-            <p className="mt-2 text-xs text-star/45">
-              {ORIENTATION_NOTE[orientation]}
-            </p>
-          )}
-          <p
-            className={`leading-relaxed text-star/80 ${
-              isSolo ? "mt-3 text-xs" : "mt-4 text-sm"
-            }`}
-          >
-            {reading.detail}
-          </p>
-          <div
-            className={`rounded-lg border border-accent/20 bg-accent/5 ${
-              isSolo ? "mt-3 px-3 py-2" : "mt-5 px-4 py-3"
-            }`}
-          >
-            <p className="text-xs font-semibold tracking-wide text-gold uppercase">
-              Guidance
-            </p>
-            <p
-              className={`leading-relaxed text-star/85 ${
-                isSolo ? "mt-1 text-xs" : "mt-2 text-sm"
-              }`}
-            >
-              {reading.guidance}
-            </p>
-          </div>
-        </>
+        <div className={isSolo ? "mt-3" : "mt-5"}>
+          <ReadingTabs
+            hasPersonal={hasPersonal}
+            compact={isSolo}
+            scholarly={
+              <ScholarlyReadingBody
+                reading={reading}
+                orientation={orientation}
+                compact={isSolo}
+                showOrientationNote={isSolo}
+              />
+            }
+            personal={
+              reading.personal ? (
+                <PersonalReadingView
+                  personal={reading.personal}
+                  compact={isSolo}
+                />
+              ) : null
+            }
+          />
+        </div>
       )}
 
       <button

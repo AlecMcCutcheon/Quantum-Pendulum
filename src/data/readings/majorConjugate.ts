@@ -16,9 +16,9 @@ export const MAJOR_CONJUGATE: Record<string, ReadingText> = {
   },
   "major-01": {
     summary:
-      "Conjugate Operator—manipulation or misdirected craft crosses the work.",
+      "Conjugate Catalyst—manipulation or misdirected craft crosses the work.",
     detail:
-      "Magician reversed traditionally includes manipulation and poor planning, beside untapped talent (Biddy). Conjugate is the table used for persuasion, not creation: words without follow-through, tools for image, operators on the wrong problem. The crossing is ethical—skill without honest aim. Quantumally, the apparatus runs but the transformation serves a hidden Hamiltonian.",
+      "Magician reversed traditionally includes manipulation and poor planning, beside untapped talent (Biddy). Conjugate is the table used for persuasion, not creation: words without follow-through, tools for image, catalyst aimed at the wrong reaction. The crossing is ethical—skill without honest aim. Quantumally, the apparatus runs but transformation serves a hidden aim.",
     guidance:
       "Deliver one promised outcome before new promises. If influence feels slick, ask what cannot be said aloud.",
   },
@@ -56,9 +56,9 @@ export const MAJOR_CONJUGATE: Record<string, ReadingText> = {
   },
   "major-06": {
     summary:
-      "Conjugate Entanglement—values misaligned; disharmony crosses the bond.",
+      "Conjugate The Entangled—values misaligned; disharmony crosses the bond.",
     detail:
-      "Lovers reversed: self-love needed, disharmony, imbalance, misalignment of values (Biddy). Conjugate is the crossing in relationship—promises out of phase, ethics announced but not lived, triangulation. Entanglement here is noisy correlation, not intimacy.",
+      "Lovers reversed: self-love needed, disharmony, imbalance, misalignment of values (Biddy). Conjugate is the crossing in relationship—promises out of phase, ethics announced but not lived, triangulation. Correlation here is noisy, not intimacy.",
     guidance:
       "Write what you will not compromise. One conversation that names misalignment before ritual.",
   },
