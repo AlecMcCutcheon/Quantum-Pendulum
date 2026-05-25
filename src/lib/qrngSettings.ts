@@ -1,5 +1,5 @@
-const KEY_STORAGE = "quantum-tarot-outshift-api-key";
-const PROVIDER_STORAGE = "quantum-tarot-qrng-provider";
+const KEY_STORAGE = "quantum-pendulum-outshift-api-key";
+const PROVIDER_STORAGE = "quantum-pendulum-qrng-provider";
 
 /** Preserve characters exactly (Outshift keys may include a trailing comma). */
 export function normalizeOutshiftApiKey(key: string): string {

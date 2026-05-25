@@ -392,7 +392,7 @@ export async function runTest(
       }
       return {
         ok: true,
-        message: `qrandom.io OK (no Outshift key) — sample card ${qrandom.result[0]}`,
+        message: `qrandom.io OK (no Outshift key) — sample ${qrandom.result[0]}`,
         source: "qrandom",
         raw: qrandom.raw,
         mapped: qrandom.result,
@@ -405,7 +405,7 @@ export async function runTest(
         if (qrandom) {
           return {
             ok: true,
-            message: `Failover OK — qrandom.io sample card ${qrandom.result[0]}`,
+            message: `Failover OK — qrandom.io sample ${qrandom.result[0]}`,
             source: "qrandom",
             raw: qrandom.raw,
             mapped: qrandom.result,
@@ -415,15 +415,13 @@ export async function runTest(
       return { ok: false, message: test.error, source: "outshift" };
     }
     const blocks = (test.raw as { random_numbers?: OutshiftBlock[] }).random_numbers;
-    const mapped = blocks?.map((b, i) => {
+    const mapped = blocks?.map((b) => {
       const raw = b.decimal ?? "0";
-      return i === 0
-        ? mapDecimalToRange(raw, 0, 77)
-        : mapDecimalToRange(raw, 0, 3);
+      return mapDecimalToRange(raw, 0, 1_000_000);
     });
     return {
       ok: true,
-      message: `Outshift OK — mapped card ${mapped?.[0]}, orientation ${mapped?.[1]}`,
+      message: `Outshift OK — sample integers ${mapped?.join(", ")}`,
       source: "outshift",
       raw: test.raw,
       request: test.request,
@@ -437,7 +435,7 @@ export async function runTest(
   }
   return {
     ok: true,
-    message: `qrandom.io OK — sample card ${qrandom.result[0]}`,
+    message: `qrandom.io OK — sample ${qrandom.result[0]}`,
     source: "qrandom",
     raw: qrandom.raw,
     mapped: qrandom.result,

@@ -1,54 +1,36 @@
-type DrawButtonVariant = "collapse" | "another";
-
 interface DrawButtonProps {
   onClick: () => void;
-  disabled: boolean;
-  loading: boolean;
-  /** Overrides default loading label for the variant. */
+  disabled?: boolean;
+  loading?: boolean;
+  label?: string;
   loadingLabel?: string;
-  shimmer?: boolean;
-  variant?: DrawButtonVariant;
 }
-
-const LABELS: Record<
-  DrawButtonVariant,
-  { idle: string; loading: string }
-> = {
-  collapse: { idle: "Collapse the Wave", loading: "Collapsing…" },
-  another: { idle: "New Measurement", loading: "Returning…" },
-};
 
 export function DrawButton({
   onClick,
-  disabled,
-  loading,
-  loadingLabel,
-  shimmer = false,
-  variant = "collapse",
+  disabled = false,
+  loading = false,
+  label = "Fetch quantum impulse",
+  loadingLabel = "Measuring…",
 }: DrawButtonProps) {
-  const labels = LABELS[variant];
-  const showShimmer = loading && shimmer;
-  const label = loading ? (loadingLabel ?? labels.loading) : labels.idle;
-
   return (
     <button
       type="button"
       onClick={onClick}
-      disabled={disabled}
-      aria-busy={loading}
-      className={`font-display relative overflow-hidden rounded-full border px-8 py-3 text-sm font-semibold tracking-widest uppercase transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-void disabled:cursor-not-allowed disabled:opacity-40 ${
-        showShimmer
-          ? "border-accent/60 bg-accent/20 text-accent"
-          : "border-accent/40 bg-accent/15 text-accent hover:border-accent hover:bg-accent/25"
-      }`}
+      disabled={disabled || loading}
+      className="font-display relative overflow-hidden rounded-full border border-accent/50 bg-accent/15 px-10 py-3.5 text-sm font-semibold tracking-widest text-accent uppercase transition hover:border-accent hover:bg-accent/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:cursor-not-allowed disabled:opacity-50"
+      style={
+        loading
+          ? undefined
+          : {
+              backgroundImage:
+                "linear-gradient(90deg, transparent 0%, rgba(167,139,250,0.25) 50%, transparent 100%)",
+              backgroundSize: "200% 100%",
+              animation: "shimmer 2.5s ease-in-out infinite",
+            }
+      }
     >
-      {showShimmer ? (
-        <span
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-accent/35 to-transparent motion-safe:animate-[shimmer_1.4s_ease-in-out_infinite] bg-[length:200%_100%]"
-          aria-hidden
-        />
-      ) : null}
-      <span className="relative">{label}</span>
+      {loading ? loadingLabel : label}
     </button>
   );
 }

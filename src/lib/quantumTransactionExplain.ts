@@ -1,28 +1,14 @@
-import { DECK, DECK_SIZE } from "../data/deck";
-import type { Orientation } from "../types/deck";
-import type { QuantumBasis } from "./intentAlign";
-import type { SpacetimeSnapshot } from "../types/spacetime";
-import { invertOrientation, ORIENTATIONS } from "./orientation";
-import type { PartnerDrawResult, QuantumDrawResult } from "./quantumDraw";
-
-export interface DirectCollapse {
-  cardIndex: number;
-  orientationIndex: number;
-  cardName: string;
-  orientation: Orientation;
-}
-
-export function directCollapseFromRaw(raw: number[]): DirectCollapse {
-  const cardIndex = Math.abs(raw[0] ?? 0) % DECK_SIZE;
-  const orientationIndex = Math.abs(raw[1] ?? 0) % ORIENTATIONS.length;
-  const card = DECK[cardIndex]!;
-  return {
-    cardIndex,
-    orientationIndex,
-    cardName: card.quantumName,
-    orientation: ORIENTATIONS[orientationIndex]!,
-  };
-}
+import type { ConsumedQuantumRecord } from "../types/quantumLedger";
+import type { QuantumConsumptionLedger } from "../types/quantumLedger";
+import type { QuantumStream } from "../types/pendulum";
+import {
+  formatStreamRoles,
+  hasLookaheadBatch,
+  impulseFieldRole,
+  remainingInActiveBatch,
+  sessionSourceLabel,
+  streamRemaining,
+} from "./quantumPendulum";
 
 export function formatQuantumRaw(
   raw: number[],
@@ -36,15 +22,6 @@ export function formatQuantumRaw(
     .join("\n");
 }
 
-export const FRESH_MEASUREMENT_ROLES = [
-  "card (mod 78)",
-  "pole (mod 4)",
-  "art entropy",
-  "art entropy",
-  "art entropy",
-  "art entropy",
-] as const;
-
 export function formatTimestamp(ms: number): string {
   return new Date(ms).toLocaleString(undefined, {
     dateStyle: "medium",
@@ -52,69 +29,93 @@ export function formatTimestamp(ms: number): string {
   });
 }
 
-export function buildAlignmentPayload(
-  basis: QuantumBasis,
-  freshQuantum: number[],
-  intent: string,
-  spacetime?: SpacetimeSnapshot | null,
-): string {
-  const payload: Record<string, unknown> = {
-    basis: basis.quantumRaw,
-    basisId: basis.drawId,
-    fresh: freshQuantum,
-    intent: intent.trim(),
-  };
-  if (spacetime) payload.spacetime = spacetime;
-  return JSON.stringify(payload, null, 2);
+function formatConsumedRow(r: ConsumedQuantumRecord): string {
+  const role = impulseFieldRole(r.fieldIndex);
+  const mic =
+    r.micByte === null ? "—" : `0x${r.micByte.toString(16).padStart(2, "0")}`;
+  const spread =
+    r.micByte === null ? "—" : `xor ${r.xorSpread}%`;
+  return (
+    `[${r.poolIndex}] QRNG ${r.qrng} → used ${r.mixed} · mic ${mic} · ${spread}\n` +
+    `     impulse #${r.impulseIndex + 1} · ${role}`
+  );
 }
 
-export function partnerCollapseExplain(
-  draw: PartnerDrawResult,
-  primaryCardId: string,
-  primaryOrientation: Orientation,
+export function buildStreamReport(
+  stream: QuantumStream,
+  ledger: QuantumConsumptionLedger,
 ): {
-  direct: DirectCollapse;
-  bumped: boolean;
-  orientationRule: string;
+  batchCount: number;
+  sessionFetchedTotal: number;
+  bufferedNow: number;
+  queued: number;
+  queuedImpulses: number;
+  consumedCount: number;
+  impulsesConsumed: number;
+  batchesSummary: string;
+  consumedFormatted: string;
+  poolAheadFormatted: string;
+  avgXorSpread: number;
+  avgImpulsePhaseShift: number;
+  avgMicActivity: number;
+  lastImpulsePhaseShift: number;
+  lastMicActivity: number;
+  lastXorSpread: number;
 } {
-  const direct = directCollapseFromRaw(draw.quantumRaw);
-  const bumped = DECK[direct.cardIndex]!.id === primaryCardId;
-  const orientationRule = `${primaryOrientation} → ${invertOrientation(primaryOrientation)} (entangled opposite pole, not re-rolled)`;
-  return { direct, bumped, orientationRule };
-}
+  const batchesSummary = stream.batches
+    .map(
+      (b, i) =>
+        `#${i + 1} ${b.drawId.slice(0, 8)}… · ${sessionSourceLabel(b.source)} · ${formatTimestamp(b.drawnAt)} · ${b.length} ints @${b.offset}`,
+    )
+    .join("\n");
 
-export const SOURCE_LABEL: Record<QuantumDrawResult["source"], string> = {
-  outshift: "Outshift QRNG",
-  qrandom: "qrandom.io Quantum RNG",
-  unknown: "Quantum source unknown",
-};
+  const consumedFormatted =
+    ledger.records.length > 0
+      ? ledger.records.map(formatConsumedRow).join("\n\n")
+      : "(none yet — impulses appear here as they are consumed)";
 
-/** How procedural card art is seeded — changes every draw, not fixed per card. */
-export function primaryArtEntropyExplain(draw: QuantumDrawResult): {
-  source: string;
-  note: string;
-} {
-  if (draw.realigned) {
-    return {
-      source: "SHA-256 alignment hash",
-      note: "Pattern, hue, and symmetry come from hash bytes—not a fixed look for this card.",
-    };
-  }
-  const end = draw.quantumRaw.length - 1;
+  const inCurrentBatch = remainingInActiveBatch(stream);
+  const lookahead = hasLookaheadBatch(stream);
+  const previewCount = Math.min(inCurrentBatch, 10);
+  const ahead = stream.pool.slice(
+    stream.cursor,
+    stream.cursor + previewCount,
+  );
+  const poolAheadFormatted =
+    ahead.length > 0
+      ? `Next in current batch (raw QRNG — mic mixes only at consumption):\n${formatQuantumRaw(
+          ahead,
+          formatStreamRoles(ahead.length),
+        )}${
+          inCurrentBatch > previewCount
+            ? `\n… +${inCurrentBatch - previewCount} more in this batch`
+            : ""
+        }${
+          lookahead
+            ? `\n\nNext batch already prefetched (${streamRemaining(stream) - inCurrentBatch} ints) — held until this batch ends.`
+            : ""
+        }`
+      : "(pool empty ahead of cursor)";
+
+  const queued = streamRemaining(stream);
+  const sessionFetchedTotal = stream.poolBaseIndex + stream.pool.length;
+
   return {
-    source:
-      end >= 2 ? `raw[2] … raw[${end}] (same QRNG batch)` : "QRNG batch tail",
-    note: "Same archetype can render with different kaleidoscope / burst art each collapse.",
-  };
-}
-
-export function partnerArtEntropyExplain(partner: PartnerDrawResult): {
-  source: string;
-  note: string;
-} {
-  const end = partner.quantumRaw.length - 1;
-  return {
-    source: end >= 1 ? `raw[1] … raw[${end}]` : "QRNG batch tail",
-    note: "Partner face art is independently seeded from its own measurement.",
+    batchCount: stream.batches.length,
+    sessionFetchedTotal,
+    bufferedNow: stream.pool.length,
+    queued,
+    queuedImpulses: Math.floor(queued / 5),
+    consumedCount: ledger.records.length,
+    impulsesConsumed: ledger.impulsesConsumed,
+    batchesSummary: batchesSummary || "(none)",
+    consumedFormatted,
+    poolAheadFormatted,
+    avgXorSpread: ledger.avgXorSpread,
+    avgImpulsePhaseShift: ledger.avgImpulsePhaseShift,
+    avgMicActivity: ledger.avgMicActivity,
+    lastImpulsePhaseShift: ledger.lastImpulsePhaseShift,
+    lastMicActivity: ledger.lastMicActivity,
+    lastXorSpread: ledger.lastXorSpread,
   };
 }
