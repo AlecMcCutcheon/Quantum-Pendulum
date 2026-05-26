@@ -46,11 +46,6 @@ interface CalNoiseAccumulator {
   n: number;
 }
 
-function mean(values: number[]): number {
-  if (values.length === 0) return 0;
-  return values.reduce((a, b) => a + b, 0) / values.length;
-}
-
 function historySpanMs(frames: TimestampedFrame[]): number {
   if (frames.length < 2) return 0;
   return frames[frames.length - 1]!.at - frames[0]!.at;
@@ -235,10 +230,6 @@ export class MicActivityWindow {
 
   get spanMs(): number {
     return historySpanMs(this.frames);
-  }
-
-  isStationaryNoise(now = performance.now()): boolean {
-    return this._ambient;
   }
 
   shouldBeLive(now = performance.now()): boolean {
