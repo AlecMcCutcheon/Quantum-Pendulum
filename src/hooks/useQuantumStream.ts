@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from "react";
 import { takeQrngNotice } from "../api/qrng";
 import {
   appendLedgerImpulse,
+  appendLedgerPoolSlots,
   createEmptyLedger,
   mixWithMicEntropy,
 } from "../lib/micEntropy";
@@ -14,6 +15,7 @@ import {
   nextImpulseFromStream,
   shouldPrefetch,
   streamRemaining,
+  takeFromStream,
   trimConsumedFromStream,
 } from "../lib/quantumPendulum";
 import type { ConsumedImpulse, QuantumStream } from "../types/pendulum";
@@ -29,6 +31,11 @@ export interface UseQuantumStreamResult {
   start: () => Promise<boolean>;
   stop: () => void;
   consumeImpulse: () => ConsumedImpulse | null;
+  /**
+   * Take the next `count` integers from the shared session pool (FIFO with
+   * pendulum impulses). Mic-mixed when mic entropy is on and not ambient-idle.
+   */
+  consumeIntegers: (count: number, labels?: string[]) => number[] | null;
   clearNotice: () => void;
 }
 
@@ -131,12 +138,69 @@ export function useQuantumStream(
     setQrngNotice(null);
   }, [sync]);
 
+  const micMixingActive = Boolean(mic?.enabled && mic?.mixingActive);
+
+  /** Shared FIFO cursor — impulses and circle shift interleave in pool order. */
+  const takeFromPool = useCallback(
+    (
+      count: number,
+      options?: { mixMic?: boolean; labels?: string[] },
+    ): number[] | null => {
+      const cursor = streamRef.current.cursor;
+      const poolStart = streamRef.current.poolBaseIndex + cursor;
+      const mixMic = options?.mixMic ?? false;
+      const capturedMic: number[] = [];
+      const mix = mixMic
+        ? (qrng: number) => {
+            const b = mic!.takeByte() & 0xff;
+            capturedMic.push(b);
+            return mixWithMicEntropy(qrng, b);
+          }
+        : undefined;
+      const taken = takeFromStream(streamRef.current, count, mix);
+      if (!taken) {
+        maybePrefetch();
+        return null;
+      }
+
+      const raw = streamRef.current.pool.slice(cursor, cursor + count);
+
+      if (options?.labels?.length) {
+        const micBytes = mixMic
+          ? capturedMic.map((b) => b as number | null)
+          : raw.map(() => null);
+        const nextLedger = appendLedgerPoolSlots(
+          ledgerRef.current,
+          poolStart,
+          raw,
+          taken.values,
+          options.labels,
+          micBytes,
+        );
+        ledgerRef.current = nextLedger;
+        setLedger(nextLedger);
+      }
+
+      const trimmed = trimConsumedFromStream(taken.stream);
+      streamRef.current = trimmed;
+      setStream(trimmed);
+      maybePrefetch();
+      return taken.values;
+    },
+    [maybePrefetch, mic],
+  );
+
+  const consumeIntegers = useCallback(
+    (count: number, labels?: string[]): number[] | null =>
+      takeFromPool(count, { mixMic: micMixingActive, labels }),
+    [takeFromPool, micMixingActive],
+  );
+
   const consumeImpulse = useCallback((): ConsumedImpulse | null => {
     const poolStart =
       streamRef.current.poolBaseIndex + streamRef.current.cursor;
-    const micActive = Boolean(mic?.enabled && mic?.mixingActive);
     const capturedMic: number[] = [];
-    const mix = micActive
+    const mix = micMixingActive
       ? (qrng: number) => {
           const b = mic!.takeByte() & 0xff;
           capturedMic.push(b);
@@ -150,7 +214,7 @@ export function useQuantumStream(
       return null;
     }
 
-    const micBytes = micActive
+    const micBytes = micMixingActive
       ? capturedMic.map((b) => b as number | null)
       : result.raw.map(() => null);
     const nextLedger = appendLedgerImpulse(
@@ -169,11 +233,11 @@ export function useQuantumStream(
     maybePrefetch();
     return {
       impulse: result.impulse,
-      ...(micActive
+      ...(micMixingActive
         ? { directImpulse: impulseFromValues(result.raw) }
         : {}),
     };
-  }, [maybePrefetch, mic]);
+  }, [maybePrefetch, mic, micMixingActive]);
 
   const clearNotice = useCallback(() => setQrngNotice(null), []);
 
@@ -186,6 +250,7 @@ export function useQuantumStream(
     start,
     stop,
     consumeImpulse,
+    consumeIntegers,
     clearNotice,
   };
 }

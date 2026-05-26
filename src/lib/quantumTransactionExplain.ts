@@ -30,14 +30,18 @@ export function formatTimestamp(ms: number): string {
 }
 
 function formatConsumedRow(r: ConsumedQuantumRecord): string {
-  const role = impulseFieldRole(r.fieldIndex);
+  const role =
+    r.label ??
+    (r.impulseIndex >= 0
+      ? `impulse #${r.impulseIndex + 1} · ${impulseFieldRole(r.fieldIndex)}`
+      : impulseFieldRole(r.fieldIndex));
   const mic =
     r.micByte === null ? "—" : `0x${r.micByte.toString(16).padStart(2, "0")}`;
   const spread =
     r.micByte === null ? "—" : `xor ${r.xorSpread}%`;
   return (
     `[${r.poolIndex}] QRNG ${r.qrng} → used ${r.mixed} · mic ${mic} · ${spread}\n` +
-    `     impulse #${r.impulseIndex + 1} · ${role}`
+    `     ${role}`
   );
 }
 

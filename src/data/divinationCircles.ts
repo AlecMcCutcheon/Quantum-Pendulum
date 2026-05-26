@@ -67,6 +67,18 @@ export const DIVINATION_CIRCLES: DivinationCircle[] = [
     ],
   },
   {
+    id: "time-span",
+    name: "Time span (within a year)",
+    description: "Rough month windows from now",
+    sectors: [
+      { label: "~1 month" },
+      { label: "2–3 months" },
+      { label: "4–8 months" },
+      { label: "9–12 months" },
+      { label: "Unclear" },
+    ],
+  },
+  {
     id: "energy",
     name: "Energy",
     description: "",

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type MutableRefObject } from "react";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Physics, type RapierRigidBody } from "@react-three/rapier";
 import type { DivinationCircle } from "../../types/pendulum";
@@ -25,19 +25,21 @@ import { PivotKinematic } from "./PivotKinematic";
 import { KaleidoscopeBackdrop } from "./KaleidoscopeBackdrop";
 import { PivotMount } from "./PivotMount";
 import { applyPivotTarget, createPivotState } from "./pivotOscillator";
-import { createTrailBuffer } from "./pendulumTrailStore";
+import { createTrailBuffer, type TrailPoint } from "./pendulumTrailStore";
 import { WORLD } from "./constants";
 
 interface QuantumPendulumSceneProps {
   circle: DivinationCircle;
   running: boolean;
   micActive: boolean;
+  trailBufferRef: MutableRefObject<TrailPoint[]>;
   consumeImpulse: () => ConsumedImpulse | null;
   onReadingChange: (
     reading: SwingReading,
     label: string,
     sector: number,
     confidence: SwingConfidence,
+    axisStrengths: AxisStrengths,
   ) => void;
 }
 
@@ -45,6 +47,7 @@ export function QuantumPendulumScene({
   circle,
   running,
   micActive,
+  trailBufferRef,
   consumeImpulse,
   onReadingChange,
 }: QuantumPendulumSceneProps) {
@@ -69,7 +72,6 @@ export function QuantumPendulumScene({
     maybe: 0.55,
   });
   const bobRef = useRef<RapierRigidBody | null>(null);
-  const trailBufferRef = useRef(createTrailBuffer());
 
   consumeRef.current = consumeImpulse;
   runningRef.current = running;
@@ -157,7 +159,13 @@ export function QuantumPendulumScene({
 
       setAxisStrengths(state.axisStrengths);
       setConfidence(state.confidence);
-      onReadingChange(state.verdictReading, label, sector, state.confidence);
+      onReadingChange(
+        state.verdictReading,
+        label,
+        sector,
+        state.confidence,
+        state.axisStrengths,
+      );
     },
     [circle, onReadingChange],
   );

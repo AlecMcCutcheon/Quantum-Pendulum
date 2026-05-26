@@ -12,6 +12,9 @@ export default defineConfig(({ mode }) => {
   return {
     base: githubPages ? pagesBase : "/",
     plugins: [react(), tailwindcss(), qrngServerPlugin()],
+    optimizeDeps: {
+      exclude: ["@dimforge/rapier3d-compat"],
+    },
     build: {
       rollupOptions: {
         output: {

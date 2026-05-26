@@ -2,6 +2,7 @@ import { WORLD } from "../components/pendulum3d/constants";
 import type { QuantumConsumptionLedger } from "../types/quantumLedger";
 import {
   IMPULSE_FIELDS,
+  impulseFieldRole,
   impulseFromValues,
 } from "./quantumPendulum";
 
@@ -108,10 +109,12 @@ export function appendLedgerImpulse(
     const micByte = micBytes[i] ?? null;
     const xorSpread =
       micByte === null ? 0 : integerXorSpreadPercent(qrng, m);
+    const fieldIndex = i % IMPULSE_FIELDS;
     return {
       poolIndex: poolStartIndex + i,
       impulseIndex,
-      fieldIndex: i % IMPULSE_FIELDS,
+      fieldIndex,
+      label: `impulse #${impulseIndex + 1} · ${impulseFieldRole(fieldIndex)}`,
       qrng,
       mixed: m,
       micByte,
@@ -166,5 +169,38 @@ export function appendLedgerImpulse(
     lastXorSpread,
     impulsePhaseHistory: impulseSamples.slice(-24),
     micActivityHistory: micSamples.slice(-24),
+  };
+}
+
+/** Non-impulse draws (circle shift, etc.) — same FIFO pool as impulses. */
+export function appendLedgerPoolSlots(
+  ledger: QuantumConsumptionLedger,
+  poolStartIndex: number,
+  raw: number[],
+  mixed: number[],
+  labels: string[],
+  micBytes: (number | null)[] = [],
+): QuantumConsumptionLedger {
+  const at = Date.now();
+  const newRecords = raw.map((qrng, i) => {
+    const m = mixed[i]!;
+    const micByte = micBytes[i] ?? null;
+    const xorSpread =
+      micByte === null ? 0 : integerXorSpreadPercent(qrng, m);
+    return {
+      poolIndex: poolStartIndex + i,
+      impulseIndex: -1,
+      fieldIndex: i,
+      label: labels[i] ?? labels[0] ?? "pool",
+      qrng,
+      mixed: m,
+      micByte,
+      xorSpread,
+      at,
+    };
+  });
+  return {
+    ...ledger,
+    records: [...ledger.records, ...newRecords],
   };
 }

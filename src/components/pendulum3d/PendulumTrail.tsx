@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Line } from "@react-three/drei";
 import type { MutableRefObject } from "react";
 import * as THREE from "three";
 import { WORLD } from "./constants";
 import {
+  TRAIL,
   buildTrailRenderVertices,
   type TrailPoint,
 } from "./pendulumTrailStore";
@@ -14,23 +15,31 @@ interface PendulumTrailProps {
   bufferRef: MutableRefObject<TrailPoint[]>;
 }
 
+function trailColorsToGlow(
+  colors: [number, number, number, number][],
+): [number, number, number, number][] {
+  return colors.map(([r, g, b, a]) => [r, g, b, Math.min(1, a * 0.38)]);
+}
+
+interface TrailStrip {
+  points: THREE.Vector3[];
+  colors: [number, number, number, number][];
+}
+
+const EMPTY: TrailStrip = { points: [], colors: [] };
+
 export function PendulumTrail({ running, bufferRef }: PendulumTrailProps) {
   const y = WORLD.discY + 0.022;
-  const [points, setPoints] = useState<THREE.Vector3[]>([]);
-  const [vertexColors, setVertexColors] = useState<
-    [number, number, number, number][]
-  >([]);
-
-  const placeholder = useMemo(
-    () => [new THREE.Vector3(0, y, 0), new THREE.Vector3(0.001, y, 0.001)],
-    [y],
-  );
+  const [strip, setStrip] = useState<TrailStrip>(EMPTY);
+  const pointsRef = useRef<THREE.Vector3[]>([]);
+  const lastCountRef = useRef(0);
 
   useEffect(() => {
     if (!running) {
       bufferRef.current = [];
-      setPoints([]);
-      setVertexColors([]);
+      pointsRef.current = [];
+      lastCountRef.current = 0;
+      setStrip(EMPTY);
     }
   }, [running, bufferRef]);
 
@@ -39,9 +48,10 @@ export function PendulumTrail({ running, bufferRef }: PendulumTrailProps) {
 
     const buf = bufferRef.current;
     if (buf.length < 2) {
-      if (points.length > 0) {
-        setPoints([]);
-        setVertexColors([]);
+      if (lastCountRef.current > 0) {
+        lastCountRef.current = 0;
+        pointsRef.current = [];
+        setStrip(EMPTY);
       }
       return;
     }
@@ -49,20 +59,50 @@ export function PendulumTrail({ running, bufferRef }: PendulumTrailProps) {
     const verts = buildTrailRenderVertices(buf, y, performance.now());
     if (verts.length < 2) return;
 
-    setPoints(verts.map((v) => new THREE.Vector3(v.x, v.y, v.z)));
-    setVertexColors(verts.map((v) => v.color));
+    const pool = pointsRef.current;
+    while (pool.length < verts.length) {
+      pool.push(new THREE.Vector3());
+    }
+    for (let i = 0; i < verts.length; i++) {
+      const v = verts[i]!;
+      pool[i]!.set(v.x, v.y, v.z);
+    }
+    pool.length = verts.length;
+    lastCountRef.current = verts.length;
+
+    setStrip({
+      points: pool.slice(0, verts.length),
+      colors: verts.map((v) => v.color),
+    });
   });
 
-  if (points.length < 2) return null;
+  if (strip.points.length < 2) return null;
+
+  const glowColors = trailColorsToGlow(strip.colors);
+
+  const lineProps = {
+    transparent: true,
+    depthWrite: false,
+    toneMapped: false as const,
+    color: "#ffffff",
+    renderOrder: 5,
+  };
 
   return (
-    <Line
-      points={points.length >= 2 ? points : placeholder}
-      vertexColors={vertexColors}
-      lineWidth={2.65}
-      transparent
-      depthWrite={false}
-      renderOrder={5}
-    />
+    <group>
+      <Line
+        points={strip.points}
+        vertexColors={glowColors}
+        lineWidth={TRAIL.lineWidth3dGlow}
+        {...lineProps}
+        renderOrder={4}
+      />
+      <Line
+        points={strip.points}
+        vertexColors={strip.colors}
+        lineWidth={TRAIL.lineWidth3d}
+        {...lineProps}
+      />
+    </group>
   );
 }

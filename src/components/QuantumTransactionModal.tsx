@@ -83,8 +83,9 @@ export function QuantumTransactionModal({
         </div>
 
         <p className="mb-4 text-xs leading-relaxed text-star/55">
-          One QRNG buffer feeds the pendulum. Each impulse reads five integers
-          (angle, radius, strength, blend, interval).{" "}
+          One batched QRNG pool feeds everything in order: pendulum impulses
+          (five integers each) and circle-shift votes (one at a time) share the
+          same cursor — whoever needs entropy next takes the next integer(s).{" "}
           <strong className="font-normal text-star/70">
             Queued now
           </strong>{" "}

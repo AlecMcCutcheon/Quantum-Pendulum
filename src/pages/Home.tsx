@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { AutoCircleSwapToggle } from "../components/AutoCircleSwapToggle";
 import { CirclePicker } from "../components/CirclePicker";
 import { DrawButton } from "../components/DrawButton";
 import { MicEntropySection } from "../components/MicEntropySection";
@@ -8,6 +9,7 @@ import {
   QuantumTransactionModal,
 } from "../components/QuantumTransactionModal";
 import { getCircleById } from "../data/divinationCircles";
+import { useQuantumCircleAutoSwap } from "../hooks/useQuantumCircleAutoSwap";
 import { useLiveMicEntropy } from "../hooks/useLiveMicEntropy";
 import { useQuantumStream } from "../hooks/useQuantumStream";
 
@@ -16,6 +18,7 @@ type Phase = "idle" | "loading" | "running" | "error";
 export function Home() {
   const [phase, setPhase] = useState<Phase>("idle");
   const [circleId, setCircleId] = useState("yes-no-maybe");
+  const [autoCircleSwap, setAutoCircleSwap] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [txOpen, setTxOpen] = useState(false);
 
@@ -27,6 +30,7 @@ export function Home() {
     start,
     stop,
     consumeImpulse,
+    consumeIntegers,
   } = useQuantumStream(undefined, {
     enabled: mic.enabled && mic.status === "on",
     mixingActive: mic.mixingActive,
@@ -34,6 +38,14 @@ export function Home() {
   });
 
   const circle = getCircleById(circleId);
+
+  const { live: circleShiftLive } = useQuantumCircleAutoSwap({
+    enabled: autoCircleSwap,
+    running: phase === "running",
+    circleId,
+    onCircleId: setCircleId,
+    consumeIntegers,
+  });
 
   const begin = useCallback(async () => {
     setErrorMsg(null);
@@ -59,6 +71,13 @@ export function Home() {
     <div className="flex w-full max-w-2xl flex-col items-center text-center">
       <div className="mb-6 flex w-full flex-col items-center gap-4">
         <CirclePicker value={circleId} onChange={setCircleId} />
+        <AutoCircleSwapToggle
+          enabled={autoCircleSwap}
+          active={phase === "running"}
+          live={circleShiftLive}
+          onChange={setAutoCircleSwap}
+          disabled={phase === "loading"}
+        />
         <MicEntropySection
           enabled={mic.enabled}
           status={mic.status}

@@ -3,6 +3,8 @@ export interface ConsumedQuantumRecord {
   poolIndex: number;
   impulseIndex: number;
   fieldIndex: number;
+  /** Impulse field or circle-shift slot (e.g. "circle shift · vote"). */
+  label?: string;
   qrng: number;
   mixed: number;
   micByte: number | null;

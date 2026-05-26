@@ -5,6 +5,10 @@ export const TRAIL = {
   minIntervalMs: 6,
   /** Max gap between rendered vertices (world units) — fills dotted segments */
   maxRenderSegment: 0.006,
+  /** Screen-space width (drei Line / Line2) */
+  lineWidth3d: 2.35,
+  lineWidth3dGlow: 4.5,
+  lineWidth2d: 2.4,
 } as const;
 
 /** Newest segment kept at full opacity; fade runs over the rest of the trail. */
@@ -108,4 +112,46 @@ export function buildTrailRenderVertices(
   }
 
   return out;
+}
+
+export function trailColorCss(age01: number): string {
+  const [r, g, b, a] = trailColorForAge(age01);
+  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${a.toFixed(3)})`;
+}
+
+export interface TrailSvgSegment {
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+  stroke: string;
+  strokeWidth: number;
+}
+
+/** 2D disc trail segments (same densification + colors as the 3D line strip). */
+export function buildTrailSvgSegments(
+  buffer: TrailPoint[],
+  now: number,
+  project: (x: number, z: number) => { x: number; y: number },
+): TrailSvgSegment[] {
+  const verts = buildTrailRenderVertices(buffer, 0, now);
+  if (verts.length < 2) return [];
+
+  const segments: TrailSvgSegment[] = [];
+  for (let i = 1; i < verts.length; i++) {
+    const a = verts[i - 1]!;
+    const b = verts[i]!;
+    const p1 = project(a.x, a.z);
+    const p2 = project(b.x, b.z);
+    const [r, g, bl, alpha] = a.color;
+    segments.push({
+      x1: p1.x,
+      y1: p1.y,
+      x2: p2.x,
+      y2: p2.y,
+      stroke: `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(bl * 255)},${alpha.toFixed(3)})`,
+      strokeWidth: TRAIL.lineWidth2d,
+    });
+  }
+  return segments;
 }
