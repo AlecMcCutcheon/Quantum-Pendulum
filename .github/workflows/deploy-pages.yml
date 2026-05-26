@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why this deploy was triggered"
+        required: false
+        default: "manual"
 
 permissions:
   contents: read

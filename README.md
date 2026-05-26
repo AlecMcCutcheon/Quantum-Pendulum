@@ -1,6 +1,6 @@
 # Quantum Pendulum
 
-3D pendulum divination powered by true QRNG (Outshift or qrandom.io): quantum integers steer anchor pulls; swing motion maps to swappable reading circles, with optional live mic entropy.
+3D pendulum divination powered by true QRNG (Outshift or qrandom.io): quantum integers steer anchor pulls; swing motion maps to swappable reading circles, optional live mic entropy, 2D disc view, and quantum circle shift voting.
 
 **Live:** [https://alecmccutcheon.github.io/Quantum-Pendulum/](https://alecmccutcheon.github.io/Quantum-Pendulum/)
 
