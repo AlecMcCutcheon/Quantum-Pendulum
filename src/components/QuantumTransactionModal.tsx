@@ -69,7 +69,8 @@ export function QuantumTransactionModal({
               Quantum stream
             </h2>
             <p className="mt-1 text-xs text-star/50">
-              Full consumed history for this session — not a truncated tail.
+              Consumed log keeps the last 100 integers; session totals below are
+              not capped.
             </p>
           </div>
           <button
@@ -90,8 +91,9 @@ export function QuantumTransactionModal({
             Queued now
           </strong>{" "}
           is what matters for the next pull — not the session total fetched.
-          Used numbers are kept in the log below; the in-memory buffer only
-          holds what is still unread (plus any prefetched batch).
+          The log below shows the most recent 100 consumed integers; the
+          in-memory buffer only holds what is still unread (plus any prefetched
+          batch).
         </p>
 
         <dl className="grid gap-3 text-sm text-star/80 sm:grid-cols-2">
@@ -129,7 +131,7 @@ export function QuantumTransactionModal({
         ) : null}
 
         <p className="mt-5 text-xs font-semibold tracking-wide text-star/45 uppercase">
-          Consumed (full session log)
+          Consumed (last 100)
         </p>
         <pre className="mt-1 max-h-56 overflow-auto rounded-lg border border-white/10 bg-void/60 p-3 font-mono text-[11px] leading-relaxed whitespace-pre-wrap text-star/75">
           {report.consumedFormatted}
@@ -151,8 +153,9 @@ export function QuantumTransactionModal({
 
         <p className="mt-4 text-xs leading-relaxed text-star/45">
           Each impulse uses five integers: disk angle, disk radius, approach
-          strength, blend duration, next interval. With mic on, one byte is
-          paired per integer at consumption time; phase shift measures how far
+          strength, blend duration, next interval. With mic on, one byte per
+          integer (waveform ⊕ live spectrum) is mixed at consumption; phase
+          shift measures how far
           the used value moved from the raw QRNG word. Impulse phase shift is
           the meaningful “how far did the draw move” metric; XOR spread near 50%
           only confirms full-word mixing.

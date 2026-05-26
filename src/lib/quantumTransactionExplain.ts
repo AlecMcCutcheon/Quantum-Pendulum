@@ -110,7 +110,7 @@ export function buildStreamReport(
     bufferedNow: stream.pool.length,
     queued,
     queuedImpulses: Math.floor(queued / 5),
-    consumedCount: ledger.records.length,
+    consumedCount: ledger.integersConsumed,
     impulsesConsumed: ledger.impulsesConsumed,
     batchesSummary: batchesSummary || "(none)",
     consumedFormatted,

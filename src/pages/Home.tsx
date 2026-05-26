@@ -83,8 +83,14 @@ export function Home() {
           status={mic.status}
           error={mic.error}
           live={mic.live}
+          inputMode={mic.inputMode}
+          onInputModeChange={mic.setInputMode}
+          pttHeld={mic.pttHeld}
+          onPttHeldChange={mic.setPttHeld}
           entropyPhase={mic.entropyPhase}
           ledger={ledger}
+          waveformRef={mic.waveformRef}
+          mixingActive={mic.mixingActive}
           disabled={phase === "loading"}
           onChange={mic.setEnabled}
         />

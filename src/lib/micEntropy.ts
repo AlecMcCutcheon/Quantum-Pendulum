@@ -1,5 +1,8 @@
 import { WORLD } from "../components/pendulum3d/constants";
-import type { QuantumConsumptionLedger } from "../types/quantumLedger";
+import type {
+  ConsumedQuantumRecord,
+  QuantumConsumptionLedger,
+} from "../types/quantumLedger";
 import {
   IMPULSE_FIELDS,
   impulseFieldRole,
@@ -78,9 +81,23 @@ export function impulsePhaseShiftScore(
   );
 }
 
+/** In-memory log tail — older rows are dropped to limit browser memory. */
+export const LEDGER_RECORDS_MAX = 100;
+
+function appendLedgerRecords(
+  ledger: QuantumConsumptionLedger,
+  newRecords: ConsumedQuantumRecord[],
+): ConsumedQuantumRecord[] {
+  const combined = [...ledger.records, ...newRecords];
+  return combined.length > LEDGER_RECORDS_MAX
+    ? combined.slice(-LEDGER_RECORDS_MAX)
+    : combined;
+}
+
 export function createEmptyLedger(): QuantumConsumptionLedger {
   return {
     records: [],
+    integersConsumed: 0,
     impulsesConsumed: 0,
     avgXorSpread: 0,
     avgImpulsePhaseShift: 0,
@@ -123,7 +140,7 @@ export function appendLedgerImpulse(
     };
   });
 
-  const records = [...ledger.records, ...newRecords];
+  const records = appendLedgerRecords(ledger, newRecords);
   const xorSamples = records.map((r) => r.xorSpread).filter((s) => s > 0);
   const avgXorSpread =
     xorSamples.length > 0
@@ -152,6 +169,7 @@ export function appendLedgerImpulse(
 
   return {
     records,
+    integersConsumed: ledger.integersConsumed + newRecords.length,
     impulsesConsumed: ledger.impulsesConsumed + 1,
     avgXorSpread,
     avgImpulsePhaseShift:
@@ -201,6 +219,7 @@ export function appendLedgerPoolSlots(
   });
   return {
     ...ledger,
-    records: [...ledger.records, ...newRecords],
+    records: appendLedgerRecords(ledger, newRecords),
+    integersConsumed: ledger.integersConsumed + newRecords.length,
   };
 }

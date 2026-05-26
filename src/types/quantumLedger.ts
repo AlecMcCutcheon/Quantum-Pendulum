@@ -15,6 +15,8 @@ export interface ConsumedQuantumRecord {
 
 export interface QuantumConsumptionLedger {
   records: ConsumedQuantumRecord[];
+  /** Session total consumed; `records` only keeps the most recent tail. */
+  integersConsumed: number;
   impulsesConsumed: number;
   /** Mean XOR bit spread (~50% is normal). */
   avgXorSpread: number;
